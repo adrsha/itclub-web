@@ -1,3 +1,9 @@
+html, body{
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  margin: 0;
+  padding: 0;
+}
+
 .events{
     position: relative;
     border-radius: 20vw;
@@ -10,13 +16,16 @@
     margin: 5vw;
     height: fit-content;
   }
-  .eventTitle {
+
+.eventTitle {
     color: var(--color1);
     font-family: "Monomaniac One", cursive;
-    font-size: 3rem;
-    margin-bottom: 3rem;
+    font-size: 5rem;
+    margin: 3rem;
     text-align: center;
+    padding-top: 20vh;
   }
+
   .Eventlists{
     display: flex;
   }

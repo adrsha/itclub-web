@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Countdown from "./countdown/Countdown.jsx";
 import Nav from "./Nav/Nav.jsx";
 import ContactUs from "./ContactUs/ContactUs.jsx";
@@ -14,10 +13,10 @@ import { LenisComponent } from "./Lenis/Lenis.js";
 function App() {
   return (
     <>
+      <Nav />
+      <Lines />
       <LenisComponent />
       <Parallax />
-      <Lines />
-      <Nav />
       <Countdown />
       <div className="pageContent">
         <Cards

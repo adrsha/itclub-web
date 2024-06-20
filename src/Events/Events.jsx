@@ -1,5 +1,7 @@
 import eventGraphic from "/events_bg.png";
 import Cards from "../Cards/Cards";
+import Footer from "../Footer/Footer";
+import Nav from "../Nav/Nav";
 import Parallax from "../Parallax/Parallax";
 import eventData from "/Dristi-From-Scratch/data/Events.json";
 import Lines from "../Lines/Lines.jsx";
@@ -36,18 +38,15 @@ let eventHtml = eventData.map((ev) => {
 function Events() {
   return (
     <>
+      <Nav />
+      <Lines />
       <LenisComponent />
       <Parallax />
-      <Lines />
-
+      <div className="eventTitle">Our Events</div>
       <div className="events">
-        <div className="eventImage">
-          <img src={eventGraphic} alt="" />
-        </div>
-
-        <div className="eventTitle">Our Events</div>
         <div className="eventContent">{eventHtml}</div>
       </div>
+      <Footer />
     </>
   );
 }
