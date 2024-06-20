@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Monomaniac+One&display=swap');
+*{
+  box-sizing: border-box;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+body, html{
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  min-height: 100vh;
+  background-color: #090f11;
+  margin: 0;
+  padding: 0;
+}
+
+div.submitted{
+  position: relative;
+  border-radius: 20vw;
+  position: absolute;
+  height: 55vh;
+  bottom: 10vh;
+  left: 50%;
+  transform: translate(-50%, 0);
+  padding: 5vh;
+  padding-left: 10vw;
+  padding-right: 10vw;
+  background-color: var(--color4aA);
+  background-size: 30vw;
+  background-repeat: no-repeat;
+  color: var(--color1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+div.submitted h1{
+    font-family: "Monomaniac One", cursive;
+    font-size: 5rem;
+}
+div.submitted a{
+  color: var(--color1e);
+  transition: color 0.5s;
+}
+
+div.submitted a:hover{
+  color: var(--color1a);
+}

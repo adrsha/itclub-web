@@ -13,6 +13,10 @@ const router = createBrowserRouter([
     path: "/itclub-web/events",
     element: <Events />,
   },
+  {
+    path: "/itclub-web/submitted",
+    element: <Events />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
