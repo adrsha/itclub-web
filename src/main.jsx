@@ -6,15 +6,15 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path: "/itclub-web/",
+    path: "/",
     element: <App />,
   },
   {
-    path: "/itclub-web/events",
+    path: "/events",
     element: <Events />,
   },
   {
-    path: "/itclub-web/submitted",
+    path: "/submitted",
     element: <Events />,
   },
 ]);
