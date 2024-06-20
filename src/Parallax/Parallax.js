@@ -8,11 +8,11 @@ function signOf(x) {
   if (x < 0) return -1;
   return 0;
 }
-
 function Parallax() {
   const [changeInTransform, setChangeInTransform] = useState();
 
   useEffect(() => {
+    window.scrollTo(0, 0);
     for (let i = 0; i < parallaxEls.length; i++) {
       if (parallaxEls[i].hasAttribute("data-lerp")) {
         lerp = parallaxEls[i].dataset.lerp;

@@ -5,35 +5,29 @@ export default function ContactUs() {
     <div className="contactUs" id="contactUs">
       <div className="contactUsTitle">Contact Us</div>
       <div className="contactUsContent">
-        <form action="submit">
-          <div className="form_text parallaxEl">
+        <div className="moreinfo">
+          For more information and to stay updated on our activities, follow us
+          on our social media channels and visit our website.
+          <br />
+          Email:kecktm.it.club@gmail.com
+          <br />
+          Follow us on Facebook, Twitter, and Instagram.
+        </div>
+        <form className="parallaxEl" action="submit">
+          <div className="form_text">
             <input placeholder=" " type="text" id="name" name="name" />
             <label htmlFor="name">Name</label>
           </div>
-          <div className="form_email parallaxEl">
+          <div className="form_email">
             <input placeholder=" " type="email" id="email" name="email" />
             <label htmlFor="email">Email</label>
           </div>
-          <div className="form_message parallaxEl">
+          <div className="form_message">
             <textarea placeholder=" " id="message" name="message"></textarea>
             <label htmlFor="message">Message</label>
           </div>
-          <button className="parallaxEl" type="submit">
-            Send
-          </button>
+          <button type="submit">Send</button>
         </form>
-        <div className="moreinfo">
-          <p>
-          For more information and to stay updated on our activities, follow us on our social media channels and visit our website.
-          Contact Us 
-          </p>
-          <p>
-          Email:kecktm.it.club@gmail.com
-          </p>
-          <p>
-          Follow us on Facebook, Twitter, and Instagram.
-          </p>
-        </div>
         <img
           className="parallaxEl"
           src={contactUsGraphics}
