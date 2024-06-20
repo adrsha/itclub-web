@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Countdown.css";
-import eventData from "/Dristi-From-Scratch/data/Events.json";
+import eventData from "../../data/Events.json";
 import mouseImg from "/m1.png";
 
 // get the latest event

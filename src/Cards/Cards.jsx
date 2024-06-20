@@ -1,17 +1,17 @@
 /* eslint-disable react/prop-types */
 import "./Cards.css";
-import member from "/Dristi-From-Scratch/data/Members.json";
+import member from "../../data/Members.json";
 import dummyImage from "/president.png";
 import { useState } from "react";
 
-let cardHtml=member.map((mv) =>{
-    return(
-      <div key={mv.attr} className="tablet" id={mv.attr}>
-            <img src={dummyImage} alt="" />
-            {mv.val}
-            <div className="post">{mv.post}</div>
-      </div>
-    );
+let cardHtml = member.map((mv) => {
+  return (
+    <div key={mv.attr} className="tablet" id={mv.attr}>
+      <img src={dummyImage} alt="" />
+      {mv.val}
+      <div className="post">{mv.post}</div>
+    </div>
+  );
 });
 function Cards(props) {
   const [MembersOpen, setMembersOpen] = useState("shorter");
@@ -40,9 +40,7 @@ function Cards(props) {
     return (
       <div className={"glassCards glass parallaxEl"} id="MembersCard">
         <div className="cardTitle">{props.title}</div>
-        <div className={"membersList " + MembersOpen}>
-          {cardHtml}
-        </div>
+        <div className={"membersList " + MembersOpen}>{cardHtml}</div>
         <div
           className="tablet showMore"
           onClick={() => {

@@ -1,5 +1,5 @@
 import "./AboutUs.css";
-import member from "/Dristi-From-Scratch/data/Members.json";
+import member from "../../data/Members.json";
 import aboutUsImg from "/about_us.png";
 import Cards from "../Cards/Cards.jsx";
 
@@ -64,13 +64,7 @@ export default function AboutUs() {
             Instagram.
           </p>
         </div>
-        <Cards
-          id="MembersCard"
-          title="Our Members"
-        {
-          ...cardProps
-        }
-        />
+        <Cards id="MembersCard" title="Our Members" {...cardProps} />
       </div>
     </div>
   );
