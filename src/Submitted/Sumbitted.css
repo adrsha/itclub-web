@@ -38,11 +38,3 @@ div.submitted h1{
     font-family: "Monomaniac One", cursive;
     font-size: 3rem;
 }
-div.submitted a{
-  color: var(--color1e);
-  transition: color 0.5s;
-}
-
-div.submitted a:hover{
-  color: var(--color1a);
-}

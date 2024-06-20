@@ -13,7 +13,9 @@ export default function Submitted() {
           We will be in touch with you soon. Thank you for your interest in our
           projects.
         </p>
-        <a href="/">Go back to the homepage</a>
+        <a className="specialLinks" href="/">
+          Go back to the homepage
+        </a>
       </div>
     </>
   );

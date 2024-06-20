@@ -126,8 +126,7 @@ input:-webkit-autofill:active{
   margin-bottom: 2rem;
   font-weight: bold;
   width: 40vw;
-  transform: translate(-200px, 500px);
-  padding: 10%px;
+  padding: 10px;
 }
 
 

@@ -60,9 +60,16 @@ function Cards(props) {
   } else if (props.id == "Eventscard") {
     return (
       <div className="glassCards glass parallaxEl" id={props.id}>
-        <div className="cardTitle">{props.title}</div>
-        {props.description}
-        <div className="showMore">more</div>
+        <div className="cardData">
+          <div className="cardTitle">{props.title}</div>
+          {props.description}
+          <div className="showMore">See more</div>
+        </div>
+        <hr />
+        <div className="cardActions">
+          <button className="activated">Roll In</button>
+          <button className="deactivated">Learn More</button>
+        </div>
       </div>
     );
   }

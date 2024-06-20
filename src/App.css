@@ -38,6 +38,14 @@ a{
   text-decoration: none;
   color: inherit;
 }
+a.specialLinks{
+  color: var(--color1e);
+  font-weight: bold;
+  transition: 0.2s ease;
+}
+a.specialLinks:hover{
+  color: var(--color1a);
+}
 
 #root {
   margin: 0;
@@ -62,12 +70,16 @@ a{
 button{
   border:none;
   padding: 1rem;
+  padding-left: 3em;
+  padding-right: 3em;
   border-radius: 1rem;
   margin: 2px;
-  width: 10rem;
+  width: fit-content;
+  display: block;
   font-family: "JetBrains Mono", monospace;
-  font-weight: bold;
+  font-weight: bolder;
   cursor: pointer;
+  white-space: nowrap;
 }
 button.activated{
   background-color: var(--color1a);
@@ -82,15 +94,14 @@ button.deactivated{
   transition: 0.2s;
 }
 button.deactivated:hover{
-  width: 11rem;
+  padding-left: 5em;
+  padding-right: 5em;
 }
 
 button.activated:hover{
-  width: 11rem;
-  }
-
-
-
+  padding-left: 5em;
+  padding-right: 5em;
+}
 
 /* LENIS Customization*/
 html.lenis, html.lenis body {

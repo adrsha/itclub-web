@@ -69,7 +69,7 @@ div.aboutUsContent div.glassCards#MembersCard> div.membersList{
 }
 
 div.aboutUsContent div.glassCards#MembersCard > div.membersList.shorter{
-  height: 60vh;
+  height: fit-content;
   animation: slideUp .5s ease-in-out forwards;
 }
 div.aboutUsContent div.glassCards#MembersCard > div.membersList.larger{
