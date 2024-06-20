@@ -8,8 +8,10 @@ let cardHtml = member.map((mv) => {
   return (
     <div key={mv.attr} className="tablet" id={mv.attr}>
       <img src={dummyImage} alt="" />
-      {mv.val}
-      <div className="post">{mv.post}</div>
+      <div className="tabletContent">
+        {mv.val}
+        <div className="post">{mv.post}</div>
+      </div>
     </div>
   );
 });
@@ -38,9 +40,16 @@ function Cards(props) {
     );
   } else if (props.id == "MembersCard") {
     return (
-      <div className={"glassCards glass parallaxEl"} id="MembersCard">
-        <div className="cardTitle">{props.title}</div>
-        <div className={"membersList " + MembersOpen}>{cardHtml}</div>
+      <div
+        className={"glassCards glass parallaxEl " + MembersOpen}
+        id="MembersCard"
+      >
+        <div className="cardTitle">
+          Our
+          <br />
+          Members
+        </div>
+        <div className={"membersList"}>{cardHtml}</div>
         <div
           className="tablet showMore"
           onClick={() => {

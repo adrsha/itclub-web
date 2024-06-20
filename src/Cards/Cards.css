@@ -89,22 +89,34 @@
 
 .tablet{
   font-weight: 800;
-  margin: 1rem;
-  width: 100%;
-  border-radius: 2.5rem;
+  padding: 0.5rem;
+  border-radius: 2em;
   position: relative;
-  padding: 0.3rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding-left: 1rem;
+  padding-right: 1rem;
   background-color: var(--color4aA);
+  width: 15vw;
 }
-.tablet img{
-  transform: translate(-2%, -40%);
+.tabletContent{
+  text-align: right;
+  padding-right: 1rem;
 }
-
+.tabletContent > .post{
+  color: var(--color1);
+  white-space: nowrap;
+  opacity: 0.5;
+}
 
 @media (max-width: 1200px) {
 
   .glassCards#image{
     display: none;
+  }
+  .tablet{
+    max-width: 25vw;
   }
 
   .glassCards#one{

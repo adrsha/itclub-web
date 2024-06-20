@@ -35,7 +35,7 @@ export default function AboutUs() {
             Instagram.
           </p>
         </div>
-        <Cards id="MembersCard" title="Our Members" {...cardProps} />
+        <Cards id="MembersCard" {...cardProps} />
       </div>
     </div>
   );

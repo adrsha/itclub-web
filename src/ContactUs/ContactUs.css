@@ -131,9 +131,5 @@ input:-webkit-autofill:active{
 
 
 @media (max-width: 1500px) {
-  .contactUsContent form{
-    margin-top: -10vh;
-  }
-
 }
 
