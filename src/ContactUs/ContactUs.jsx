@@ -13,7 +13,11 @@ export default function ContactUs() {
           <br />
           Follow us on Facebook, Twitter, and Instagram.
         </div>
-        <form className="parallaxEl" action="submit">
+        <form
+          className="parallaxEl"
+          action="https://formspree.io/f/xvgppokn"
+          method="POST"
+        >
           <div className="form_text">
             <input placeholder=" " type="text" id="name" name="name" />
             <label htmlFor="name">Name</label>
