@@ -16,7 +16,7 @@
   font-family: "Monomaniac One", cursive;
   text-align: center;
   font-size: 3rem;
-  margin-bottom: 3rem;
+  margin-bottom: 4.5rem;
 }
 .aboutUsContent{
   padding: 2rem;
@@ -32,7 +32,7 @@
   padding: 0.5rem;
   transform: translate(0%, -50%);
   margin: 2rem;
-  font-size: 0.8rem;
+  font-size: 1.25rem;
   display: block;
   transition: all .2s;
 }

@@ -34,6 +34,7 @@ let eventHtml = eventData.map((ev) => {
     );
   }
 });
+eventHtml.forEach((ev) => console.log(ev));
 
 function Events() {
   return (
