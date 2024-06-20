@@ -66,7 +66,7 @@ function Nav() {
           ) {
             // For Events
             e.target.onmousedown = (e) => {
-              location.href = "events";
+              location.href = "/Dristi-From-Scratch/events";
               setDisplay("hidden");
             };
             e.target.children[1].children[2].classList.add("navItemHover");
@@ -78,7 +78,7 @@ function Nav() {
           ) {
             // For About
             e.target.onmousedown = (e) => {
-              location.href = "#aboutUs";
+              location.href = "/Dristi-From-Scratch/#aboutUs";
               setDisplay("hidden");
             };
             e.target.children[1].children[0].classList.add("navItemHover");
@@ -91,7 +91,7 @@ function Nav() {
             // For Contact
             e.target.onmousedown = (e) => {
               // lenis.scrollTo("#contactUs");
-              location.href = "#contactUs";
+              location.href = "/Dristi-From-Scratch/#contactUs";
               setDisplay("hidden");
             };
             e.target.children[1].children[1].classList.add("navItemHover");
