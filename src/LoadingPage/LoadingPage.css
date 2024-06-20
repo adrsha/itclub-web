@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.body{
+    width: 100vw;
+    height: 100vh;
+    background-color: #080E10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.loadingContainer{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: #142E3E;
+    border: 2px solid rgba(127, 186, 228, 0.1);
+    margin: 10px;
+    border-radius: 10%;
+    animation: sizeanim  2s ease-in-out infinite;
+    animation-delay: calc(0.1s * var(--i));
+}
+@keyframes sizeanim {
+    0%{
+        height: 100px;
+    }
+    48%{
+        height: 200px;
+    }
+    99%{
+        height: 100px;
+    }
+}

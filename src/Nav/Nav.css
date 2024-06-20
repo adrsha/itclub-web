@@ -7,65 +7,28 @@ li{
 
 div.NavOpener{
   position: absolute;
-  height: 3rem;
-  width: 3rem;
-  top:10vh;
-  left: 50%;
+  top:5vh;
+  right: 5%;
   z-index: 3;
-  transform: translate(-50%,0);
   border-radius: 50%;
   box-shadow: var(--color3) 0 0 12px 2px;
   background-color: var(--color3);
   display:flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 3vmin;
-  transition: padding 0.2s ease, background-color 0.2s ease, transform 0.2s ease;
   cursor: pointer;
+}
+.hamburger{
+  margin: 4px;
+  width: 40px;
+  height: 3px;
+  background-color: #257EB9;
 }
 
 .fixedNavBar{
   position: fixed;
-  top:5vh;
-}
-
-div.NavOpener:hover{
-  background-color: transparent;
-  box-shadow: none;
-}
-div.NavOpener>svg{
-  height: inherit;
-  overflow: visible;
-}
-
-div.NavOpener>svg>path{
-  transition: 0.1s ease-in;
-}
-
-div.NavOpener::after{
-  content:"";
-  width: 0px;
-  box-shadow: var(--color1) 0 0 5px 0px;
-  aspect-ratio:1;
-  border-radius: 50%;
-  position: absolute;
-  background-color: var(--color1);
-  left:50%;
-  top:50%;
-  transform: translate(-50%, -30%);
-  transition: 0.2s ease;
-}
-div.NavOpener:hover>svg>:nth-child(1){
-  transform: translate(-1rem, 0.2rem);
-}
-div.NavOpener:hover>svg>:nth-child(2){
-  transform: translate(1rem, 0.2rem );
-}
-div.NavOpener:hover>svg>:nth-child(3){
-  transform: translate(0,-1.2rem);
-}
-div.NavOpener:hover::after{
-  width: 0.8rem;
+  top:10vh;
 }
 
 img.logo{
