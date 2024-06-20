@@ -1,79 +1,87 @@
 [
     {
-        "attr":"id",
-        "val" : "MembersCard"
-    },
-    {
-        "attr":"title",
-        "val" : "Our Members"
-    },
-    {
+        "post": "President",
         "attr":"president",
         "val" : "Koshish Shrestha"
     },
     {
+        "post": "Secretary",
         "attr":"secretary",
         "val" : "Prayas Silwal"
     },
     {
+        "post": "Resource Manager",
         "attr":"resourceManager",
         "val" : "Kabita Khanal"
     },
     {
+        "post": "Lead Designer",
         "attr":"leadDesigner",
         "val" : "Prajwol Shrestha"
     },
     {
+        "post": "Event Coordinator",
         "attr":"eventCoordinator",
         "val" : "Bijen Shrestha"
     },
     {
+        "post": "Vice President",
         "attr":"vicePresident",
         "val" : "Sujan Sapkota"
     },
     {
+        "post": "Joint Secretary",
         "attr":"jointSecretary",
         "val" : "Aryan Manandhar"
     },
     {
+        "post": "Developer",
         "attr":"Developer",
         "val" : "Ankit Shrestha"
     },
     {
+        "post": "Designer",
         "attr":"designer1",
         "val" : "Shreyas Acharya"
     },
     {
+        "post": "Designer",
         "attr":"designer2",
         "val" : "Sneha Karki"
     },
     {
+        "post": "Executive Member",
         "attr":"executiveMember1",
         "val" : "Pranav Ram Joshi"
     },
     {
+        "post": "Executive Member",
         "attr":"executiveMember2",
         "val" : "Adarsha Acharya"
     },
     {
+        "post": "Executive Member",
         "attr":"executiveMember3",
         "val" : "Ashika Ghimire"
     },
     {
+        "post": "Executive Member",
         "attr":"executiveMember4",
         "val" : "Sworup Karki"
     },
     {
+        "post": "Executive Member",
         "attr":"executiveMember5",
         "val" : "Ayush Malla"
     },
     {
+        "post": "Executive Member",
         "attr":"executiveMember6",
         "val" : "Jyoti Kumari Gupta"
     },
     {
+        "post": "Executive Member",
         "attr":"executiveMember7",
         "val" : "Aayush Lamsal"
     }
-
 ]
