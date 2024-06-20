@@ -1,7 +1,7 @@
 import eventGraphic from "/events_bg.png";
 import Cards from "../Cards/Cards";
 import Parallax from "../Parallax/Parallax";
-import eventData from "./Events.json";
+import eventData from "/Dristi-From-Scratch/data/Events.json";
 import Lines from "../Lines/Lines.jsx";
 import { LenisComponent } from "../Lenis/Lenis.js";
 import "./Events.css";
@@ -32,7 +32,6 @@ let eventHtml = eventData.map((ev) => {
     );
   }
 });
-eventHtml.forEach((ev) => console.log(ev));
 
 function Events() {
   return (

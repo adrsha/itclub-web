@@ -5,7 +5,7 @@ import Cards from "../Cards/Cards.jsx";
 
 export default function AboutUs() {
   const cardProps = member.reduce((props, item) => {
-    props[item.key] = item.value;
+    props[item.attr] = item.val;
     return props;
   }, {});
   return (
@@ -58,17 +58,13 @@ export default function AboutUs() {
             close the gap between industrial demands and academic learning.
           </p>
           <p>
-          For more information and to stay updated on our activities, follow us on our social media channels and visit our website.
-Contact Us 
-Email:kecktm.it.club@gmail.com
-Follow us on Facebook, Twitter, and Instagram.
+            For more information and to stay updated on our activities, follow
+            us on our social media channels and visit our website. Contact Us
+            Email:kecktm.it.club@gmail.com Follow us on Facebook, Twitter, and
+            Instagram.
           </p>
         </div>
-        <Cards
-        {
-          ...cardProps
-        }
-        />
+        <Cards {...cardProps} />
       </div>
     </div>
   );

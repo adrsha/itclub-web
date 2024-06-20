@@ -1,79 +1,79 @@
 [
     {
-        "key":"id",
-        "value" : "MembersCard"
+        "attr":"id",
+        "val" : "MembersCard"
     },
     {
-        "key":"title",
-        "value" : "Our Members"
+        "attr":"title",
+        "val" : "Our Members"
     },
     {
-        "key":"president",
-        "value" : "Koshish Shrestha"
+        "attr":"president",
+        "val" : "Koshish Shrestha"
     },
     {
-        "key":"secretary",
-        "value" : "Prayas Silwal"
+        "attr":"secretary",
+        "val" : "Prayas Silwal"
     },
     {
-        "key":"resourceManager",
-        "value" : "Kabita Khanal"
+        "attr":"resourceManager",
+        "val" : "Kabita Khanal"
     },
     {
-        "key":"leadDesigner",
-        "value" : "Prajwol Shrestha"
+        "attr":"leadDesigner",
+        "val" : "Prajwol Shrestha"
     },
     {
-        "key":"eventCoordinator",
-        "value" : "Bijen Shrestha"
+        "attr":"eventCoordinator",
+        "val" : "Bijen Shrestha"
     },
     {
-        "key":"vicePresident",
-        "value" : "Sujan Sapkota"
+        "attr":"vicePresident",
+        "val" : "Sujan Sapkota"
     },
     {
-        "key":"jointSecretary",
-        "value" : "Aryan Manandhar"
+        "attr":"jointSecretary",
+        "val" : "Aryan Manandhar"
     },
     {
-        "key":"Developer",
-        "value" : "Ankit Shrestha"
+        "attr":"Developer",
+        "val" : "Ankit Shrestha"
     },
     {
-        "key":"designer1",
-        "value" : "Shreyas Acharya"
+        "attr":"designer1",
+        "val" : "Shreyas Acharya"
     },
     {
-        "key":"designer2",
-        "value" : "Sneha Karki"
+        "attr":"designer2",
+        "val" : "Sneha Karki"
     },
     {
-        "key":"executiveMember1",
-        "value" : "Pranav Ram Joshi"
+        "attr":"executiveMember1",
+        "val" : "Pranav Ram Joshi"
     },
     {
-        "key":"executiveMember2",
-        "value" : "Adarsha Acharya"
+        "attr":"executiveMember2",
+        "val" : "Adarsha Acharya"
     },
     {
-        "key":"executiveMember3",
-        "value" : "Ashika Ghimire"
+        "attr":"executiveMember3",
+        "val" : "Ashika Ghimire"
     },
     {
-        "key":"executiveMember4",
-        "value" : "Sworup Karki"
+        "attr":"executiveMember4",
+        "val" : "Sworup Karki"
     },
     {
-        "key":"executiveMember5",
-        "value" : "Ayush Malla"
+        "attr":"executiveMember5",
+        "val" : "Ayush Malla"
     },
     {
-        "key":"executiveMember6",
-        "value" : "Jyoti Kumari Gupta"
+        "attr":"executiveMember6",
+        "val" : "Jyoti Kumari Gupta"
     },
     {
-        "key":"executiveMember7",
-        "value" : "Aayush Lamsal"
+        "attr":"executiveMember7",
+        "val" : "Aayush Lamsal"
     }
 
 ]

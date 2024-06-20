@@ -1,11 +1,26 @@
 import { useState } from "react";
 import "./Countdown.css";
+import eventData from "/Dristi-From-Scratch/data/Events.json";
 import mouseImg from "/m1.png";
 
+// get the latest event
+let latestEvent = eventData[0];
+let tempDate;
+
+for (let i = 0; i < eventData.length; i++) {
+  tempDate = new Date(eventData[i].eventDate);
+  let latestEventDate = new Date(latestEvent.eventDate);
+  if (latestEventDate > tempDate) {
+    latestEvent = eventData[i];
+  }
+}
+
 function Countdown() {
-  // const deadline = new Date('May 15 24 00:00:00');
-  const deadline = new Date("June 24 24 00:00:00");
-  const event = "Advanced Machine Learning";
+  // Get the data of the event
+  const deadline = new Date(latestEvent.eventDate);
+  const event = latestEvent.eventName;
+
+  // Countdown
   const [days, setDays] = useState(0);
   const [hours, setHours] = useState(0);
   const [mins, setMins] = useState(0);
@@ -39,10 +54,8 @@ function Countdown() {
           useGrouping: false,
         }),
       );
-
-      //console.log(countVar)
     } else {
-      countVar = `Today!`;
+      console.log("It's Today");
     }
   }, 1000);
 

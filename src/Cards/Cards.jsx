@@ -112,7 +112,6 @@ function Cards(props) {
             <div className="post">Executive Member</div>
           </div>
         </div>
-
         <div
           className="tablet showMore"
           onClick={() => {
