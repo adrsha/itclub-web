@@ -13,7 +13,7 @@ export default function Submitted() {
           We will be in touch with you soon. Thank you for your interest in our
           projects.
         </p>
-        <a href="/itclub-web/">Go back to the homepage</a>
+        <a href="/">Go back to the homepage</a>
       </div>
     </>
   );

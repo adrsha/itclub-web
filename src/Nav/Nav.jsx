@@ -26,7 +26,7 @@ function Nav() {
 
   return (
     <>
-      <a href="/itclub-web/">
+      <a href="/">
         <img src={logo} className="logo" />
       </a>
       <div
@@ -66,7 +66,7 @@ function Nav() {
           ) {
             // For Events
             e.target.onmousedown = (e) => {
-              location.href = "/itclub-web/events";
+              location.href = "/events";
               setDisplay("hidden");
             };
             e.target.children[1].children[2].classList.add("navItemHover");
@@ -78,7 +78,7 @@ function Nav() {
           ) {
             // For About
             e.target.onmousedown = (e) => {
-              location.href = "/itclub-web/#aboutUs";
+              location.href = "/#aboutUs";
               setDisplay("hidden");
             };
             e.target.children[1].children[0].classList.add("navItemHover");
@@ -91,7 +91,7 @@ function Nav() {
             // For Contact
             e.target.onmousedown = (e) => {
               // lenis.scrollTo("#contactUs");
-              location.href = "/itclub-web/#contactUs";
+              location.href = "/#contactUs";
               setDisplay("hidden");
             };
             e.target.children[1].children[1].classList.add("navItemHover");
