@@ -6,11 +6,11 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
   {
-    path: "/Dristi-From-Scratch/",
+    path: "/itclub-web/",
     element: <App />,
   },
   {
-    path: "/Dristi-From-Scratch/events",
+    path: "/itclub-web/events",
     element: <Events />,
   },
 ]);
