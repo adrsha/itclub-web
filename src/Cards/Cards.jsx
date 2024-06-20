@@ -1,6 +1,7 @@
+/* eslint-disable react/prop-types */
 import "./Cards.css";
 import dummyImage from "/president.png";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 function Cards(props) {
   const [MembersOpen, setMembersOpen] = useState("shorter");
@@ -132,10 +133,8 @@ function Cards(props) {
     return (
       <div className="glassCards glass parallaxEl" id={props.id}>
         <div className="cardTitle">{props.title}</div>
-        <div className="tablet" id="event_tablet">
-          {props.description}
-          <div className="showMore">more</div>
-        </div>
+        {props.description}
+        <div className="showMore">more</div>
       </div>
     );
   }

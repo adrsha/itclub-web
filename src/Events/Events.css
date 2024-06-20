@@ -15,11 +15,11 @@
     font-family: "Monomaniac One", cursive;
     font-size: 3rem;
     margin-bottom: 3rem;
+    text-align: center;
   }
   .Eventlists{
     display: flex;
   }
   .emptyspace{
-    width: 40%;
-    
+    flex:1; 
   }

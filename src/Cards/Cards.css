@@ -78,6 +78,18 @@
     transform: translate(-50%, 50%);
   }
 
+
+.tablet{
+  font-weight: 800;
+  margin: 1rem;
+  width: 100%;
+  border-radius: 2.5rem;
+  position: relative;
+  padding: 0.5rem;
+  background-color: var(--color4aA);
+}
+
+
 @media (max-width: 1200px) {
 
   .glassCards#image{
