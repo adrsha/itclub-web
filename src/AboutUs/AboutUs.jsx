@@ -1,8 +1,13 @@
 import "./AboutUs.css";
+import member from "/Dristi-From-Scratch/data/Members.json";
 import aboutUsImg from "/about_us.png";
 import Cards from "../Cards/Cards.jsx";
 
 export default function AboutUs() {
+  const cardProps = member.reduce((props, item) => {
+    props[item.key] = item.value;
+    return props;
+  }, {});
   return (
     <div className="aboutUs" id="aboutUs">
       <img className="parallaxEl" src={aboutUsImg} alt="" data-lerp="-15" />
@@ -60,25 +65,9 @@ Follow us on Facebook, Twitter, and Instagram.
           </p>
         </div>
         <Cards
-          id="MembersCard"
-          title="Our Members"
-          president="Koshish Shrestha"
-          secretary="Prayas Silwal"
-          resourceManager="Kabita Khanal"
-          leadDesigner="Prajwol Shrestha"
-          eventCoordinator="Bijen Shrestha"
-          vicePresident="Sujan Sapkota"
-          jointSecretary="Aryan Manandhar"
-          Developer="Ankit Shrestha"
-          designer1="Shreyas Acharya"
-          designer2="Sneha Karki"
-          executiveMember1="Pranav Ram Joshi"
-          executiveMember2="Adarsha Acharya"
-          executiveMember3="Ashika Ghimire"
-          executiveMember4="Sworup Karki"
-          executiveMember5="Ayush Malla"
-          executiveMember6="Jyoti Kumari Gupta"
-          executiveMember7="Aayush Lamsal"
+        {
+          ...cardProps
+        }
         />
       </div>
     </div>

@@ -1,0 +1,79 @@
+[
+    {
+        "key":"id",
+        "value" : "MembersCard"
+    },
+    {
+        "key":"title",
+        "value" : "Our Members"
+    },
+    {
+        "key":"president",
+        "value" : "Koshish Shrestha"
+    },
+    {
+        "key":"secretary",
+        "value" : "Prayas Silwal"
+    },
+    {
+        "key":"resourceManager",
+        "value" : "Kabita Khanal"
+    },
+    {
+        "key":"leadDesigner",
+        "value" : "Prajwol Shrestha"
+    },
+    {
+        "key":"eventCoordinator",
+        "value" : "Bijen Shrestha"
+    },
+    {
+        "key":"vicePresident",
+        "value" : "Sujan Sapkota"
+    },
+    {
+        "key":"jointSecretary",
+        "value" : "Aryan Manandhar"
+    },
+    {
+        "key":"Developer",
+        "value" : "Ankit Shrestha"
+    },
+    {
+        "key":"designer1",
+        "value" : "Shreyas Acharya"
+    },
+    {
+        "key":"designer2",
+        "value" : "Sneha Karki"
+    },
+    {
+        "key":"executiveMember1",
+        "value" : "Pranav Ram Joshi"
+    },
+    {
+        "key":"executiveMember2",
+        "value" : "Adarsha Acharya"
+    },
+    {
+        "key":"executiveMember3",
+        "value" : "Ashika Ghimire"
+    },
+    {
+        "key":"executiveMember4",
+        "value" : "Sworup Karki"
+    },
+    {
+        "key":"executiveMember5",
+        "value" : "Ayush Malla"
+    },
+    {
+        "key":"executiveMember6",
+        "value" : "Jyoti Kumari Gupta"
+    },
+    {
+        "key":"executiveMember7",
+        "value" : "Aayush Lamsal"
+    }
+
+]
