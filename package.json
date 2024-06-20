@@ -1,6 +1,6 @@
 {
   "name": "itclub-web",
-  "homepage": "https://adrsha.github.io/itclub-web",
+  "homepage": "./",
   "private": true,
   "version": "0.0.0",
   "type": "module",
