@@ -36,7 +36,7 @@
 .glassCards .cardTitle{
   font-family: "JetBrains Mono", monospace;
   font-weight: 800;
-  font-size: 2.5rem;
+  font-size: 2.5em;
   margin: 3rem;
   margin-top: 0rem;
 }
@@ -45,7 +45,6 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  position: relative;
   margin-bottom: -10vh;
   z-index:1;
   align-items: center;
@@ -65,8 +64,8 @@
   background-color: var(--color4aA);
   /* background-color: var(--color4a); */
   /* backdrop-filter: blur(2px); */
-  background-size: 30vw;
-  background-repeat: no-repeat;
+  /* background-size: 30vw; */
+  /* background-repeat: no-repeat; */
   margin: 5vw;
   margin-bottom: 40vh;
 }
@@ -126,9 +125,38 @@
     margin: auto;
     margin-bottom: 10vh;
     margin-top: 10vh;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
   .glassCards#projects{
     width: 30rem;
     margin: auto;
+    font-size: 0.8em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+@media (max-width: 650px) {
+  .glassCards#circleButtons{
+    width: 80vw;
+
+  }
+  
+  .pageContent{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
+  .glassCards#notice{
+    width: 30vw;
+    margin-bottom: 10vh;
+    margin-top: 10vh;
+
+  }
+  .glassCards#projects{
+    width: 30vw;
   }
 }

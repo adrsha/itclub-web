@@ -71,8 +71,8 @@ a.specialLinks:hover{
 button{
   border:none;
   padding: 1rem;
-  padding-left: 3em;
-  padding-right: 3em;
+  padding-left: 1em;
+  padding-right: 1em;
   border-radius: 1rem;
   margin: 2px;
   width: fit-content;
@@ -80,6 +80,7 @@ button{
   font-family: "JetBrains Mono", monospace;
   font-weight: bolder;
   cursor: pointer;
+  font-size: 1em;
   white-space: nowrap;
 }
 button.activated{
@@ -95,13 +96,13 @@ button.deactivated{
   transition: 0.2s;
 }
 button.deactivated:hover{
-  padding-left: 5em;
-  padding-right: 5em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 button.activated:hover{
-  padding-left: 5em;
-  padding-right: 5em;
+  padding-left: 2em;
+  padding-right: 2em;
 }
 
 /* LENIS Customization*/
@@ -137,6 +138,7 @@ html.lenis, html.lenis body {
   background-color: var(--color4);
   border-radius: 1rem;
 }
+
 
 
 @media (max-width: 1000px){
