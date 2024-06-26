@@ -14,10 +14,12 @@ let eventHtml = eventData.map((ev) => {
       <div key={ev.id} className="Eventlists">
         <div className="emptyspace"></div>
         <Cards
-          id="Eventscard"
+          id="DetailCard"
           title={ev.eventName}
           description={ev.eventDescription}
           date={ev.eventDate}
+          button1="Roll In"
+          button2="Learn More"
         />
       </div>
     );
@@ -25,8 +27,10 @@ let eventHtml = eventData.map((ev) => {
     return (
       <div key={ev.id} className="Eventlists">
         <Cards
-          id="Eventscard"
+          id="DetailCard"
           title={ev.eventName}
+          button1="Roll In"
+          button2="Learn More"
           description={ev.eventDescription}
         />
         <div className="emptyspace"></div>

@@ -66,9 +66,12 @@ function Cards(props) {
         </div>
       </div>
     );
-  } else if (props.id == "Eventscard") {
+  } else if (props.id == "DetailCard") {
     return (
-      <div className="glassCards glass parallaxEl" id={props.id}>
+      <div
+        className={"glassCards glass parallaxEl " + props.extraClass}
+        id={props.id}
+      >
         <div className="cardData">
           <div className="cardTitle">{props.title}</div>
           {props.description}
@@ -76,8 +79,8 @@ function Cards(props) {
         </div>
         <hr />
         <div className="cardActions">
-          <button className="activated">Roll In</button>
-          <button className="deactivated">Learn More</button>
+          <button className="activated">{props.button1}</button>
+          <button className="deactivated">{props.button2}</button>
         </div>
       </div>
     );

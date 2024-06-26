@@ -30,14 +30,19 @@ function App() {
         />
         <Cards id="image" src={kecImg} />
         <Cards
-          id="one"
+          id="notice"
           title="New Notice"
-          content="The KEC IT club is in the way to configuring your life's choices eradicating all of your desires and pain from your physical body ..."
+          content="Advanced Machine Learning is coming soon! Stay tuned for more information. We will be posting the details here soon."
         />
         <Cards
-          id="two"
+          id="DetailCard"
+          description="Projects done inside as well as conducted by IT Club, via events and hackathons as well as selection procedures."
           title="Our Projects"
-          content="We have created so many projects that talking about said projects is a pure waste of time. Instead watch us fight this capybara..."
+          button1="Learn More"
+          extraClass="projectDetailsCard"
+          link1="#events"
+          button2="Explore"
+          link2="#events"
         />
       </div>
       <AboutUs />

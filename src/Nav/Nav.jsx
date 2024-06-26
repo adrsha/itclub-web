@@ -29,9 +29,11 @@ function Nav() {
       <a href="/">
         <img src={logo} className="logo" />
       </a>
-      <div className="NavOpener"
+      <div
+        className="NavOpener"
         onClick={(e) => setDisplay("popIn")}
-        style={navStyle}>
+        style={navStyle}
+      >
         <div className="hamburger top"></div>
         <div className="hamburger middle"></div>
         <div className="hamburger bottom"></div>

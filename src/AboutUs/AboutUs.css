@@ -51,7 +51,7 @@ div.aboutUsContent div.glassCards#MembersCard{
   padding: 3vw;
   padding-left: 5vw;
   width: auto;
-  max-width: 27vw;
+  width: 27vw;
   right: 0vw;
 }
 div.aboutUsContent div.glassCards#MembersCard> div.membersList{
@@ -78,7 +78,7 @@ div.aboutUsContent div.glassCards#MembersCard> div.membersList{
 }
 
 div.aboutUsContent div.glassCards#MembersCard.shorter{
-  animation: slideIn .5s ease forwards;
+  animation: slideIn .5s ease-in forwards;
 }
 div.aboutUsContent div.glassCards#MembersCard.larger{
   animation: slideOut 1s ease forwards;
@@ -88,12 +88,12 @@ div.aboutUsContent div.glassCards#MembersCard.larger{
   0%{
   }
   100% {
-    max-width: 80vw;
+    width: 60vw;
   }
 }
 @keyframes slideIn{
   0%{
-    max-width: 80vw;
+    width: 60vw;
   }
   100% {
   }

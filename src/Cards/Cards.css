@@ -8,10 +8,6 @@
   width: 30rem;
 }
 
-.glassCards#two{
-  margin-top: 5vh;
-  margin-left: 10vw;
-}
 
 .glassCards .cardContent{
   font-size: 1.3rem;
@@ -110,6 +106,12 @@
   opacity: 0.5;
 }
 
+
+#DetailCard .projectDetailsCard{
+  width: 50vw;
+}
+
+
 @media (max-width: 1200px) {
 
   .glassCards#image{
@@ -119,13 +121,13 @@
     max-width: 25vw;
   }
 
-  .glassCards#one{
+  .glassCards#notice{
     width: 30rem;
     margin: auto;
     margin-bottom: 10vh;
     margin-top: 10vh;
   }
-  .glassCards#two{
+  .glassCards#projects{
     width: 30rem;
     margin: auto;
   }
