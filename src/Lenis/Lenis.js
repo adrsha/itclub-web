@@ -5,7 +5,7 @@ export const lenis = new Lenis({
   wheelMultiplier: 0.7,
   gestureOrientation: "vertical",
   normalizeWheel: false,
-  smoothTouch: false,
+  smoothTouch: true,
   easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)), // https://easings.net
   direction: "vertical",
   smooth: true,
