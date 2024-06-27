@@ -130,6 +130,19 @@ input:-webkit-autofill:active{
 }
 
 
-@media (max-width: 1500px) {
+@media (max-width: 650px) {
+  img{
+    display: none;
+  }
+  .contactUsContent{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  #send{
+    height: 15vh;
+    width: 9vh;
+  }
+
 }
 

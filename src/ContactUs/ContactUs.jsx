@@ -5,8 +5,7 @@ export default function ContactUs() {
   return (
     <div className="contactUs" id="contactUs">
       <div className="contactUsTitle">Contact Us</div>
-      <div className="contactUsContent">
-        <div className="moreinfo">
+      <div className="moreinfo">
           For more information and to stay updated on our activities, follow us
           on our social media channels as well.
           <br />
@@ -21,25 +20,28 @@ export default function ContactUs() {
           </a>
           , Twitter, and Instagram.
         </div>
+      <div className="contactUsContent">
         <form
           className="parallaxEl"
+          id="formContent"
           action="https://formcarry.com/s/lkVSZ-RGqK0"
           method="POST"
         >
-          <div className="form_text">
+            <div className="form_text formElement">
             <input placeholder=" " type="text" id="name" name="name" />
             <label htmlFor="name">Your Name</label>
           </div>
-          <div className="form_email">
+          <div className="form_email formElement">
             <input placeholder=" " type="email" id="email" name="email" />
             <label htmlFor="email">Your Email</label>
           </div>
-          <div className="form_message">
+          <div className="form_message formElement">
             <textarea placeholder=" " id="message" name="message"></textarea>
             <label htmlFor="message">Message to send</label>
-          </div>
-          <button type="submit">Send</button>
+            </div>
         </form>
+        <button type="submit" id="send">Send</button>
+
         <img
           className="parallaxEl"
           src={contactUsGraphics}
