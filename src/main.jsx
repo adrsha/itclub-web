@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import Events from "./Events/Events.jsx";
-import Submitted from "./Submitted/Submitted.jsx";
+import Notices from "./Notices/Notices.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -15,8 +15,8 @@ const router = createBrowserRouter([
     element: <Events />,
   },
   {
-    path: "/submitted",
-    element: <Submitted />,
+    path: "/notices",
+    element: <Notices />,
   },
 ]);
 

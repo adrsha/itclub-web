@@ -18,6 +18,7 @@ let cardHtml = member.map((mv) => {
 function Cards(props) {
   const [MembersOpen, setMembersOpen] = useState("shorter");
   const [MembersCardState, setMembersCardState] = useState("Show More");
+
   if (props.id == "circleButtons") {
     return (
       <div className="glassCards glass parallaxEl" id={props.id}>
@@ -73,22 +74,45 @@ function Cards(props) {
         id={props.id}
       >
         <div className="cardData">
-          <div className="cardTitle">{props.title}</div>
-          {props.description}
-          <div className="showMore">See more</div>
+          {Object.prototype.hasOwnProperty.call(props, "title") ? (
+            <div className="cardTitle">{props.title}</div>
+          ) : null}
+          <div className="cardContent">{props.description}</div>
         </div>
         <hr />
         <div className="cardActions">
-          <button className="activated">{props.button1}</button>
-          <button className="deactivated">{props.button2}</button>
+          {Object.prototype.hasOwnProperty.call(props, "button1") ? (
+            <button className="activated">
+              <a href={props.link1}>{props.button1}</a>
+            </button>
+          ) : null}
+          {Object.prototype.hasOwnProperty.call(props, "button2") ? (
+            <button className="deactivated">
+              <a href={props.link2}>{props.button2}</a>
+            </button>
+          ) : null}
         </div>
       </div>
     );
   }
   return (
     <div className="glassCards glass parallaxEl" id={props.id}>
-      <div className="cardTitle">{props.title}</div>
-      <div className="cardContent">{props.content}</div>
+      {Object.prototype.hasOwnProperty.call(props, "title") ? (
+        <div className="cardTitle">{props.title}</div>
+      ) : null}
+      {Object.prototype.hasOwnProperty.call(props, "content") ? (
+        <div className="cardContent">{props.content}</div>
+      ) : null}
+      {Object.prototype.hasOwnProperty.call(props, "button1") ? (
+        <button className="activated simpleButton">
+          <a href={props.link1}>{props.button1}</a>
+        </button>
+      ) : null}
+      {Object.prototype.hasOwnProperty.call(props, "button2") ? (
+        <button className="deactivated simpleButton">
+          <a href={props.link2}>{props.button2}</a>
+        </button>
+      ) : null}
     </div>
   );
 }

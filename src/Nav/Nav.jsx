@@ -4,36 +4,19 @@ import closeImg from "/close.png";
 import aboutImg from "/info.png";
 import contactImg from "/contact.png";
 import eventsImg from "/events.png";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 function Nav() {
   // Links
   // Hard defined vars
-  let [navStyle, setnavStyle] = useState({});
   let [navDisplay, setDisplay] = useState("hidden");
-
-  window.onscroll = () => {
-    if (document.documentElement.scrollTop > 90) {
-      setnavStyle({
-        top: "10px",
-        position: "fixed",
-        height: "2rem",
-      });
-    } else {
-      setnavStyle({});
-    }
-  };
 
   return (
     <>
-      <a href="/">
-        <img src={logo} className="logo" />
+      <a href="/" className="logo">
+        <img src={logo} />
       </a>
-      <div
-        className="NavOpener"
-        onClick={(e) => setDisplay("popIn")}
-        style={navStyle}
-      >
+      <div className="NavOpener" onClick={(e) => setDisplay("popIn")}>
         <div className="hamburger top"></div>
         <div className="hamburger middle"></div>
         <div className="hamburger bottom"></div>

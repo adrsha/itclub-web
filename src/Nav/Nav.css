@@ -6,13 +6,10 @@ li{
 }
 
 div.NavOpener{
-  position: absolute;
+  position: fixed;
   top:5vh;
   right: 5%;
   z-index: 3;
-  border-radius: 50%;
-  box-shadow: var(--color3) 0 0 12px 2px;
-  background-color: var(--color3);
   display:flex;
   flex-direction: column;
   align-items: center;
@@ -20,10 +17,17 @@ div.NavOpener{
   cursor: pointer;
 }
 .hamburger{
-  margin: 4px;
-  width: 40px;
-  height: 3px;
-  background-color: #257EB9;
+  margin: 0.3rem;
+  width: 30px;
+  height: 2px;
+  border-radius: 5px;
+  background-color: var(--color1a);
+  transition: 0.2s ease;
+}
+
+.NavOpener:hover .hamburger{
+  background-color: var(--color1);
+  margin-top: 0.4rem;
 }
 
 .fixedNavBar{
@@ -31,12 +35,33 @@ div.NavOpener{
   top:10vh;
 }
 
-img.logo{
+.logo{
   position: fixed;
-  top: 4vh;
+  top: 5vh;
   left: 5vw;
   height: 3rem;
   z-index: 2;
+  font-weight: bold;
+  color: var(--color1);
+  font-family: "JetBrains Mono", monospace;
+}
+.logo img{
+  aspect-ratio: 1;
+  height: 100%;
+  transition: 0.2s ease;
+}
+.logo::before{
+  content: "KEC";
+  position: absolute;
+  top: 0%;
+  transform: translate(-50%, calc(-100% - 0.5rem));
+}
+.logo::after{
+  content: "CLUB";
+  position: absolute;
+  bottom: 0%;
+  right: 0%;
+  transform: translate(50%, calc(100% + 0.5rem));
 }
 
 
@@ -124,6 +149,18 @@ nav.NavContainer div.NavItems:nth-child(3){
   transition: 0.2s ease;
   opacity: 0.5;
 }
+
+#navDestroyer69::after{
+  content: "CLOSE";
+  position: absolute;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, -120%);
+  font-size: 1.5rem;
+  font-weight: light;
+  color: var(--color1);
+}
+
 #navDestroyer69:hover{
   opacity: 1;
 }

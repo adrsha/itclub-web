@@ -2,42 +2,41 @@ import Cards from "../Cards/Cards";
 import Footer from "../Footer/Footer";
 import Nav from "../Nav/Nav";
 import Parallax from "../Parallax/Parallax";
-import eventData from "../../data/Events.json";
+import noticeData from "../../data/Notices.json";
 import Lines from "../Lines/Lines.jsx";
 import { LenisComponent } from "../Lenis/Lenis.js";
-import "./Events.css";
+import "./Notices.css";
 
-let eventHtml = eventData.map((ev) => {
-  if (ev.id % 2 === 0) {
+let noticesHtml = noticeData.map((noti) => {
+  if (noti.id % 2 === 0) {
     return (
-      <div key={ev.id} className="Eventlists">
+      <div key={noti.id} className="Eventlists">
         <div className="emptyspace"></div>
         <Cards
           id="DetailCard"
-          title={ev.eventName}
-          description={ev.eventDescription}
-          date={ev.eventDate}
-          button1="Roll In"
+          title={noti.noticeHead}
+          description={noti.noticeBody}
+          button1="View Events"
           button2="Learn More"
         />
       </div>
     );
   } else {
     return (
-      <div key={ev.id} className="Eventlists">
+      <div key={noti.id} className="Eventlists">
         <Cards
           id="DetailCard"
-          title={ev.eventName}
-          button1="Roll In"
+          title={noti.noticeHead}
+          description={noti.noticeBody}
+          button1="View Events"
           button2="Learn More"
-          description={ev.eventDescription}
         />
         <div className="emptyspace"></div>
       </div>
     );
   }
 });
-eventHtml.forEach((ev) => console.log(ev));
+noticesHtml.forEach((ev) => console.log(ev));
 
 function Events() {
   return (
@@ -46,9 +45,9 @@ function Events() {
       <Lines />
       <LenisComponent />
       <Parallax />
-      <div className="eventTitle">Our Events</div>
+      <div className="eventTitle">Notices!!</div>
       <div className="events">
-        <div className="eventContent">{eventHtml}</div>
+        <div className="eventContent">{noticesHtml}</div>
       </div>
       <Footer />
     </>

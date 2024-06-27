@@ -31,8 +31,10 @@ function App() {
         <Cards id="image" src={kecImg} />
         <Cards
           id="notice"
-          title="New Notice"
+          title="New Notice!"
           content="Advanced Machine Learning is coming soon! Stay tuned for more information. We will be posting the details here soon."
+          button1="View All Notices"
+          link1="/notices"
         />
         <Cards
           id="DetailCard"

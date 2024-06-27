@@ -7,7 +7,12 @@
   margin: 0;
   width: 30rem;
 }
-
+.glassCards button.simpleButton{
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 1rem;
+}
 
 .glassCards .cardContent{
   font-size: 1.3rem;
@@ -106,6 +111,37 @@
 }
 
 
+ #DetailCard{
+    flex: 2;
+    display: flex;
+    padding: 7rem;
+    width: auto;
+  }
+
+  #DetailCard > hr{
+    margin: 2rem;
+    border: 1px solid var(--color4a);
+  }
+
+  #DetailCard > div.cardData,
+  #DetailCard > div.cardActions{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 0.5rem;
+  }
+  #DetailCard > div.cardData{
+    flex: 1;
+  }
+  #DetailCard > div.cardActions{
+    min-width: fit-content;
+  }
+
+  #DetailCard > div.cardActions > button{
+    font-size: 1rem;
+  }
+
 #DetailCard .projectDetailsCard{
   width: 50vw;
 }
@@ -113,6 +149,9 @@
 
 @media (max-width: 1200px) {
 
+  #DetailCard{
+    flex-direction: column;
+  }
   .glassCards#image{
     display: none;
   }

@@ -33,34 +33,5 @@ html, body{
     flex: 1;
   }
 
- #DetailCard{
-    flex: 2;
-    display: flex;
-    padding: 7rem;
-    width: auto;
-  }
-
-  #DetailCard > hr{
-    margin: 2rem;
-    border: 1px solid var(--color4a);
-  }
-
-  #DetailCard > div.cardData,
-  #DetailCard > div.cardActions{
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.5rem;
-  }
-
-  #DetailCard > div.cardActions > button{
-    font-size: 1rem;
-  }
-
   @media (max-width: 1200px) {
-    #DetailCard{
-      flex-direction: column;
-    }
   }
