@@ -21,17 +21,19 @@
 .aboutUsContent{
   padding: 2rem;
   display: flex;
+  flex-direction: column;
+  align-items: center;
   z-index: 1;
   position: relative;
 }
-.aboutUsContent p{
+.aboutUsText p{
   font-family: "Quicksand";
   font-weight: bold;
   color: var(--color1);
   border-radius: 0.5rem;
   padding: 0.5rem;
   transform: translate(0%, -50%);
-  margin: 2rem;
+  margin: 1rem;
   font-size: 1.25rem;
   display: block;
   transition: all .2s;
@@ -41,8 +43,8 @@
   width: 40vw;
 }
 
-.aboutUsContent>p{
-  position: relative;
+#membersButton{
+  display: none;
 }
 
 div.aboutUsContent div.glassCards#MembersCard{
@@ -116,6 +118,7 @@ div.aboutUsContent div.glassCards#MembersCard.larger{
     width: 60vw;
     height: 100vh;
     overflow: scroll;
+    margin-top: 20vw;
   }
 
   div.aboutUsContent div.glassCards#MembersCard> div.membersList{
@@ -148,6 +151,30 @@ div.aboutUsContent div.glassCards#MembersCard.larger{
     }
     100% {
     }
+  }
+
+}
+@media (max-width: 650px){
+  #membersButton{
+    background-color: var(--color4aA);
+    color: var(--color1);
+    border: 3px solid var(--color1a);
+    transition: 0.2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  #membersButton:hover{
+    background-color: var(--color1a);
+    padding-left: 1vw;
+    padding-left: 1vw;
+  }
+  img{
+    display: none;
+  }
+  #MembersCard{
+    display: none;
+    width: 90vw;
   }
 
 }

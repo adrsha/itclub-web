@@ -8,6 +8,17 @@ export default function AboutUs() {
     props[item.attr] = item.val;
     return props;
   }, {});
+
+  function togglediv(){
+    const memDiv = document.getElementById('MembersCard');
+
+    // Toggle the visibility of the div
+    if (memDiv.style.display === 'none') {
+        memDiv.style.display = 'block';
+    } else {
+        memDiv.style.display = 'none';
+    }
+};
   return (
     <div className="aboutUs" id="aboutUs">
       <img className="parallaxEl" src={aboutUsImg} alt="" data-lerp="-15" />
@@ -35,7 +46,9 @@ export default function AboutUs() {
             Instagram.
           </p>
         </div>
+        <button id="membersButton" onClick={togglediv}>Members</button>
         <Cards id="MembersCard" {...cardProps} />
+        
       </div>
     </div>
   );
