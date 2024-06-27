@@ -101,7 +101,7 @@ function Cards(props) {
         <div className="cardTitle">{props.title}</div>
       ) : null}
       {Object.prototype.hasOwnProperty.call(props, "content") ? (
-        <div className="cardContent">{props.content}</div>
+        <div className="cardContent" id="noticeContent">{props.content}</div>
       ) : null}
       {Object.prototype.hasOwnProperty.call(props, "button1") ? (
         <button className="activated simpleButton">
