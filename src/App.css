@@ -34,7 +34,6 @@ html, body{
   background-color: #090f11;
   margin: 0;
   padding: 0;
-  font-size: 1.75vh;
 }
 
 a{
@@ -142,15 +141,6 @@ html.lenis, html.lenis body {
   border-radius: 1rem;
 }
 
-
-
-@media (max-width: 1000px){
-
-  .pageContent{
-    height: 150vh;
-  }
-}
-
 @keyframes flicker {
     0% {
         opacity: 0.5;
@@ -169,7 +159,12 @@ html.lenis, html.lenis body {
     }
 }
 
-.projectDetailsCard#DetailCard {
-  width: 50vw;
-  margin-left: auto;
+@media (max-width: 1000px){
+  body{
+    font-size: calc(0.7rem + 0.2vw);
+  }
+
+  .pageContent{
+    height: 150vh;
+  }
 }

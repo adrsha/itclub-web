@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import Lenis from "lenis";
+
 export const lenis = new Lenis({
   lerp: 0.1,
   wheelMultiplier: 0.7,
@@ -12,6 +13,7 @@ export const lenis = new Lenis({
 });
 export function LenisComponent() {
   useEffect(() => {
+    lenis.on("scroll", (e) => {});
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);

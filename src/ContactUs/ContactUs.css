@@ -129,7 +129,6 @@ input:-webkit-autofill:active{
   padding: 10px;
 }
 
-
 @media (max-width: 650px) {
   img{
     display: none;
@@ -145,4 +144,3 @@ input:-webkit-autofill:active{
   }
 
 }
-

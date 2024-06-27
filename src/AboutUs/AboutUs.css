@@ -15,8 +15,8 @@
   color: var(--color1);
   font-family: "Monomaniac One", cursive;
   text-align: center;
-  font-size: 3rem;
-  margin-bottom: 4.5rem;
+  font-size: 3em;
+  margin-bottom: 1.5em;
 }
 .aboutUsContent{
   padding: 2rem;
@@ -35,7 +35,7 @@
   border-radius: 0.5rem;
   padding: 0.5rem;
   margin: 1rem;
-  font-size: 1.25rem;
+  font-size: 1.25em;
   display: block;
   transition: all .2s;
 }
@@ -167,5 +167,4 @@ div.glassCards#MembersCard.larger{
   .glassCards#image{
     display: none;
   }
-
 }

@@ -15,7 +15,7 @@
 }
 
 .glassCards .cardContent{
-  font-size: 1.3rem;
+  font-size: 1.3em;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -51,18 +51,22 @@
   display: flex;
   flex-direction: column;
   margin-bottom: -10vh;
-  z-index:1;
+  width: 33em;
+  height: 33em;
+  z-index:4;
+  position: relative;
   align-items: center;
-  translate: 0, -20vh;
   border-radius: 50%;
   justify-content: center;
   aspect-ratio: 1;
+  font-size: calc(0.7rem + 0.2vw);
+
 }
 
 .pageContent{
   position: relative;
   border-radius: 20vw;
-  height: 110vh;
+  height: 140vh;
   padding-left: 10vw;
   padding-right: 10vw;
   /* background: url('../bg_grid.png') right bottom no-repeat, url('../bg_grid2.png') left top no-repeat; */
@@ -111,39 +115,35 @@
 }
 
 
- #DetailCard{
-    flex: 2;
-    display: flex;
-    padding: 7rem;
-    width: auto;
-  }
+#DetailCard{
+  flex: 2;
+  display: flex;
+  padding: 7rem;
+}
 
-  #DetailCard > hr{
-    margin: 2rem;
-    border: 1px solid var(--color4a);
-  }
+#DetailCard > hr{
+  margin: 2rem;
+  border: 1px solid var(--color4a);
+}
 
-  #DetailCard > div.cardData,
-  #DetailCard > div.cardActions{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    border-radius: 0.5rem;
-  }
-  #DetailCard > div.cardData{
-    flex: 1;
-  }
-  #DetailCard > div.cardActions{
-    min-width: fit-content;
-  }
+#DetailCard > div.cardData,
+#DetailCard > div.cardActions{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+}
+#DetailCard > div.cardData{
+  flex: 1;
+}
+#DetailCard > div.cardActions{
+  min-width: fit-content;
+}
 
-  #DetailCard > div.cardActions > button{
-    font-size: 1rem;
-  }
-
-#DetailCard .projectDetailsCard{
+.projectDetailsCard{
   width: 50vw;
+  margin-left: auto;
 }
 
 
@@ -155,52 +155,25 @@
   .glassCards#image{
     display: none;
   }
+  .glassCards#circleButtons{
+  }
   .tablet{
     max-width: 25vw;
   }
-
-  .glassCards#notice{
-    width: 30rem;
-    margin: auto;
-    margin-bottom: 10vh;
-    margin-top: 10vh;
-    font-size: 0.8em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .glassCards#projects{
-    width: 30rem;
-    margin: auto;
-    font-size: 0.8em;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 }
 @media (max-width: 650px) {
-  .glassCards#circleButtons{
-    width: 80vw;
-
-  }
-  
   .pageContent{
     display: flex;
     flex-direction: column;
     padding: 0;
   }
-  .glassCards#notice{
-    width: 50vw;
-    margin-bottom: 10vh;
-    margin-top: 10vh;
-    padding: 3vh 3vw 3vh 3vw;
-    /* display: flex;
-    flex-direction: column; */
-
+  .pageContent > .glassCards{
+    width: 80vw;
+    margin: auto;
   }
-  .glassCards#projects{
-    width: 30vw;
-    height: auto;
+  .glassCards#circleButtons{
+    width: 80vw;
+    height: calc(70vw + 5vh) ;
   }
   #noticeContent{
     display: flex;
