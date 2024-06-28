@@ -164,23 +164,3 @@ nav.NavContainer div.NavItems:nth-child(3){
 #navDestroyer69:hover{
   opacity: 1;
 }
-
-@keyframes fadeOut {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0;
-    display: none;
-  }
-}
-@keyframes fadeIn {
-  from {
-    display: block;
-    opacity: 0;
-  }
-  to {
-    display: block;
-    opacity: 1;
-  }
-}

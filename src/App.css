@@ -159,12 +159,3 @@ html.lenis, html.lenis body {
     }
 }
 
-@media (max-width: 1000px){
-  body{
-    font-size: calc(0.7rem + 0.2vw);
-  }
-
-  .pageContent{
-    height: 150vh;
-  }
-}
