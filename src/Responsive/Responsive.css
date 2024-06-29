@@ -27,7 +27,8 @@
     padding: 3vw;
     min-height: 40vh;
     height: auto;
-    top: 0;
+    top: auto;
+    bottom: 0;
   }
 
   div.glassCards#MembersCard> div.membersList{

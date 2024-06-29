@@ -93,19 +93,19 @@ function Nav() {
         <nav className="NavContainer">
           <div className="NavItems" id="about_nav">
             About Us
-            <span className="NavItemIcons">
+            <span className="NavItemIcons glass">
               <img src={aboutImg} alt="" />
             </span>
           </div>
           <div className="NavItems" id="contact_nav">
             Contact Us
-            <span className="NavItemIcons">
+            <span className="NavItemIcons glass">
               <img src={contactImg} alt="" />
             </span>
           </div>
           <div className="NavItems" id="events_nav">
             Events
-            <span className="NavItemIcons">
+            <span className="NavItemIcons glass">
               <img src={eventsImg} alt="" />
             </span>
           </div>

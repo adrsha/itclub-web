@@ -82,6 +82,7 @@ div.glassCards#MembersCard> div.membersList{
 .tablet.showMore{
   position: absolute;
   color: var(--color1);
+  min-width: 5em;
   top: 50%;
   left: 0;
   transform: rotate(90deg) translateY(calc(50% - 1vw));
