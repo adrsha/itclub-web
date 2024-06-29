@@ -3,7 +3,7 @@
 ## Conventions
 
 * All code should be formatted with [eslint](https://eslint.org/)
-* Common css styles should be placed in `src/app.css`
+* Common CSS styles should be placed in `src/app.css`
 * Try to name all you variables in camelCase or PascalCase. If you notice inconsistencies, you may change it and open a pull request.
 * Try not to make multiple Push Requests. Be efficient. 
 * Commit messages from here on out should be in the format of `<type>: <description>` where `type` is one of the following:

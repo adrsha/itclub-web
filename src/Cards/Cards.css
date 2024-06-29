@@ -24,15 +24,16 @@
 
 .glassCards#image{
   position: absolute;
-  top: 35vh;
+  top: 50vh;
   padding: 0;
   right: 10vw;
-  backdrop-filter: blur(25px);
   height: fit-content;
   width: fit-content;
 }
 .glassCards#image>img{
+  height: 50vh;
   width: 30vw;
+  object-fit: cover;
   border-radius:  10vh;
   opacity: 0.5;
   box-shadow: var(--color3) 0 0 22px 0px;
@@ -41,6 +42,9 @@
 .glassCards .cardTitle{
   font-family: "JetBrains Mono", monospace;
   font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-size: 2.5em;
   margin: 3rem;
   margin-top: 0rem;
@@ -50,7 +54,7 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  margin-bottom: -10vh;
+  /* margin-bottom: -10vh; */
   width: 33em;
   height: 33em;
   z-index:4;
@@ -66,17 +70,10 @@
 .pageContent{
   position: relative;
   border-radius: 20vw;
-  height: 140vh;
   padding-left: 10vw;
   padding-right: 10vw;
-  /* background: url('../bg_grid.png') right bottom no-repeat, url('../bg_grid2.png') left top no-repeat; */
   background-color: var(--color4aA);
-  /* background-color: var(--color4a); */
-  /* backdrop-filter: blur(2px); */
-  /* background-size: 30vw; */
-  /* background-repeat: no-repeat; */
   margin: 5vw;
-  margin-bottom: 40vh;
 }
 
 .pageContent::before{
@@ -97,12 +94,16 @@
   border-radius: 2em;
   position: relative;
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: space-between;
   padding-left: 1rem;
   padding-right: 1rem;
   background-color: var(--color4aA);
   width: 15vw;
+  min-width: 15em;
+}
+.tablet img{
+  width: 3vw;
 }
 .tabletContent{
   text-align: right;

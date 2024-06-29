@@ -1,0 +1,56 @@
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+    display: none;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    display: block;
+    opacity: 0;
+  }
+  to {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@keyframes slideOut {
+  0%{
+  }
+  100% {
+    width: 60vw;
+  }
+}
+@keyframes slideIn{
+  0%{
+    width: 60vw;
+  }
+  100% {
+  }
+}
+
+
+@keyframes flicker {
+    0% {
+        opacity: 0.5;
+    }
+    10% {
+        opacity: 0.7;
+    }
+    20% {
+        opacity: 0.5;
+    }
+    30% {
+        opacity: 0.7;
+    }
+    100% {
+        opacity: 0.7;
+    }
+}
+

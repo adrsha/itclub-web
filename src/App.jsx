@@ -7,6 +7,7 @@ import Parallax from "./Parallax/Parallax.js";
 import Cards from "./Cards/Cards.jsx";
 import "./App.css";
 import "./Responsive/Responsive.css";
+import "./Animations/Animations.css";
 import kecImg from "/kec_peeps.png";
 import Lines from "./Lines/Lines.jsx";
 import { LenisComponent } from "./Lenis/Lenis.js";

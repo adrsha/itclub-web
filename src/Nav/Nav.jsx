@@ -73,7 +73,7 @@ function Nav() {
             e.target.onmousedown = (e) => {
               setDisplay("hidden");
             };
-            e.target.children[1].children[0].classList.remove("navItemHover");
+            e.target.children[1].children[0].classList.remove("navItemHover"); // *required to Un-hover these fuckers
             e.target.children[1].children[1].classList.remove("navItemHover");
             e.target.children[1].children[2].classList.remove("navItemHover");
           }
@@ -88,7 +88,7 @@ function Nav() {
         }}
       >
         <div id="navDestroyer69">
-          <img src={closeImg} alt="" />
+          <img src={closeImg} alt="" onMouseMove={(e) => e.stopPropagation()} />
         </div>
         <nav className="NavContainer">
           <div className="NavItems" id="about_nav">

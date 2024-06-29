@@ -52,9 +52,9 @@ export default function AboutUs() {
           </p>
         </div>
         <div className="membersToggle">
-          <button className="activated" id="membersButton" onClick={togglediv}>
-            Members
-          </button>
+          <a id="membersButton" onClick={togglediv}>
+            <button className="activated membersButtonText">Members</button>
+          </a>
           <Cards id="MembersCard" {...cardProps} />
         </div>
       </div>
