@@ -11,6 +11,7 @@
 
 :root{
   --color1b: #ddddee;
+  --color1A:  rgba(105,205, 255, 0.2);
   --color1: #81BCE4;
   --color1a: #2270A5;
   --color1e: #29B1EA;
@@ -44,6 +45,7 @@ a.specialLinks{
   color: var(--color1e);
   font-weight: bold;
   transition: 0.2s ease;
+  cursor: pointer;
 }
 a.specialLinks:hover{
   color: var(--color1a);

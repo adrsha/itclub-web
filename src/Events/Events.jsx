@@ -41,7 +41,7 @@ let eventHtml = eventData.map((ev) => {
 function Events() {
   return (
     <>
-      <Nav />
+      <Nav home notices />
       <Lines />
       <LenisComponent />
       <Parallax />

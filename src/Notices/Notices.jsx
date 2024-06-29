@@ -41,7 +41,7 @@ noticesHtml.forEach((ev) => console.log(ev));
 function Events() {
   return (
     <>
-      <Nav />
+      <Nav home events />
       <Lines />
       <LenisComponent />
       <Parallax />

@@ -8,77 +8,52 @@ import { useState, useEffect } from "react";
 import { lenis } from "../Lenis/Lenis.js";
 import isMobile from "../ExtraFuncs.js";
 
-function Nav() {
+function Nav(props) {
   // Links
   // Hard defined vars
+  // var width = document.documentElement.clientWidth;
+
   useEffect(() => {
+    function setCirclePts(element, noOfChildren, radius, changeInAngle) {
+      var angleDisp = Math.PI / 4;
+      for (let i = 0; i < noOfChildren; i++) {
+        var l = (((Math.PI - angleDisp) * radius) / (noOfChildren + 1)) * i;
+        var angle_error = l / (2 * radius) + angleDisp / 2;
+        var thita = l / radius;
+        var yTransform =
+          radius - radius * Math.cos(thita + angle_error + changeInAngle);
+        var zTransform =
+          radius - radius * Math.sin(2 * thita + angle_error + changeInAngle);
+        element.children[i].style.top = `${yTransform}px`;
+        element.children[i].style.transform =
+          `rotateX(${Math.PI / 2 - thita - angle_error - changeInAngle}rad) translate(-50%, -50%) translateX(-${zTransform / 5}px)`;
+      }
+    }
+
     const navContainerContainer = document.getElementById(
       "navContainerContainer",
     );
+    var height = document.documentElement.clientHeight;
+    var noOfChildren = navContainerContainer.children[1].children.length;
+    if (!isMobile()) {
+      setCirclePts(
+        navContainerContainer.children[1],
+        noOfChildren,
+        height / 2,
+        0,
+      );
+    }
+
     const hoverFunction = (navContainerContainer) => {
+      var wind_e = window.event;
       if (!isMobile()) {
-        var wind_e = window.event;
-        var width = document.documentElement.clientWidth;
-        var height = document.documentElement.clientHeight;
-
         var posY = wind_e.clientY;
-        var posX = wind_e.clientX;
-
-        if (wind_e.clientY > height * 0.65 && wind_e.clientY < height * 0.85) {
-          console.log(isMobile());
-          navContainerContainer.children[1].children[2].classList.add(
-            "navItemHover",
-          );
-          navContainerContainer.children[1].children[1].classList.remove(
-            "navItemHover",
-          );
-          navContainerContainer.children[1].children[0].classList.remove(
-            "navItemHover",
-          );
-        } else if (
-          wind_e.clientY < height * 0.35 &&
-          wind_e.clientY > height * 0.15
-        ) {
-          navContainerContainer.children[1].children[0].classList.add(
-            "navItemHover",
-          );
-          navContainerContainer.children[1].children[1].classList.remove(
-            "navItemHover",
-          );
-          navContainerContainer.children[1].children[2].classList.remove(
-            "navItemHover",
-          );
-        } else if (
-          wind_e.clientY < height * 0.65 &&
-          wind_e.clientY > height * 0.35
-        ) {
-          navContainerContainer.children[1].children[1].classList.add(
-            "navItemHover",
-          );
-          navContainerContainer.children[1].children[0].classList.remove(
-            "navItemHover",
-          );
-          navContainerContainer.children[1].children[2].classList.remove(
-            "navItemHover",
-          );
-        } else {
-          navContainerContainer.children[1].children[0].classList.remove(
-            "navItemHover",
-          ); // *required to Un-hover these fuckers
-          navContainerContainer.children[1].children[1].classList.remove(
-            "navItemHover",
-          );
-          navContainerContainer.children[1].children[2].classList.remove(
-            "navItemHover",
-          );
-        }
-        var newCenter = [width / 2, height * 0.5];
-
-        var diffFromCenter = [posX - newCenter[0], posY - newCenter[1]];
-        navContainerContainer.children[1].children[0].style.transform = `rotateX(calc(${(diffFromCenter[1] / (0.75 * height)) * 90}deg + 45deg)) translate(-50%, -50%)`;
-        navContainerContainer.children[1].children[1].style.transform = `rotateX(calc(${(diffFromCenter[1] / (0.75 * height)) * 90}deg + 0deg)) translate(-50%, -50%)`;
-        navContainerContainer.children[1].children[2].style.transform = `rotateX(calc(${(diffFromCenter[1] / (0.75 * height)) * 90}deg + -45deg)) translate(-50%, -50%)`;
-        navContainerContainer.children[1].style.top = `calc(-50% - ${diffFromCenter[1] * 0.75}px))`;
+        setCirclePts(
+          navContainerContainer.children[1],
+          noOfChildren,
+          height / 2,
+          (-posY / height) * Math.PI - height / 2,
+        );
       }
     };
 
@@ -107,38 +82,62 @@ function Nav() {
           <img src={closeImg} alt="" />
         </div>
         <nav className="NavContainer">
-          <a
-            onMouseDown={(e) => {
-              e.preventDefault();
-              lenis.scrollTo("#aboutUs");
-            }}
-            className="NavItems"
-            id="about_nav"
-          >
-            About Us
-            <span className="NavItemIcons glass">
-              <img src={aboutImg} alt="" />
-            </span>
-          </a>
-          <a
-            onMouseDown={(e) => {
-              e.preventDefault();
-              lenis.scrollTo("#contactUs");
-            }}
-            className="NavItems"
-            id="contact_nav"
-          >
-            Contact Us
-            <span className="NavItemIcons glass">
-              <img src={contactImg} alt="" />
-            </span>
-          </a>
-          <a href="/events" className="NavItems" id="events_nav">
-            Events
-            <span className="NavItemIcons glass">
-              <img src={eventsImg} alt="" />
-            </span>
-          </a>
+          {Object.prototype.hasOwnProperty.call(props, "home") ? (
+            <a href="/" className="NavItems" id="events_nav">
+              Home
+              <span className="NavItemIcons glass">
+                <img src={eventsImg} alt="" />
+              </span>
+            </a>
+          ) : null}
+
+          {Object.prototype.hasOwnProperty.call(props, "aboutUs") ? (
+            <a
+              onMouseDown={(e) => {
+                e.preventDefault();
+                lenis.scrollTo("#aboutUs");
+              }}
+              className="NavItems"
+              id="about_nav"
+            >
+              About Us
+              <span className="NavItemIcons glass">
+                <img src={aboutImg} alt="" />
+              </span>
+            </a>
+          ) : null}
+          {Object.prototype.hasOwnProperty.call(props, "contactUs") ? (
+            <a
+              onMouseDown={(e) => {
+                e.preventDefault();
+                lenis.scrollTo("#contactUs");
+              }}
+              className="NavItems"
+              id="contact_nav"
+            >
+              Contact Us
+              <span className="NavItemIcons glass">
+                <img src={contactImg} alt="" />
+              </span>
+            </a>
+          ) : null}
+
+          {Object.prototype.hasOwnProperty.call(props, "events") ? (
+            <a href="/events" className="NavItems" id="events_nav">
+              Events
+              <span className="NavItemIcons glass">
+                <img src={eventsImg} alt="" />
+              </span>
+            </a>
+          ) : null}
+          {Object.prototype.hasOwnProperty.call(props, "notices") ? (
+            <a href="/notices" className="NavItems" id="events_nav">
+              Notices
+              <span className="NavItemIcons glass">
+                <img src={eventsImg} alt="" />
+              </span>
+            </a>
+          ) : null}
         </nav>
       </div>
     </>

@@ -87,15 +87,39 @@
     align-items: center;
   }
 
-nav.NavContainer .NavItems:nth-child(1){
-  transform: none;
-}
-nav.NavContainer .NavItems:nth-child(1){
-  transform: none;
-}
-nav.NavContainer .NavItems:nth-child(3){
-  transform: none;
-}
+  nav.NavContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    justify-content: center;
+
+  }
+  nav.NavContainer .NavItems{
+    background-color: var(--color4aA);
+    width: 50%;
+    border: 1px solid var(--color3A);
+    /* box-shadow: inset 0px 0px 1rem 1rem var(--color3A), 0px 0px 1rem 1rem var(--color3A); */
+    position: static;
+    transform: none;
+    justify-content: center;
+    margin: 0;
+    border-radius: 1vh;
+    transition: 0.2s ease;
+  }
+  nav.NavContainer .NavItems:first-child{
+    border-radius: 4vh 4vh 1vh 1vh ;
+  }
+  nav.NavContainer .NavItems:last-child{
+    border-radius: 1vh 1vh 4vh 4vh ;
+  }
+  nav.NavContainer .NavItems:hover{
+    background-color: var(--color4aA);
+    border: none;
+  }
+  nav.NavContainer .NavItems > .NavItemIcons{
+    display: none;
+  }
 }
 
 /* SUPER SMALL SCREENS */
@@ -106,6 +130,12 @@ nav.NavContainer .NavItems:nth-child(3){
   }
   .projectDetailsCard hr{
     display: none;
+  }
+  #notice {
+    margin: 2vh;
+  }
+  #DetailCard{
+    flex-direction: column;
   }
   #noticeContent{
     display: flex;
