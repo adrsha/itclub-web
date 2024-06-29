@@ -3,6 +3,7 @@ import "./Cards.css";
 import member from "../../data/Members.json";
 import dummyImage from "/president.png";
 import { useState } from "react";
+import { lenis } from "../Lenis/Lenis.js";
 
 let cardHtml = member.map((mv) => {
   return (
@@ -24,10 +25,20 @@ function Cards(props) {
       <div className="glassCards glass parallaxEl" id={props.id}>
         <div className="cardTitle">{props.title}</div>
         <div className="cardContent">
-          <a href={props.link1}>
+          <a
+            onMouseDown={(e) => {
+              e.preventDefault();
+              lenis.scrollTo("#aboutUs");
+            }}
+          >
             <button className="activated">{props.button1}</button>
           </a>
-          <a href={props.link2}>
+          <a
+            onMouseDown={(e) => {
+              e.preventDefault();
+              lenis.scrollTo("#contactUs");
+            }}
+          >
             <button className="deactivated">{props.button2}</button>
           </a>
         </div>
@@ -101,7 +112,9 @@ function Cards(props) {
         <div className="cardTitle">{props.title}</div>
       ) : null}
       {Object.prototype.hasOwnProperty.call(props, "content") ? (
-        <div className="cardContent" id="noticeContent">{props.content}</div>
+        <div className="cardContent" id="noticeContent">
+          {props.content}
+        </div>
       ) : null}
       {Object.prototype.hasOwnProperty.call(props, "button1") ? (
         <button className="activated simpleButton">

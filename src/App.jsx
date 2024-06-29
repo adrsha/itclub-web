@@ -1,4 +1,5 @@
 import Countdown from "./countdown/Countdown.jsx";
+import isMobile from "./ExtraFuncs.js";
 import Nav from "./Nav/Nav.jsx";
 import ContactUs from "./ContactUs/ContactUs.jsx";
 import AboutUs from "./AboutUs/AboutUs.jsx";
@@ -11,23 +12,6 @@ import "./Animations/Animations.css";
 import kecImg from "/kec_peeps.png";
 import Lines from "./Lines/Lines.jsx";
 import { LenisComponent } from "./Lenis/Lenis.js";
-import LoadingPage from "./LoadingPage/LoadingPage.jsx";
-
-function isMobile() {
-  if (
-    navigator.userAgent.match(/Android/i) ||
-    navigator.userAgent.match(/webOS/i) ||
-    navigator.userAgent.match(/iPhone/i) ||
-    navigator.userAgent.match(/iPad/i) ||
-    navigator.userAgent.match(/iPod/i) ||
-    navigator.userAgent.match(/BlackBerry/i) ||
-    navigator.userAgent.match(/Windows Phone/i)
-  ) {
-    return true;
-  } else {
-    return false;
-  }
-}
 
 function App() {
   return (

@@ -87,16 +87,16 @@ nav.NavContainer{
   position: absolute;
   perspective: var(--perspective);
   top: 50%;
-  pointer-events: none;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 100%;
   height: 25vh;
 }
 
-nav.NavContainer div.NavItems{
+nav.NavContainer .NavItems{
   font-size: 3rem;
   color: var(--color1);
+  display: block;
   border-radius: 3vh 0vh 0vh 3vh;
   transition: background-color 0.3s ease, border-radius 0.3s ease;
   background-color: var(--color4a);
@@ -107,12 +107,16 @@ nav.NavContainer div.NavItems{
   transform-style: preserve-3d;
 }
 
- nav.NavContainer div.NavItems.navItemHover{
-  color: var(--color4a);
+ nav.NavContainer .NavItems.navItemHover{
+  color: var(--color1);
   background-color: var(--color1a);
+  box-shadow: inset 0px 0px 1rem -0.5rem var(--color1), 0px 0px 1rem -0.5rem var(--color1);
 }
+ nav.NavContainer .NavItems:hover{
+  box-shadow: inset 0px 0px 10rem var(--color1), 0px 0px 10rem var(--color1);
+ }
 
-nav.NavContainer div.NavItems span.NavItemIcons{
+nav.NavContainer .NavItems .NavItemIcons{
   position: absolute;
   top: 0;
   right: 0;
@@ -121,13 +125,13 @@ nav.NavContainer div.NavItems span.NavItemIcons{
   border-radius: 3vh;
 }
 
-nav.NavContainer div.NavItems:nth-child(1){
+nav.NavContainer .NavItems:nth-child(1){
   transform: rotateX(0deg);
 }
-nav.NavContainer div.NavItems:nth-child(1){
+nav.NavContainer .NavItems:nth-child(1){
   transform: rotateX(40deg);
 }
-nav.NavContainer div.NavItems:nth-child(3){
+nav.NavContainer .NavItems:nth-child(3){
   transform: rotateX(-40deg);
 }
 

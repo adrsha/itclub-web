@@ -13,19 +13,11 @@ export const lenis = new Lenis({
 });
 export function LenisComponent() {
   useEffect(() => {
-    lenis.on("scroll", (e) => {});
+    lenis.on("scroll", () => {});
     function raf(time) {
       lenis.raf(time);
       requestAnimationFrame(raf);
     }
-
-    // Make links scroll smoothly
-    document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-      anchor.addEventListener("click", function (e) {
-        e.preventDefault();
-        lenis.scrollTo(this.getAttribute("href"));
-      });
-    });
 
     requestAnimationFrame(raf);
   }, []);
