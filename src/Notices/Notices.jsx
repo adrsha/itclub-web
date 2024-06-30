@@ -36,7 +36,6 @@ let noticesHtml = noticeData.map((noti) => {
     );
   }
 });
-noticesHtml.forEach((ev) => console.log(ev));
 
 function Events() {
   return (

@@ -7,9 +7,12 @@ export const lenis = new Lenis({
   gestureOrientation: "vertical",
   normalizeWheel: false,
   smoothTouch: true,
+  syncTouch: true,
   easing: (t) => (t === 1 ? 1 : 1 - Math.pow(2, -10 * t)), // https://easings.net
   direction: "vertical",
   smooth: true,
+  touchInertiaMultiplier: 40,
+  autoResize: true,
 });
 export function LenisComponent() {
   useEffect(() => {

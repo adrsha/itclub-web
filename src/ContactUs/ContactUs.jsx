@@ -40,10 +40,10 @@ export default function ContactUs() {
             <textarea placeholder=" " id="message" name="message"></textarea>
             <label htmlFor="message">Message to send</label>
           </div>
+          <button type="submit" id="send">
+            Send
+          </button>
         </form>
-        <button type="submit" id="send">
-          Send
-        </button>
 
         <img
           className="parallaxEl"

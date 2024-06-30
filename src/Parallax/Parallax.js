@@ -1,53 +1,61 @@
-let parallaxEls = document.getElementsByClassName("parallaxEl");
-import { useState, useEffect } from "react";
-let parallaxElsPos = [];
-let lerp;
+import "./Parallax.css";
+import React, { useState, useEffect, useCallback, useRef } from "react";
+import { throttle } from "lodash";
+import { lenis } from "../Lenis/Lenis"; // Adjust the import path as needed
 
-function signOf(x) {
-  if (x > 0) return 1;
-  if (x < 0) return -1;
-  return 0;
-}
 function Parallax() {
-  const [changeInTransform, setChangeInTransform] = useState();
+  const [scrollY, setScrollY] = useState(0);
+  const parallaxElsRef = useRef([]);
+  const rafIdRef = useRef(null);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    for (let i = 0; i < parallaxEls.length; i++) {
-      if (parallaxEls[i].hasAttribute("data-lerp")) {
-        lerp = parallaxEls[i].dataset.lerp;
-      } else {
-        lerp = 5;
-      }
-      parallaxElsPos.push(
-        signOf(lerp) * window.pageYOffset +
-          parallaxEls[i].getBoundingClientRect().top,
-      );
-    }
-
-    const handleScroll = () => {
-      setChangeInTransform(window.pageYOffset);
-    };
-
-    handleScroll();
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    const parallaxEls = document.getElementsByClassName("parallaxEl");
+    parallaxElsRef.current = Array.from(parallaxEls).map((el) => ({
+      el,
+      lerp: parseFloat(el.dataset.lerp || 10),
+      initialPos: el.getBoundingClientRect().top,
+      currentPos: 0,
+    }));
   }, []);
 
+  const handleScroll = useCallback(
+    throttle(() => {
+      setScrollY(lenis.scroll);
+    }, 16),
+    [],
+  );
+
   useEffect(() => {
-    for (let i = 0; i < parallaxEls.length; i++) {
-      if (parallaxEls[i].hasAttribute("data-lerp")) {
-        lerp = parallaxEls[i].dataset.lerp;
-      } else {
-        lerp = 5;
+    lenis.on("scroll", handleScroll);
+    return () => {
+      lenis.off("scroll", handleScroll);
+    };
+  }, [handleScroll]);
+
+  const updatePositions = useCallback(() => {
+    parallaxElsRef.current.forEach((item) => {
+      const { el, lerp, initialPos } = item;
+      const targetPos = (scrollY - initialPos) / lerp;
+      item.currentPos += (targetPos - item.currentPos) * 0.1;
+
+      const roundedPos = Math.round(item.currentPos * 100) / 100;
+      el.style.transform = `translate3d(0, ${roundedPos}px, 0)`;
+    });
+
+    rafIdRef.current = requestAnimationFrame(updatePositions);
+  }, [scrollY]);
+
+  useEffect(() => {
+    rafIdRef.current = requestAnimationFrame(updatePositions);
+    return () => {
+      if (rafIdRef.current) {
+        cancelAnimationFrame(rafIdRef.current);
       }
-      parallaxEls[i].style.transform =
-        `translate(0, calc(${-changeInTransform / lerp + parallaxElsPos[i] / lerp}px - ${50 / lerp}vh))`;
-    }
-  }, [changeInTransform]);
+    };
+  }, [updatePositions]);
+
+  return null;
 }
 
 export default Parallax;
+import "./Parallax.css";

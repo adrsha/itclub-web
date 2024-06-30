@@ -1,6 +1,7 @@
 
 @keyframes fadeOut {
   from {
+    display: block;
     opacity: 1;
   }
   to {

@@ -35,14 +35,12 @@ function Nav(props) {
     );
     var height = document.documentElement.clientHeight;
     var noOfChildren = navContainerContainer.children[1].children.length;
-    if (!isMobile()) {
-      setCirclePts(
-        navContainerContainer.children[1],
-        noOfChildren,
-        height / 2,
-        0,
-      );
-    }
+    setCirclePts(
+      navContainerContainer.children[1],
+      noOfChildren,
+      height / 2,
+      0,
+    );
 
     const hoverFunction = (navContainerContainer) => {
       var wind_e = window.event;
@@ -96,7 +94,6 @@ function Nav(props) {
               onMouseDown={(e) => {
                 e.preventDefault();
                 lenis.scrollTo("#aboutUs");
-                setDisplay("hidden");
               }}
               className="NavItems"
               id="about_nav"
@@ -112,7 +109,6 @@ function Nav(props) {
               onMouseDown={(e) => {
                 e.preventDefault();
                 lenis.scrollTo("#contactUs");
-                setDisplay("hidden");
               }}
               className="NavItems"
               id="contact_nav"
