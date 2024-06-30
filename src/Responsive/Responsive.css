@@ -1,11 +1,6 @@
 
 /* LARGE SCREENS */
 
-@media (max-width: 1500px){
-  div.glassCards#MembersCard> div.membersList .tablet{
-    width: 19vw;
-  }
-}
 
 /* MEDIUM SCREENS */
 
@@ -74,9 +69,6 @@
   }
   .pageContent #image{
     display: none;
-  }
-  #DetailCard{
-    /* flex-direction: column; */
   }
   .pageContent > .glassCards{
     margin: auto;

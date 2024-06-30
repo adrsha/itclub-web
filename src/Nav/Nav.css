@@ -40,6 +40,7 @@ div.NavOpener{
   top: 5vh;
   left: 5vw;
   height: 3rem;
+  aspect-ratio: 1.06;
   z-index: 2;
   font-weight: bold;
   color: var(--color1);
@@ -75,7 +76,7 @@ div.navContainerContainer{
   backdrop-filter: blur(10px);
 
   font-family: "Monomaniac One", sans-serif;
-  background: var(--color4aA);
+  background: rgba(0, 0, 0, 0.1);
   color: var(--color-1);
   padding: 1em;
   margin: 0px;
@@ -101,10 +102,10 @@ nav.NavContainer .NavItems{
   color: var(--color1);
   display: flex;
   border-radius: 3vh 0vh 0vh 3vh;
-  transition: background-color 0.3s ease, border-radius 0.3s ease; 
+  transition: box-shadow 0.3s ease, background-color 0.2s ease;
   transform: translate(-50%, -50%) rotateY(0deg); /* Ensure 3D context */
   left: 50%;
-  background-color: var(--color4a);
+  border: 1px solid var(--color3A);
   width: fit-content;
   padding: 0.5em;
   margin: auto;
@@ -113,7 +114,8 @@ nav.NavContainer .NavItems{
 }
 
  nav.NavContainer .NavItems:hover{
-  box-shadow: inset 0px 0px 10rem var(--color1), 0px 0px 10rem var(--color1);
+  box-shadow: inset 0px 0px 10rem var(--color1a), 0px 0px 10rem var(--color1e);
+  background-color: var(--color1);
  }
 
 .NavItems > .NavItemIcons{

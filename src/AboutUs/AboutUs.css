@@ -62,6 +62,7 @@ div.glassCards#MembersCard{
   top: -20vh;
   padding: 3vw;
   padding-left: 5vw;
+  min-width: 27vw;
   width: 27vw;
   right: 0vw;
 }

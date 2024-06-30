@@ -6,20 +6,21 @@ export default function ContactUs() {
     <div className="contactUs" id="contactUs">
       <div className="contactUsTitle">Contact Us</div>
       <div className="moreinfo">
-          For more information and to stay updated on our activities, follow us
-          on our social media channels as well.
-          <br />
-          Email : kecktm.it.club@gmail.com
-          <br />
-          Follow us on{" "}
-          <a
-            className="specialLinks"
-            href="https://www.facebook.com/kecitclub/"
-          >
-            Facebook
-          </a>
-          , Twitter, and Instagram.
-        </div>
+        For more information and to stay updated on our activities, follow us on
+        our social media channels as well.
+        <br />
+        Email : kecktm.it.club@gmail.com
+        <br />
+        Follow us on{" "}
+        <a className="specialLinks" href="https://www.facebook.com/kecitclub/">
+          Facebook
+        </a>{" "}
+        and{" "}
+        <a className="specialLinks" href="https://www.instagram.com/kecitclub/">
+          Instagram
+        </a>
+        .
+      </div>
       <div className="contactUsContent">
         <form
           className="parallaxEl"
@@ -27,7 +28,7 @@ export default function ContactUs() {
           action="https://formcarry.com/s/lkVSZ-RGqK0"
           method="POST"
         >
-            <div className="form_text formElement">
+          <div className="form_text formElement">
             <input placeholder=" " type="text" id="name" name="name" />
             <label htmlFor="name">Your Name</label>
           </div>
@@ -38,9 +39,11 @@ export default function ContactUs() {
           <div className="form_message formElement">
             <textarea placeholder=" " id="message" name="message"></textarea>
             <label htmlFor="message">Message to send</label>
-            </div>
+          </div>
         </form>
-        <button type="submit" id="send">Send</button>
+        <button type="submit" id="send">
+          Send
+        </button>
 
         <img
           className="parallaxEl"
