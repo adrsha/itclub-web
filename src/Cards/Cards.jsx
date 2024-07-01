@@ -114,15 +114,31 @@ function Cards(props) {
       {Object.prototype.hasOwnProperty.call(props, "content") ? (
         <div className="cardContent" id="noticeContent">
           {props.content}
+          <div className="noticeSpButtons">
+            {Object.prototype.hasOwnProperty.call(props, "buttonDiscord") ? (
+              <button className="discordButton">
+                <a href={props.buttonDiscord}>
+                  <img src="/discord_logo.png" alt="" />
+                </a>
+              </button>
+            ) : null}
+            {Object.prototype.hasOwnProperty.call(props, "buttonForm") ? (
+              <button className="formButton">
+                <a href={props.buttonForm}>
+                  <img src="/forms_logo.png" alt="" />
+                </a>
+              </button>
+            ) : null}
+          </div>
         </div>
       ) : null}
       {Object.prototype.hasOwnProperty.call(props, "button1") ? (
-        <button className="activated simpleButton">
+        <button className="activated ">
           <a href={props.link1}>{props.button1}</a>
         </button>
       ) : null}
       {Object.prototype.hasOwnProperty.call(props, "button2") ? (
-        <button className="deactivated simpleButton">
+        <button className="deactivated ">
           <a href={props.link2}>{props.button2}</a>
         </button>
       ) : null}

@@ -58,21 +58,8 @@ function Lines() {
 
   return (
     <div className="lines">
-      {/* <div className="lineHorizontal"> </div> */}
-      <div className="boxLeft">
-        <div className="lineLeft">
-          <div className="bulb"></div>
-        </div>
-      </div>
-      <div className="boxCenter">
-        <div className="lineCenter">
-          <div className="bulb"></div>
-        </div>    
-      </div>
-      <div className="boxRight">
-        <div className="lineRight">
-          <div className="bulb"></div>
-        </div>
+      <div className="line">
+        <div className="bulb"></div>
       </div>
     </div>
   );

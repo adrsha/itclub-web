@@ -11,6 +11,20 @@
   #DetailCard{
     width: 70vw;
   }
+  #notice #noticeContent{
+  } 
+  #notice {
+    width: 60vw;
+  }
+
+  .glassCards#image{
+    position: static;
+    width: 70vw;
+  }
+  .glassCards#image img{
+    width: 70vw;
+  }
+
   div.aboutUsContent div.glassCards#MembersCard,
   div.aboutUsContent div.glassCards#MembersCard.shorter,
   div.aboutUsContent div.glassCards#MembersCard.longer{

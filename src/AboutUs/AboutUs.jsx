@@ -1,6 +1,6 @@
 import "./AboutUs.css";
 import member from "../../data/Members.json";
-import aboutUsImg from "/about_us.png";
+import aboutUsImg from "/about_us_graphics.png";
 import Cards from "../Cards/Cards.jsx";
 
 export default function AboutUs() {

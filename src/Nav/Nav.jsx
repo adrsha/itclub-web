@@ -1,9 +1,10 @@
 import "./Nav.css";
 import logo from "/logo.png";
 import closeImg from "/close.png";
-import aboutImg from "/info.png";
+import aboutImg from "/about_us.png";
 import contactImg from "/contact.png";
 import eventsImg from "/events.png";
+import noticeImg from "/notice.png";
 import { useState, useEffect } from "react";
 import { lenis } from "../Lenis/Lenis.js";
 import isMobile from "../ExtraFuncs.js";
@@ -86,7 +87,7 @@ function Nav(props) {
                 <img src={eventsImg} alt="" />
               </span>
             </a>
-          ) : null} 
+          ) : null}
 
           {Object.prototype.hasOwnProperty.call(props, "aboutUs") ? (
             <a
@@ -131,7 +132,7 @@ function Nav(props) {
             <a href="/notices" className="NavItems" id="events_nav">
               Notices
               <span className="NavItemIcons glass">
-                <img src={eventsImg} alt="" />
+                <img src={noticeImg} alt="" />
               </span>
             </a>
           ) : null}

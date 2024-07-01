@@ -14,11 +14,6 @@
   margin-top: 1rem;
 }
 
-#notice{
-  margin-top: 5vh;
-  margin-bottom: 10vh;
-}
-
 .glassCards .cardContent{
   font-size: 1.3em;
   display: flex;
@@ -31,17 +26,15 @@
   position: absolute;
   top: 50vh;
   padding: 0;
-  right: 10vw;
+  right: 12vw;
   height: fit-content;
   width: fit-content;
 }
-.glassCards#image>img{
-  height: 50vh;
+.glassCards#image > img{
   width: 30vw;
-  object-fit: cover;
-  border-radius:  10vh;
+  object-fit: contain;
+  border-radius:  2vw;
   opacity: 0.5;
-  box-shadow: var(--color3) 0 0 22px 0px;
 }
 
 .glassCards .cardTitle{
@@ -80,16 +73,69 @@
 }
 
 .pageContent::before{
-    content: "SCROLL DOWN";
-    color: var(--color1);
-    font-family: "JetBrains Mono", monospace;
-    position: absolute;
-    font-weight: bold;
-    top: 1vh;
-    left: 50%;
-    transform: translate(-50%, 50%);
-  }
+  content: "SCROLL DOWN";
+  color: var(--color1);
+  font-family: "JetBrains Mono", monospace;
+  position: absolute;
+  font-weight: bold;
+  top: 1vh;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+#notice{
+  width: 30vw;
+}
 
+#notice #noticeContent{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gaps: 1rem;
+  text-align: left;
+} 
+
+.noticeSpButtons{
+  margin-left: 1rem;
+}
+.discordButton{
+  border-radius: 1rem 1rem 0 0;
+  display: inline;
+}
+
+.formButton{
+  border-radius: 0 0 1rem 1rem;
+}
+
+#notice .activated, #notice .deactivated{
+  display: inline;
+  margin: 5px;
+  margin-top: 1rem;
+}
+
+.discordButton img,
+.formButton img{
+  height: auto;
+  width: 2em;
+  opacity: 0.8;
+  transition: opacity 0.2s ease-in-out;
+}
+.discordButton,
+.formButton{
+  background-color: var(--color4a);
+  margin-top: 0;
+  margin: 0;
+  display: inline;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.discordButton:hover,
+.formButton:hover{
+  background-color: var(--color4aA);
+}
+.discordButton:hover img,
+.formButton:hover img{
+  opacity: 1;
+}
 
 .tablet{
   font-weight: 800;
@@ -123,8 +169,8 @@
   flex: 2;
   display: flex;
   padding: 7rem;
-  margin-top: 10vh;
-  margin-bottom: 10vh;
+  margin-top: 0vh;
+  margin-bottom: 0vh;
 }
 
 #DetailCard > hr{

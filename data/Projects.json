@@ -1,0 +1,22 @@
+[
+  {
+    "id": "1",
+    "projectName": "Pasm: Password Manager in Rust",
+    "projectDescription": "Pasm is a password manager written in Rust. It is designed to be secure, easy to use, and customizable. Pasm allows users to store and manage their passwords in a secure and organized manner inside a terminal itself, while still being easy to use.",
+    "projectImg": null
+  },
+  {
+    "id": "2",
+    "projectName": "CV Boot Camp",
+    "projectDate": "July 29 24 00:00:00",
+    "projectDescription": "In this event you will learn about how a curriculum vitae can be used to showcase your skills and experience.",
+    "projectImg": null
+  },
+  {
+    "id": "3",
+    "projectName": "UI/UX Design",
+    "projectDate": "Aug 25 24 00:00:00",
+    "projectDescription": "In this event you will learn about how to design user interfaces and user experiences for your website or application.",
+    "projectImg": null
+  }
+]

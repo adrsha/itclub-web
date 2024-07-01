@@ -9,7 +9,8 @@
     height: 80vh;
 }
 .countdownObj{
-    margin-top: 30vh;
+    margin-top: 20vh;
+    margin-bottom: 5vh;
     z-index: 1;
     display: flex;
     flex-direction: column;

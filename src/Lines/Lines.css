@@ -2,34 +2,24 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
     z-index: 0;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
     --width: 2px;
     --height: 2.5rem;
 }
-.lineHorizontal{
-    position: absolute;
-    top: 6%;
-    width: 100vw;
-    height: 2px;
-    background-color: rgba(40,116, 168, 0.2);
-}
-.boxLeft,.boxRight,.boxCenter{
-    width: 30%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
-.lineLeft/* , .lineCenter, .lineRight*/{ 
+.line{
     width: 2px;
     height: 100%;
     background-color: rgba(40,116, 168, 0.2);
 }
 
-/* .lineRight> .bulb, */
-.lineLeft> .bulb
-/* .lineCenter> .bulb */{
+.line> .bulb{
     width: var(--width);
     height: var(--height);
     position: absolute;
@@ -40,16 +30,5 @@
     opacity: 0.7;
     top: -40px;
     transform: translate(-50%, 0);
-}
-.lineLeft > .bulb{
-    transform: translate(-50%, 0);
     animation: flicker 1s infinite;
 }
-/* .lineCenter > .bulb{
-    transform: translate(-50%, 0);
-    animation: flicker 1s infinite;
-}
-.lineRight > .bulb{
-    transform: translate(-50%, 400%);
-    animation: flicker 1s .5s infinite;
-} */
