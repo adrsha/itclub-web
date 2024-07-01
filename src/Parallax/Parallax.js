@@ -1,7 +1,7 @@
 import "./Parallax.css";
 import React, { useState, useEffect, useCallback, useRef } from "react";
 import { throttle } from "lodash";
-import { lenis } from "../Lenis/Lenis"; // Adjust the import path as needed
+import { lenis } from "../Lenis/Lenis";
 
 function Parallax() {
   const [scrollY, setScrollY] = useState(0);
@@ -9,6 +9,7 @@ function Parallax() {
   const rafIdRef = useRef(null);
 
   useEffect(() => {
+    lenis.scrollTo(0);
     const parallaxEls = document.getElementsByClassName("parallaxEl");
     parallaxElsRef.current = Array.from(parallaxEls).map((el) => ({
       el,
@@ -38,7 +39,7 @@ function Parallax() {
       const targetPos = (scrollY - initialPos) / lerp;
       item.currentPos += (targetPos - item.currentPos) * 0.1;
 
-      const roundedPos = Math.round(item.currentPos * 100) / 100;
+      const roundedPos = Math.round(item.currentPos * 10) / 10; // reduce accuracy for better performance
       el.style.transform = `translate3d(0, ${roundedPos}px, 0)`;
     });
 

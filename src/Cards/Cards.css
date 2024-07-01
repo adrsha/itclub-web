@@ -14,6 +14,11 @@
   margin-top: 1rem;
 }
 
+#notice{
+  margin-top: 20vh;
+  margin-bottom: 10vh;
+}
+
 .glassCards .cardContent{
   font-size: 1.3em;
   display: flex;
@@ -46,7 +51,6 @@
   align-items: center;
   justify-content: center;
   font-size: 2.5em;
-  margin: 3rem;
   margin-top: 0rem;
 }
 
@@ -54,17 +58,16 @@
   margin: auto;
   display: flex;
   flex-direction: column;
-  /* margin-bottom: -10vh; */
   width: 33em;
   height: 33em;
   z-index:4;
   position: relative;
+  top: 15vh;
   align-items: center;
   border-radius: 50%;
   justify-content: center;
   aspect-ratio: 1;
   font-size: calc(0.7rem + 0.2vw);
-
 }
 
 .pageContent{
@@ -120,6 +123,8 @@
   flex: 2;
   display: flex;
   padding: 7rem;
+  margin-top: 10vh;
+  margin-bottom: 10vh;
 }
 
 #DetailCard > hr{
