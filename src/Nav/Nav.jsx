@@ -1,8 +1,7 @@
 import "./Nav.css";
 import logo from "/logo.png";
 import closeImg from "/close.png";
-import aboutImg from "/Group 4(1).png";
-import noticeImg from "/Group 5.png";
+import aboutImg from "/info.png";
 import contactImg from "/contact.png";
 import eventsImg from "/events.png";
 import { useState, useEffect } from "react";
@@ -10,13 +9,9 @@ import { lenis } from "../Lenis/Lenis.js";
 import isMobile from "../ExtraFuncs.js";
 
 function Nav(props) {
-  // Links
-  // Hard defined vars
-  // var width = document.documentElement.clientWidth;
-
   useEffect(() => {
     function setCirclePts(element, noOfChildren, radius, changeInAngle) {
-      var angleDisp = Math.PI / 4;
+      var angleDisp = Math.PI / 3;
       for (let i = 0; i < noOfChildren; i++) {
         var l = (((Math.PI - angleDisp) * radius) / (noOfChildren + 1)) * i;
         var angle_error = l / (2 * radius) + angleDisp / 2;
@@ -34,24 +29,27 @@ function Nav(props) {
     const navContainerContainer = document.getElementById(
       "navContainerContainer",
     );
-    var height = document.documentElement.offsetHeight;
+    var height = window.outerHeight;
     var noOfChildren = navContainerContainer.children[1].children.length;
-    setCirclePts(
-      navContainerContainer.children[1],
-      noOfChildren,
-      height / 2,
-      0,
-    );
+    if (!isMobile()) {
+      setCirclePts(
+        navContainerContainer.children[1],
+        noOfChildren,
+        height / 2,
+        (-100 / height) * Math.PI - height / 2,
+      );
+    }
 
     const hoverFunction = (navContainerContainer) => {
       var wind_e = window.event;
       if (!isMobile()) {
         var posY = wind_e.clientY;
+        var radius = height / 2;
         setCirclePts(
           navContainerContainer.children[1],
           noOfChildren,
-          height / 2,
-          (-posY / height) * Math.PI - height / 2,
+          radius,
+          ((-posY - 120) / (2 * radius)) * Math.PI - radius,
         );
       }
     };
@@ -133,7 +131,7 @@ function Nav(props) {
             <a href="/notices" className="NavItems" id="events_nav">
               Notices
               <span className="NavItemIcons glass">
-                <img src={noticeImg} alt="" />
+                <img src={eventsImg} alt="" />
               </span>
             </a>
           ) : null}
