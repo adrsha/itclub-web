@@ -1,7 +1,8 @@
 import "./Nav.css";
 import logo from "/logo.png";
 import closeImg from "/close.png";
-import aboutImg from "/info.png";
+import aboutImg from "/Group 4(1).png";
+import noticeImg from "/Group 5.png";
 import contactImg from "/contact.png";
 import eventsImg from "/events.png";
 import { useState, useEffect } from "react";
@@ -132,7 +133,7 @@ function Nav(props) {
             <a href="/notices" className="NavItems" id="events_nav">
               Notices
               <span className="NavItemIcons glass">
-                <img src={eventsImg} alt="" />
+                <img src={noticeImg} alt="" />
               </span>
             </a>
           ) : null}

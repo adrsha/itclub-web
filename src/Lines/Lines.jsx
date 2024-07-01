@@ -58,7 +58,7 @@ function Lines() {
 
   return (
     <div className="lines">
-      <div className="lineHorizontal"> </div>
+      {/* <div className="lineHorizontal"> </div> */}
       <div className="boxLeft">
         <div className="lineLeft">
           <div className="bulb"></div>

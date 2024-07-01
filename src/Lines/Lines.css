@@ -21,15 +21,15 @@
     display: flex;
     justify-content: center;
 }
-.lineLeft, .lineCenter, .lineRight{
+.lineLeft/* , .lineCenter, .lineRight*/{ 
     width: 2px;
     height: 100%;
     background-color: rgba(40,116, 168, 0.2);
 }
 
-.lineRight> .bulb,
-.lineLeft> .bulb,
-.lineCenter> .bulb{
+/* .lineRight> .bulb, */
+.lineLeft> .bulb
+/* .lineCenter> .bulb */{
     width: var(--width);
     height: var(--height);
     position: absolute;
@@ -42,14 +42,14 @@
     transform: translate(-50%, 0);
 }
 .lineLeft > .bulb{
-    transform: translate(-50%, 800%);
-    animation: flicker 1s .25s infinite;
+    transform: translate(-50%, 0);
+    animation: flicker 1s infinite;
 }
-.lineCenter > .bulb{
+/* .lineCenter > .bulb{
     transform: translate(-50%, 0);
     animation: flicker 1s infinite;
 }
 .lineRight > .bulb{
     transform: translate(-50%, 400%);
     animation: flicker 1s .5s infinite;
-}
+} */
