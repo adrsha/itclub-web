@@ -67,7 +67,7 @@ function Lines() {
       <div className="boxCenter">
         <div className="lineCenter">
           <div className="bulb"></div>
-        </div>
+        </div>    
       </div>
       <div className="boxRight">
         <div className="lineRight">

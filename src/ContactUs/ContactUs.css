@@ -21,6 +21,10 @@
 }
 .contactUsContent form{
   text-align:left;
+  display: flex;
+  align-items: start;
+  justify-content: center;
+  flex-direction: column;
 }
 .contactUsContent img{
   position: absolute;
@@ -104,13 +108,14 @@ input:-webkit-autofill:active{
 /* :NOTE: The order of the above rules is important. */
 
 .contactUsContent button[type="submit"]{
-  margin-top: 2rem;
+  margin-left: 25.464px;
+  margin-top: 0.8vh;
   color: var(--color3);
   background-color: var(--color1);
   transition: 0.2s;
+  border-radius: 0.5rem;
 }
 .contactUsContent button[type="submit"]:hover{
-  margin-top: 2rem;
   color: var(--color3a);
   background-color: var(--color1a);
 }

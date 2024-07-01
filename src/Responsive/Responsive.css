@@ -61,7 +61,10 @@
     display: none;
   }
   #send{
-    height: 15vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 4vh;
     width: 9vh;
   }
   .aboutUs img.parallaxEl{

@@ -88,7 +88,7 @@ function Nav(props) {
                 <img src={eventsImg} alt="" />
               </span>
             </a>
-          ) : null}
+          ) : null} 
 
           {Object.prototype.hasOwnProperty.call(props, "aboutUs") ? (
             <a
