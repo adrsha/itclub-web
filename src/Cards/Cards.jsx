@@ -78,6 +78,35 @@ function Cards(props) {
         </div>
       </div>
     );
+  } else if (props.id == "ImgDetailCard") {
+    return (
+      <div
+        className={"glassCards glass parallaxEl " + props.extraClass}
+        id={props.id}
+      >
+        {Object.prototype.hasOwnProperty.call(props, "titleImage") ? (
+          <img src={props.titleImage} alt="" />
+        ) : null}
+        {Object.prototype.hasOwnProperty.call(props, "title") ? (
+          <div className="cardTitle">{props.title}</div>
+        ) : null}
+        <div className="idcContent">
+          <div className="cardActions">
+            {Object.prototype.hasOwnProperty.call(props, "button1") ? (
+              <button className="activated">
+                <a href={props.link1}>{props.button1}</a>
+              </button>
+            ) : null}
+            {Object.prototype.hasOwnProperty.call(props, "button2") ? (
+              <button className="deactivated">
+                <a href={props.link2}>{props.button2}</a>
+              </button>
+            ) : null}
+          </div>
+          <div className="cardContent">{props.description}</div>
+        </div>
+      </div>
+    );
   } else if (props.id == "DetailCard") {
     return (
       <div

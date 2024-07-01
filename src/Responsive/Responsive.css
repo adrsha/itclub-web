@@ -25,6 +25,18 @@
     width: 70vw;
   }
 
+  #ImgDetailCard  .idcContent{
+    flex-direction: column-reverse;
+    margin-left: 0vw;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #ImgDetailCard  .idcContent .cardActions{
+    transform: rotate(0deg);
+    margin-top: 2em;
+  }
+
   div.aboutUsContent div.glassCards#MembersCard,
   div.aboutUsContent div.glassCards#MembersCard.shorter,
   div.aboutUsContent div.glassCards#MembersCard.longer{

@@ -195,6 +195,37 @@
   min-width: fit-content;
 }
 
+#ImgDetailCard img{
+  width: 100%;
+}
+
+#ImgDetailCard{
+  width: 80%;
+  text-align: left;
+}
+
+#ImgDetailCard img{
+  border-radius: 5vh;
+  margin-bottom: 1rem;
+}
+
+#ImgDetailCard  .idcContent{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: -2vw;
+}
+
+#ImgDetailCard  .idcContent .cardActions{
+  transform: rotate(-90deg);
+}
+
+#ImgDetailCard  .idcContent .cardActions button{
+  background-color: var(--color4);
+  border: none;
+}
+
 .projectDetailsCard{
   width: 50vw;
   margin-left: auto;

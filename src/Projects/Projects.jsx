@@ -13,12 +13,12 @@ let projectHtml = projectData.map((pr) => {
       <div key={pr.id} className="Eventlists">
         <div className="emptyspace"></div>
         <Cards
-          id="DetailCard"
+          id="ImgDetailCard"
           title={pr.projectName}
+          titleImage={pr.projectImg}
           description={pr.projectDescription}
           date={pr.projectDate}
           button1="Visit Page"
-          button2="Learn More"
         />
       </div>
     );
@@ -26,10 +26,10 @@ let projectHtml = projectData.map((pr) => {
     return (
       <div key={pr.id} className="Eventlists">
         <Cards
-          id="DetailCard"
+          id="ImgDetailCard"
           title={pr.projectName}
-          button1="Visit Page"
-          button2="Learn More"
+          titleImage={pr.projectImg}
+          button2="Visit Page"
           description={pr.projectDescription}
         />
         <div className="emptyspace"></div>
