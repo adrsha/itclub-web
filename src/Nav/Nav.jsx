@@ -94,6 +94,7 @@ function Nav(props) {
               onMouseDown={(e) => {
                 e.preventDefault();
                 lenis.scrollTo("#aboutUs");
+                setDisplay("hidden");
               }}
               className="NavItems"
               id="about_nav"
@@ -109,6 +110,7 @@ function Nav(props) {
               onMouseDown={(e) => {
                 e.preventDefault();
                 lenis.scrollTo("#contactUs");
+                setDisplay("hidden");
               }}
               className="NavItems"
               id="contact_nav"
