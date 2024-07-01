@@ -35,7 +35,7 @@ function App() {
           id="notice"
           title="New Notice!"
           content="Advanced Machine Learning is coming soon! Stay tuned for more information. We will be posting the details here soon."
-          button1="View All Notices"
+          button1="Learn More"
           link1="/notices"
         />
         <Cards

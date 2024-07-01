@@ -9,7 +9,7 @@ function Parallax() {
   const rafIdRef = useRef(null);
 
   useEffect(() => {
-    lenis.scrollTo(0);
+    lenis.scrollTo(0, 0);
     const parallaxEls = document.getElementsByClassName("parallaxEl");
     parallaxElsRef.current = Array.from(parallaxEls).map((el) => ({
       el,
@@ -17,6 +17,7 @@ function Parallax() {
       initialPos: el.getBoundingClientRect().top,
       currentPos: 0,
     }));
+    console.log(parallaxElsRef.current);
   }, []);
 
   const handleScroll = useCallback(
@@ -36,7 +37,7 @@ function Parallax() {
   const updatePositions = useCallback(() => {
     parallaxElsRef.current.forEach((item) => {
       const { el, lerp, initialPos } = item;
-      const targetPos = (scrollY - initialPos) / lerp;
+      const targetPos = -(scrollY - initialPos) / lerp;
       item.currentPos += (targetPos - item.currentPos) * 0.1;
 
       const roundedPos = Math.round(item.currentPos * 10) / 10; // reduce accuracy for better performance

@@ -34,7 +34,7 @@ function Nav(props) {
     const navContainerContainer = document.getElementById(
       "navContainerContainer",
     );
-    var height = document.documentElement.clientHeight;
+    var height = document.documentElement.offsetHeight;
     var noOfChildren = navContainerContainer.children[1].children.length;
     setCirclePts(
       navContainerContainer.children[1],

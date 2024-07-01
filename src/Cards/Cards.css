@@ -15,7 +15,7 @@
 }
 
 #notice{
-  margin-top: 20vh;
+  margin-top: 5vh;
   margin-bottom: 10vh;
 }
 
@@ -52,6 +52,7 @@
   justify-content: center;
   font-size: 2.5em;
   margin-top: 0rem;
+  margin-bottom: 2vh;
 }
 
 .glassCards#circleButtons{
@@ -62,7 +63,6 @@
   height: 33em;
   z-index:4;
   position: relative;
-  top: 15vh;
   align-items: center;
   border-radius: 50%;
   justify-content: center;

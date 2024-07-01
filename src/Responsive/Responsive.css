@@ -127,7 +127,8 @@
     display: none;
   }
   #notice {
-    margin: 2vh;
+    margin-left: auto;
+    margin-right: auto;
   }
   #DetailCard{
     flex-direction: column;
