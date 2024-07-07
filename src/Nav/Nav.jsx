@@ -37,7 +37,7 @@ function Nav(props) {
         navContainerContainer.children[1],
         noOfChildren,
         height / 2,
-        (-100 / height) * Math.PI - height / 2,
+        -(100/height)*2.5,
       );
     }
 

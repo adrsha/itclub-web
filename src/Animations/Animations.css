@@ -37,6 +37,17 @@
 }
 
 
+@keyframes bob{
+  0%{
+    padding-top: 1em;
+    padding-bottom: 1em;
+  }
+  100% {
+    padding-top: 2em;
+    padding-bottom: 2em;
+  }
+}
+
 @keyframes flicker {
     0% {
         opacity: 0.5;

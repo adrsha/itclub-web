@@ -32,7 +32,7 @@ export default function AboutUs() {
         <div className="aboutUsText">
           <div className="aboutUsTitle">About Us</div>
           <p>
-            The KEC IT Club is a student organization at Kantipur Engineering
+            The KEC IT Club is a student organization at Kathmandu Engineering
             College (KEC) that focuses on promoting computer technology and IT
             education among the students. The club organizes various events,
             programs, and workshops to help students explore their ideas,

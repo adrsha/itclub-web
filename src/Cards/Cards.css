@@ -85,6 +85,7 @@
 }
 #notice{
   width: 30vw;
+  overflow: hidden;
 }
 
 #notice #noticeContent{
@@ -95,6 +96,23 @@
   gaps: 1rem;
   text-align: left;
 } 
+#notice #noticeContent::before{
+  content: "NEW NOTICE!!";
+  text-align: center;
+  color: var(--color4);
+  background-color: var(--color1);
+  background: linear-gradient(to right, var(--color1), var(--color1e));
+  font-family: "JetBrains Mono", monospace;
+  font-weight: bolder;
+  padding: 0.5em;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 69%;
+  transform: translate(-50%, 0%);
+  border-radius: 0 0 20em 20em;
+  transform-origin: 50% 50%;
+}
 
 .noticeSpButtons{
   margin-left: 1rem;

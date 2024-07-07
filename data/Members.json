@@ -20,11 +20,6 @@
     "val": "Prajwol Shrestha"
   },
   {
-    "post": "Event Coordinator",
-    "attr": "eventCoordinator",
-    "val": "Bijen Shrestha"
-  },
-  {
     "post": "Vice President",
     "attr": "vicePresident",
     "val": "Sujan Sapkota"
@@ -33,6 +28,11 @@
     "post": "Joint Secretary",
     "attr": "jointSecretary",
     "val": "Aryan Manandhar"
+  },
+  {
+    "post": "Event Coordinator",
+    "attr": "eventCoordinator",
+    "val": "Pranav Ram Joshi"
   },
   {
     "post": "Developer",
@@ -48,11 +48,6 @@
     "post": "Designer",
     "attr": "designer2",
     "val": "Sneha Karki"
-  },
-  {
-    "post": "Executive Member",
-    "attr": "executiveMember1",
-    "val": "Pranav Ram Joshi"
   },
   {
     "post": "Executive Member",

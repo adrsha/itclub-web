@@ -93,14 +93,14 @@ function Cards(props) {
         <div className="idcContent">
           <div className="cardActions">
             {Object.prototype.hasOwnProperty.call(props, "button1") ? (
-              <button className="activated">
-                <a href={props.link1}>{props.button1}</a>
-              </button>
+              <a href={props.link1}>
+                <button className="activated">{props.button1}</button>
+              </a>
             ) : null}
             {Object.prototype.hasOwnProperty.call(props, "button2") ? (
-              <button className="deactivated">
-                <a href={props.link2}>{props.button2}</a>
-              </button>
+              <a href={props.link2}>
+                <button className="deactivated">{props.button2}</button>
+              </a>
             ) : null}
           </div>
           <div className="cardContent">{props.description}</div>
@@ -122,58 +122,59 @@ function Cards(props) {
         <hr />
         <div className="cardActions">
           {Object.prototype.hasOwnProperty.call(props, "button1") ? (
-            <button className="activated">
-              <a href={props.link1}>{props.button1}</a>
-            </button>
+            <a href={props.link1}>
+              <button className="activated">{props.button1}</button>
+            </a>
           ) : null}
           {Object.prototype.hasOwnProperty.call(props, "button2") ? (
-            <button className="deactivated">
-              <a href={props.link2}>{props.button2}</a>
-            </button>
+            <a href={props.link2}>
+              <button className="deactivated">{props.button2}</button>
+            </a>
           ) : null}
         </div>
       </div>
     );
-  }
-  return (
-    <div className="glassCards glass parallaxEl" id={props.id}>
-      {Object.prototype.hasOwnProperty.call(props, "title") ? (
-        <div className="cardTitle">{props.title}</div>
-      ) : null}
-      {Object.prototype.hasOwnProperty.call(props, "content") ? (
-        <div className="cardContent" id="noticeContent">
-          {props.content}
-          <div className="noticeSpButtons">
-            {Object.prototype.hasOwnProperty.call(props, "buttonDiscord") ? (
-              <button className="discordButton">
+  } else if (props.id == "notice") {
+    return (
+      <div className="glassCards glass parallaxEl" id={props.id}>
+        {Object.prototype.hasOwnProperty.call(props, "title") ? (
+          <div className="cardTitle">{props.title}</div>
+        ) : null}
+        {Object.prototype.hasOwnProperty.call(props, "content") ? (
+          <div className="cardContent" id="noticeContent">
+            {props.content}
+            <div className="noticeSpButtons">
+              {Object.prototype.hasOwnProperty.call(props, "buttonDiscord") ? (
                 <a href={props.buttonDiscord}>
-                  <img src="/discord_logo.png" alt="" />
+                  <button className="discordButton">
+                    <img src="/discord_logo.png" alt="" />
+                  </button>
                 </a>
-              </button>
-            ) : null}
+              ) : null}
 
-            {Object.prototype.hasOwnProperty.call(props, "buttonForm") ? (
-              <button className="formButton">
+              {Object.prototype.hasOwnProperty.call(props, "buttonForm") ? (
                 <a href={props.buttonForm}>
-                  <img src="/forms_logo.png" alt="" />
+                  <button className="formButton">
+                    <img src="/forms_logo.png" alt="" />
+                  </button>
                 </a>
-              </button>
-            ) : null}
+              ) : null}
+            </div>
           </div>
-        </div>
-      ) : null}
-      {Object.prototype.hasOwnProperty.call(props, "button1") ? (
-        <button className="activated ">
-          <a href={props.link1}>{props.button1}</a>
-        </button>
-      ) : null}
-      {Object.prototype.hasOwnProperty.call(props, "button2") ? (
-        <button className="deactivated ">
-          <a href={props.link2}>{props.button2}</a>
-        </button>
-      ) : null}
-    </div>
-  );
+        ) : null}
+        {Object.prototype.hasOwnProperty.call(props, "button1") ? (
+          <a href={props.link1}>
+            <button className="activated ">{props.button1}</button>
+          </a>
+        ) : null}
+        {Object.prototype.hasOwnProperty.call(props, "button2") ? (
+          <a href={props.link2}>
+            <button className="deactivated ">{props.button2}</button>
+          </a>
+        ) : null}
+      </div>
+    );
+  }
 }
 
 export default Cards;

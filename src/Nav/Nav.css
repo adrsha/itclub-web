@@ -96,6 +96,10 @@ nav.NavContainer{
   height: 100%;
 }
 
+nav.NavContainer a{
+  cursor: pointer;
+}
+
 nav.NavContainer .NavItems{
   font-size: 5vh;
   position: fixed;
