@@ -14,7 +14,7 @@ function Nav(props) {
     function setCirclePts(element, noOfChildren, radius, changeInAngle) {
       var angleDisp = Math.PI / 3;
       for (let i = 0; i < noOfChildren; i++) {
-        var l = (((Math.PI - angleDisp) * radius) / (noOfChildren + 1)) * i;
+        var l = (((Math.PI - angleDisp) * radius) / (noOfChildren + 1)) * i + radius;
         var angle_error = l / (2 * radius) + angleDisp / 2;
         var thita = l / radius;
         var yTransform =
@@ -30,7 +30,7 @@ function Nav(props) {
     const navContainerContainer = document.getElementById(
       "navContainerContainer",
     );
-    var height = window.outerHeight;
+    var height = window.innerHeight;
     var noOfChildren = navContainerContainer.children[1].children.length;
     if (!isMobile()) {
       setCirclePts(
@@ -50,7 +50,7 @@ function Nav(props) {
           navContainerContainer.children[1],
           noOfChildren,
           radius,
-          ((-posY - 120) / (2 * radius)) * Math.PI - radius,
+          -(posY/height)*2.5
         );
       }
     };
@@ -58,6 +58,10 @@ function Nav(props) {
     navContainerContainer.addEventListener("mousemove", () =>
       hoverFunction(navContainerContainer),
     );
+    window.addEventListener("resize", () => {
+      console.log("outer", window.outerHeight);
+      console.log("inner", window.innerHeight);
+    });
   }, []);
   let [navDisplay, setDisplay] = useState("hidden");
 

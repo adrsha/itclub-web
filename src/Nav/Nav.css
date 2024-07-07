@@ -97,7 +97,7 @@ nav.NavContainer{
 }
 
 nav.NavContainer .NavItems{
-  font-size: 3rem;
+  font-size: 5vh;
   position: fixed;
   color: var(--color1);
   display: flex;
@@ -124,8 +124,14 @@ nav.NavContainer .NavItems{
   top: 0;
   right: 0vw;
   transform: translate(100%, -20%) rotateY(0deg); /* Ensure 3D context */
-  padding: 1em;
+  height: 20vh;
+  padding: 5vh;
   border-radius: 4vh;
+}
+
+.NavItems > .NavItemIcons img{
+  height: 10vh;
+  margin: auto;
 }
 
 .hidden{
