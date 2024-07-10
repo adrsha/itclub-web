@@ -9,9 +9,12 @@ let tempDate;
 
 for (let i = 0; i < eventData.length; i++) {
   tempDate = new Date(eventData[i].eventDate);
+  let today = new Date();
   let latestEventDate = new Date(latestEvent.eventDate);
-  if (latestEventDate > tempDate) {
-    latestEvent = eventData[i];
+  if (tempDate > today) {
+    if (latestEventDate > tempDate) {
+      latestEvent = eventData[i];
+    }
   }
 }
 
