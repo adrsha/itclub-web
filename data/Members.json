@@ -2,81 +2,86 @@
   {
     "post": "President",
     "attr": "president",
-    "val": "Koshish Shrestha"
-  },
-  {
-    "post": "Secretary",
-    "attr": "secretary",
-    "val": "Prayas Silwal"
-  },
-  {
-    "post": "Resource Manager",
-    "attr": "resourceManager",
-    "val": "Kabita Khanal"
-  },
-  {
-    "post": "Lead Designer",
-    "attr": "leadDesigner",
-    "val": "Prajwol Shrestha"
+    "val": "Sujan Sapkota"
   },
   {
     "post": "Vice President",
     "attr": "vicePresident",
-    "val": "Sujan Sapkota"
+    "val": "Sworup Karki"
+  },
+  {
+    "post": "Secretary",
+    "attr": "secretary",
+    "val": "Aryan Manandhar"
   },
   {
     "post": "Joint Secretary",
     "attr": "jointSecretary",
-    "val": "Aryan Manandhar"
+    "val": "Jyoti Kumari Gupta"
   },
   {
-    "post": "Event Coordinator",
-    "attr": "eventCoordinator",
-    "val": "Pranav Ram Joshi"
-  },
-  {
-    "post": "Developer",
-    "attr": "Developer",
-    "val": "Ankit Shrestha"
-  },
-  {
-    "post": "Designer",
-    "attr": "designer1",
+    "post": "Project Manager",
+    "attr": "projectManager",
     "val": "Shreyas Acharya"
   },
   {
-    "post": "Designer",
-    "attr": "designer2",
+    "post": "Event Manager",
+    "attr": "projectManager",
+    "val": "Pranav Ram Joshi"
+  },
+  {
+    "post": "Lead Developer",
+    "attr": "leadDeveloper",
+    "val": "Ankit Shrestha"
+  },
+  {
+    "post": "Lead Designer",
+    "attr": "leadDesigner",
     "val": "Sneha Karki"
   },
   {
     "post": "Executive Member",
-    "attr": "executiveMember2",
+    "attr": "executiveMember1",
     "val": "Adarsha Acharya"
   },
   {
     "post": "Executive Member",
+    "attr": "executiveMember2",
+    "val": "Aayush Lamsal"
+  },
+  {
+    "post": "Executive Member",
     "attr": "executiveMember3",
-    "val": "Ashika Ghimire"
+    "val": "Aashika Ghimire"
   },
   {
     "post": "Executive Member",
     "attr": "executiveMember4",
-    "val": "Sworup Karki"
-  },
-  {
-    "post": "Executive Member",
-    "attr": "executiveMember5",
     "val": "Ayush Malla"
   },
   {
     "post": "Executive Member",
-    "attr": "executiveMember6",
-    "val": "Jyoti Kumari Gupta"
+    "attr": "executiveMember7",
+    "val": "Prasun Siwakoti"
   },
   {
     "post": "Executive Member",
     "attr": "executiveMember7",
-    "val": "Aayush Lamsal"
+    "val": "Khusi Khati"
+  },
+  {
+    "post": "Executive Member",
+    "attr": "executiveMember7",
+    "val": "Raj Timalsina"
+  },
+  {
+    "post": "Executive Member",
+    "attr": "executiveMember7",
+    "val": "Hritik Thapa"
+  },
+  {
+    "post": "Executive Member",
+    "attr": "executiveMember7",
+    "val": "Bikash Mishra"
   }
 ]

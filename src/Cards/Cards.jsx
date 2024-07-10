@@ -81,7 +81,10 @@ function Cards(props) {
   } else if (props.id == "ImgDetailCard") {
     return (
       <div
-        className={"glassCards glass parallaxEl " + props.extraClass}
+        className={
+          "glassCards glass parallaxEl " +
+          (props.extraClass ? props.extraClass : "")
+        }
         id={props.id}
       >
         {Object.prototype.hasOwnProperty.call(props, "titleImage") ? (
@@ -110,7 +113,10 @@ function Cards(props) {
   } else if (props.id == "DetailCard") {
     return (
       <div
-        className={"glassCards glass parallaxEl " + props.extraClass}
+        className={
+          "glassCards glass parallaxEl " +
+          (props.extraClass ? props.extraClass : "")
+        }
         id={props.id}
       >
         <div className="cardData">

@@ -32,13 +32,14 @@ export default function AboutUs() {
         <div className="aboutUsText">
           <div className="aboutUsTitle">About Us</div>
           <p>
-            The KEC IT Club is a student organization at Kathmandu Engineering
-            College (KEC) that focuses on promoting computer technology and IT
-            education among the students. The club organizes various events,
-            programs, and workshops to help students explore their ideas,
-            develop new skills, and build confidence in the field of computers
-            and technology. It serves as a platform for open discussion and
-            sharing of knowledge related to computer technology.
+            The KEC IT Club is a distinguished student organization at Kathmandu
+            Engineering College (KEC) dedicated to advancing computer technology
+            and IT education among its students. The club orchestrates a variety
+            of events, programs, and workshops designed to foster innovation,
+            skill development, and confidence in the realm of computers and
+            technology. It provides a dynamic platform for open discussions and
+            knowledge sharing, empowering students to explore their ideas and
+            excel in the field of computer technology.
           </p>
         </div>
         <div className="membersToggle">

@@ -17,7 +17,6 @@ function Parallax() {
       initialPos: el.getBoundingClientRect().top,
       currentPos: 0,
     }));
-    console.log(parallaxElsRef.current);
   }, []);
 
   const handleScroll = useCallback(
