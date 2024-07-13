@@ -12,7 +12,7 @@ import isMobile from "../ExtraFuncs.js";
 function Nav(props) {
   useEffect(() => {
     function setCirclePts(element, noOfChildren, radius, changeInAngle) {
-      var angleDisp = Math.PI / 3;
+      var angleDisp = Math.PI / 2;
       for (let i = 0; i < noOfChildren; i++) {
         var l =
           (((Math.PI - angleDisp) * radius) / (noOfChildren + 1)) * i + radius;

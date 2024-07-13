@@ -26,7 +26,6 @@ div.NavOpener{
 }
 
 .NavOpener:hover .hamburger{
-  background-color: var(--color1e);
   margin-top: 0.4rem;
 }
 
@@ -76,7 +75,7 @@ div.navContainerContainer{
   backdrop-filter: blur(10px);
 
   font-family: "Monomaniac One", sans-serif;
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.4);
   color: var(--color-1);
   padding: 1em;
   margin: 0px;
@@ -101,25 +100,29 @@ nav.NavContainer a{
 }
 
 nav.NavContainer .NavItems{
-  font-size: 5vh;
+  font-size: 4vh;
   position: fixed;
   color: var(--color1);
   display: flex;
   border-radius: 3vh 0vh 0vh 3vh;
-  transition: box-shadow 0.3s ease, background-color 0.2s ease;
+  transition: outline-offset 0.3s ease, background-color 0.2s ease;
   transform: translate(-50%, -50%) rotateY(0deg); /* Ensure 3D context */
   left: 50%;
-  border: 1px solid var(--color3A);
+  border: 2px solid var(--color3A);
   width: fit-content;
   padding: 0.5em;
   margin: auto;
   transform-style: preserve-3d;
+  outline-offset: 0px;
   backface-visibility: hidden;
 }
 
+
+ nav.NavContainer .NavItems:hover .NavItemIcons{
+ }
+
  nav.NavContainer .NavItems:hover{
-  box-shadow: inset 0px 0px 10rem var(--color1a), 0px 0px 10rem var(--color1e);
-  background-color: var(--color1);
+  border-radius: 3vh 0vh 0vh 3vh;
  }
 
 .NavItems > .NavItemIcons{
@@ -147,7 +150,6 @@ nav.NavContainer .NavItems{
   display: block;
 }
 
-
 #navDestroyer69{
   position: fixed;
   top: 10vh;
@@ -167,7 +169,6 @@ nav.NavContainer .NavItems{
   left: 50%;
   transform: translate(-50%, 200%);
   font-size: 1.5rem;
-  font-weight: light;
   color: var(--color1);
   pointer-events: none;
 }

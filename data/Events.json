@@ -2,7 +2,7 @@
   {
     "id": "1",
     "eventName": "Advanced Machine Learning",
-    "eventDate": "July 13 24 00:00:00",
+    "eventDate": "July 13 24 10:00:00",
     "eventDescription": "In this event you will learn about advanced machine learning techniques and how to apply them to your projects.",
     "eventImg": null
   },
@@ -18,6 +18,13 @@
     "eventName": "UI/UX Design",
     "eventDate": "Aug 25 24 00:00:00",
     "eventDescription": "In this event you will learn about how to design user interfaces and user experiences for your website or application.",
+    "eventImg": null
+  },
+  {
+    "id": "4",
+    "eventName": "Research Program",
+    "eventDate": "Nov 4 24 00:00:00",
+    "eventDescription": "In this event you will learn how to write your own research documents while doing your own projects",
     "eventImg": null
   }
 ]
