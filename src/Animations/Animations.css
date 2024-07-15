@@ -1,4 +1,12 @@
 
+@keyframes confetti{
+    0%{
+        opacity: 1;
+    }
+    100%{
+        opacity: 0;
+    }
+  }
 @keyframes fadeOut {
   from {
     display: block;
