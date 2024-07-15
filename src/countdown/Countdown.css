@@ -30,6 +30,7 @@
     align-items: center;
     justify-content: center;
     height: 80vh;
+    animation: fadeIn 1s linear forwards;
 }
 .countdownObj{
     margin-top: 20vh;

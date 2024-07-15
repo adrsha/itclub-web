@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Countdown.css";
 import eventData from "../../data/Events.json";
 import confettiImg1 from "/confetti1.gif";
@@ -32,40 +32,48 @@ function Countdown() {
   const [hours, setHours] = useState(0);
   const [mins, setMins] = useState(0);
   const [secs, setSec] = useState(0);
+  let today = new Date();
+  let tsec = (deadline.getTime() - today.getTime()) / 1000;
 
-  setInterval(() => {
-    const today = new Date();
-    let tsec = (deadline.getTime() - today.getTime()) / 1000;
-    if (tsec > 0) {
-      setDays(
-        Math.floor(tsec / 86400).toLocaleString("en-US", {
-          minimumIntegerDigits: 2,
-          useGrouping: false,
-        }),
-      );
-      setHours(
-        Math.floor((tsec % 86400) / 3600).toLocaleString("en-US", {
-          minimumIntegerDigits: 2,
-          useGrouping: false,
-        }),
-      );
-      setMins(
-        Math.floor((tsec % 3600) / 60).toLocaleString("en-US", {
-          minimumIntegerDigits: 2,
-          useGrouping: false,
-        }),
-      );
-      setSec(
-        Math.floor(tsec % 60).toLocaleString("en-US", {
-          minimumIntegerDigits: 2,
-          useGrouping: false,
-        }),
-      );
-    } else {
-    }
-  }, 1000);
+  function UpdateDate(tsec) {
+    setDays(
+      Math.floor(tsec / 86400).toLocaleString("en-US", {
+        minimumIntegerDigits: 2,
+        useGrouping: false,
+      }),
+    );
+    setHours(
+      Math.floor((tsec % 86400) / 3600).toLocaleString("en-US", {
+        minimumIntegerDigits: 2,
+        useGrouping: false,
+      }),
+    );
+    setMins(
+      Math.floor((tsec % 3600) / 60).toLocaleString("en-US", {
+        minimumIntegerDigits: 2,
+        useGrouping: false,
+      }),
+    );
+    setSec(
+      Math.floor(tsec % 60).toLocaleString("en-US", {
+        minimumIntegerDigits: 2,
+        useGrouping: false,
+      }),
+    );
+  }
+  useEffect(() => {
+    UpdateDate(tsec);
 
-  if (days <= 0 && hours <= 0 && mins <= 0 && secs <= 0) {
+    setInterval(() => {
+      today = new Date();
+      tsec = (deadline.getTime() - today.getTime()) / 1000;
+      if (tsec > 0) {
+        UpdateDate(tsec);
+      }
+    }, 1000);
+  }, []);
+
+  if (tsec <= 0) {
     return (
       <div className="countdown confetti">
         <audio id="myAudio">
