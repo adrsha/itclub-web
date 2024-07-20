@@ -1,14 +1,10 @@
-[
-  {
-    "id": "1",
-    "noticeHead": "Machine Learning Bootcamp 0 Complete!",
-    "noticeBody": "We have completed the Machine Learning Bootcamp 0! The Main Bootcamp is due for this July 13th.",
-    "noticeImg": null
-  },
-  {
-    "id": "2",
-    "noticeHead": "Machine Learning Classes Being Held",
-    "noticeBody": "In this event you will learn about advanced machine learning techniques and how to apply them to your projects.",
-    "noticeImg": null
-  }
-]
+  [
+
+    {
+      "id": "1",
+      "noticeHead": "Machine Learning Project Submission ",
+      "noticeBody": "Project Submission for the AI/ML Bootcamp",
+      "noticeImg": null
+    }
+  ]
+        
