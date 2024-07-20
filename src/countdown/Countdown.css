@@ -1,25 +1,25 @@
 .confettiImg{
-  position: fixed;
-  z-index: 1;
-  pointer-events: none;
-  animation: confetti 0.5s 1s linear forwards;
+    position: fixed;
+    z-index: 1;
+    pointer-events: none;
+    animation: confetti 0.5s 1s linear forwards;
 }
 .confettiImg#confetti1{
-  right: 0;
-  top: 0;
-  height: 80vh;
+    right: 0;
+    top: 0;
+    height: 80vh;
 }
 .confettiImg#confetti2{
-  bottom: 0;
-  top: auto;
-  left: 0;
-  height: 20vh;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    height: 20vh;
 }
 .confettiImg#confetti3{
-  bottom: 0;
-  top: auto;
-  left: 0;
-  height: 80vh;
+    bottom: 0;
+    top: auto;
+    left: 0;
+    height: 80vh;
 }
 
 .countdown{
@@ -59,7 +59,7 @@
     content: "hour";
     position: absolute;
     top: -0.5rem;
-    left: 60%;
+    left: 53%;
     font-size: 0.4em;
 }
 .dayshour::before{
@@ -79,7 +79,7 @@
     content: "secs";
     position: absolute;
     top: -0.5rem;
-    left: 60%;
+    left: 53%;
     font-size: 0.4em;
 }
 .minsec::before{

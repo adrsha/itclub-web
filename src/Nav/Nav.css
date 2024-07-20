@@ -1,181 +1,181 @@
 :root{
-  --perspective: 200vh;
+    --perspective: 200vh;
 }
 li{
-  list-style: none;
+    list-style: none;
 }
 
 div.NavOpener{
-  position: fixed;
-  top:5vh;
-  right: 5%;
-  z-index: 3;
-  display:flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+    position: fixed;
+    top:5vh;
+    right: 5%;
+    z-index: 3;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
 }
 .hamburger{
-  margin: 0.3rem;
-  width: 30px;
-  height: 4px;
-  border-radius: 5px;
-  background-color: var(--color1);
-  transition: 0.2s ease;
+    margin: 0.3rem;
+    width: 30px;
+    height: 4px;
+    border-radius: 5px;
+    background-color: var(--color1);
+    transition: 0.2s ease;
 }
 
 .NavOpener:hover .hamburger{
-  margin-top: 0.4rem;
+    margin-top: 0.4rem;
 }
 
 .fixedNavBar{
-  position: fixed;
-  top:10vh;
+    position: fixed;
+    top:10vh;
 }
 
 .logo{
-  position: fixed;
-  top: 5vh;
-  left: 5vw;
-  height: 3rem;
-  aspect-ratio: 1.06;
-  z-index: 2;
-  font-weight: bold;
-  color: var(--color1);
-  font-family: "JetBrains Mono", monospace;
+    position: fixed;
+    top: 5vh;
+    left: 5vw;
+    height: 3rem;
+    aspect-ratio: 1.06;
+    z-index: 2;
+    font-weight: bold;
+    color: var(--color1);
+    font-family: "JetBrains Mono", monospace;
 }
 .logo img{
-  aspect-ratio: 1;
-  height: 100%;
-  transition: 0.2s ease;
+    aspect-ratio: 1;
+    height: 100%;
+    transition: 0.2s ease;
 }
 .logo::before{
-  content: "KEC";
-  position: absolute;
-  top: 0%;
-  transform: translate(-50%, calc(-100% - 0.5rem));
+    content: "KEC";
+    position: absolute;
+    top: 0%;
+    transform: translate(-50%, calc(-100% - 0.5rem));
 }
 .logo::after{
-  content: "CLUB";
-  position: absolute;
-  bottom: 0%;
-  right: 0%;
-  transform: translate(50%, calc(100% + 0.5rem));
+    content: "CLUB";
+    position: absolute;
+    bottom: 0%;
+    right: 0%;
+    transform: translate(50%, calc(100% + 0.5rem));
 }
 
 
 div.navContainerContainer{
-  position: fixed;
-  width: 100vw;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 100vh;
-  backdrop-filter: blur(10px);
+    position: fixed;
+    width: 100vw;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 100vh;
+    backdrop-filter: blur(10px);
 
-  font-family: "Monomaniac One", sans-serif;
-  background: rgba(0, 0, 0, 0.4);
-  color: var(--color-1);
-  padding: 1em;
-  margin: 0px;
-  z-index: 10;
+    font-family: "Monomaniac One", sans-serif;
+    background: rgba(0, 0, 0, 0.4);
+    color: var(--color-1);
+    padding: 1em;
+    margin: 0px;
+    z-index: 10;
 }
 
 
 nav.NavContainer{
-  position: absolute;
-  perspective: var(--perspective);
-  perspective-origin: 50% 50%;
-  top: 0%;
-  left: 0%;
-  right: 0%;
-  bottom: 0%;
-  width: 100%;
-  height: 100%;
+    position: absolute;
+    perspective: var(--perspective);
+    perspective-origin: 50% 50%;
+    top: 0%;
+    left: 0%;
+    right: 0%;
+    bottom: 0%;
+    width: 100%;
+    height: 100%;
 }
 
 nav.NavContainer a{
-  cursor: pointer;
+    cursor: pointer;
 }
 
 nav.NavContainer .NavItems{
-  font-size: 4vh;
-  position: fixed;
-  color: var(--color1);
-  display: flex;
-  border-radius: 3vh 0vh 0vh 3vh;
-  transition: outline-offset 0.3s ease, background-color 0.2s ease;
-  transform: translate(-50%, -50%) rotateY(0deg); /* Ensure 3D context */
-  left: 50%;
-  border: 2px solid var(--color3A);
-  width: fit-content;
-  padding: 0.5em;
-  margin: auto;
-  transform-style: preserve-3d;
-  outline-offset: 0px;
-  backface-visibility: hidden;
+    font-size: 4vh;
+    position: fixed;
+    color: var(--color1);
+    display: flex;
+    border-radius: 3vh 0vh 0vh 3vh;
+    transition: outline-offset 0.3s ease, background-color 0.2s ease;
+    transform: translate(-50%, -50%) rotateY(0deg); /* Ensure 3D context */
+    left: 50%;
+    border: 2px solid var(--color3A);
+    width: fit-content;
+    padding: 0.5em;
+    margin: auto;
+    transform-style: preserve-3d;
+    outline-offset: 0px;
+    backface-visibility: hidden;
 }
 
 
  nav.NavContainer .NavItems:hover .NavItemIcons{
- }
-
- nav.NavContainer .NavItems:hover{
-  border-radius: 3vh 0vh 0vh 3vh;
+     outline-offset: 9px;
  }
 
 .NavItems > .NavItemIcons{
-  position: absolute;
-  backface-visibility: hidden;
-  top: 0;
-  right: 0vw;
-  transform: translate(100%, -20%) rotateY(0deg); /* Ensure 3D context */
-  height: 20vh;
-  padding: 5vh;
-  border-radius: 4vh;
+    position: absolute;
+    backface-visibility: hidden;
+    outline: 3px solid var(--color1e);
+    top: 0;
+    outline-offset: 0px;
+    transition: outline-offset 0.3s ease;
+    right: 0vw;
+    transform: translate(100%, -20%) rotateY(0deg); /* Ensure 3D context */
+    height: 20vh;
+    padding: 5vh;
+    border-radius: 4vh;
 }
 
 .NavItems > .NavItemIcons img{
-  height: 10vh;
-  margin: auto;
+    height: 10vh;
+    margin: auto;
 }
 
 .hidden{
-  animation: fadeOut 0.5s ease-in-out forwards;
-  display: none;
+    animation: fadeOut 0.5s ease-in-out forwards;
+    display: none;
 }
 .popIn{
-  animation: fadeIn 0.5s ease-in-out forwards;
-  display: block;
+    animation: fadeIn 0.5s ease-in-out forwards;
+    display: block;
 }
 
 #navDestroyer69{
-  position: fixed;
-  top: 10vh;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  aspect-ratio: 1;
-  z-index: 11;
-  transition: 0.2s ease;
-  opacity: 0.5;
+    position: fixed;
+    top: 10vh;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    aspect-ratio: 1;
+    z-index: 11;
+    transition: 0.2s ease;
+    opacity: 0.5;
 }
 
 #navDestroyer69::after{
-  content: "CLOSE";
-  position: absolute;
-  opacity: 0;
-  top: 0%;
-  left: 50%;
-  transform: translate(-50%, 200%);
-  font-size: 1.5rem;
-  color: var(--color1);
-  pointer-events: none;
+    content: "CLOSE";
+    position: absolute;
+    opacity: 0;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, 200%);
+    font-size: 1.5rem;
+    color: var(--color1);
+    pointer-events: none;
 }
 
 #navDestroyer69:hover{
-  opacity: 1;
+    opacity: 1;
 }
 #navDestroyer69:hover::after{
-  opacity: 1;
+    opacity: 1;
 }

@@ -26,7 +26,7 @@
   },
   {
     "post": "Event Manager",
-    "attr": "projectManager",
+    "attr": "eventManager",
     "val": "Pranav Ram Joshi"
   },
   {
@@ -61,27 +61,27 @@
   },
   {
     "post": "Executive Member",
-    "attr": "executiveMember7",
+    "attr": "executiveMember5",
     "val": "Prasun Siwakoti"
   },
   {
     "post": "Executive Member",
-    "attr": "executiveMember7",
+    "attr": "executiveMember6",
     "val": "Khusi Khati"
   },
   {
     "post": "Executive Member",
-    "attr": "executiveMember7",
+    "attr": "executiveMember8",
     "val": "Raj Timalsina"
   },
   {
     "post": "Executive Member",
-    "attr": "executiveMember7",
+    "attr": "executiveMember9",
     "val": "Hritik Thapa"
   },
   {
     "post": "Executive Member",
-    "attr": "executiveMember7",
+    "attr": "executiveMember10",
     "val": "Bikash Mishra"
   }
 ]

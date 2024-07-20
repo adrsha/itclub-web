@@ -20,11 +20,9 @@
 
 @keyframes fadeIn {
   from {
-    display: block;
     opacity: 0;
   }
   to {
-    display: block;
     opacity: 1;
   }
 }
