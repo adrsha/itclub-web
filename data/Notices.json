@@ -1,10 +1,8 @@
-  [
-
-    {
-      "id": "1",
-      "noticeHead": "Machine Learning Project Submission ",
-      "noticeBody": "Project Submission for the AI/ML Bootcamp",
-      "noticeImg": null
-    }
-  ]
-        
+[
+  {
+    "id": "1",
+    "noticeHead": "Machine Learning Project Submission",
+    "noticeBody": "The AI/ML Bootcamp project submission window is now open! Submit your projects on time to be evaluated.    ",
+    "noticeImg": null
+  }
+]

@@ -37,14 +37,14 @@ function App() {
           title={notices[0].noticeHead}
           content={notices[0].noticeBody}
           button1="All Notices"
-          buttonDiscord="https://drive.google.com/file/d/19J076MPdXXBCLFEjvEqtQVwErKZY1Ds8/view?usp=sharing"
+          buttonDiscord="https://discord.com/channels/1256494989274382417/1262448695396405360"
           buttonForm="https://docs.google.com/forms/d/e/1FAIpQLSf7Fn0zys3sWDftUoGhyPk6-Tq4iFZQFHhZwbwMR6o1CZo9hw/viewform"
           link1="/notices"
           button2="All Events"
           link2="/events"
         />
         {
-          // <Cards
+          // <Cards 
           // id="DetailCard"
           // description="Projects done inside as well as conducted by IT Club, via events and hackathons as well as selection procedures."
           // title="Our Projects"
