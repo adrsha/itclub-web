@@ -2,14 +2,14 @@
   {
     "id": "2",
     "eventName": "CV Boot Camp",
-    "eventDate": "July 29 24 00:00:00",
+    "eventDate": "Dec 29 24 00:00:00",
     "eventDescription": "In this event you will learn about how a curriculum vitae can be used to showcase your skills and experience.",
     "eventImg": null
   },
   {
     "id": "3",
     "eventName": "UI/UX Design",
-    "eventDate": "Aug 25 24 00:00:00",
+    "eventDate": "Dec 25 24 00:00:00",
     "eventDescription": "In this event you will learn about how to design user interfaces and user experiences for your website or application.",
     "eventImg": null
   },
