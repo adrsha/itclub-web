@@ -31,7 +31,7 @@ function App() {
           button2="Contact Us"
           link2="#contactUs"
         />
-        <Cards id="image" src={posterImg} />
+        {/* <Cards id="image" src={posterImg} /> */}
         <Cards
           id="notice"
           title={notices[0].noticeHead}

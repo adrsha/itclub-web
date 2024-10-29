@@ -1,5 +1,12 @@
 [
   {
+    "id": "1",
+    "eventName": "Research Program",
+    "eventDate": "Nov 4 24 00:00:00",
+    "eventDescription": "In this event you will learn how to write your own research documents while doing your own projects",
+    "eventImg": null
+  },
+  {
     "id": "2",
     "eventName": "CV Boot Camp",
     "eventDate": "Dec 29 24 00:00:00",
@@ -12,12 +19,6 @@
     "eventDate": "Dec 25 24 00:00:00",
     "eventDescription": "In this event you will learn about how to design user interfaces and user experiences for your website or application.",
     "eventImg": null
-  },
-  {
-    "id": "4",
-    "eventName": "Research Program",
-    "eventDate": "Nov 4 24 00:00:00",
-    "eventDescription": "In this event you will learn how to write your own research documents while doing your own projects",
-    "eventImg": null
   }
+
 ]
