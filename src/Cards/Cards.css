@@ -6,6 +6,10 @@
   font-weight: bold;
   margin: 0;
   width: 30rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .glassCards button.simpleButton{
   width: fit-content;
@@ -93,8 +97,10 @@
   flex-direction: row;
   justify-content: center;
   font-size: 1rem;
-  gaps: 1rem;
+  gap: 1rem;
+  /* width: 100%; */
   text-align: left;
+  
 } 
 #notice #noticeContent::before{
   content: "NEW NOTICE!!";
@@ -116,6 +122,9 @@
 
 .noticeSpButtons{
   margin-left: 1rem;
+  display: flex;
+  margin-inline: auto;
+
 }
 .discordButton{
   border-radius: 1rem 1rem 0 0;
