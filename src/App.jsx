@@ -37,8 +37,8 @@ function App() {
           title={notices[0].noticeHead}
           content={notices[0].noticeBody}
           button1="All Notices"
-          buttonDiscord="https://discord.com/channels/1256494989274382417/1262448695396405360"
-          buttonForm="https://docs.google.com/forms/d/e/1FAIpQLSf7Fn0zys3sWDftUoGhyPk6-Tq4iFZQFHhZwbwMR6o1CZo9hw/viewform"
+          buttonDiscord={notices[0].buttonDiscord}
+          buttonForm={notices[0].buttonForm}
           link1="/notices"
           button2="All Events"
           link2="/events"
