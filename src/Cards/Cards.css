@@ -96,7 +96,7 @@
   gaps: 1rem;
   text-align: left;
 } 
-#notice #noticeContent::before{
+.exists::before{
   content: "NEW NOTICE!!";
   text-align: center;
   color: var(--color4);

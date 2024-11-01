@@ -6,6 +6,7 @@ import { useState } from "react";
 import { lenis } from "../Lenis/Lenis.js";
 
 let cardHtml = member.map((mv) => {
+ 
   return (
     <div key={mv.attr} className="tablet" id={mv.attr}>
       <img src={dummyImage} alt="" />
@@ -17,6 +18,7 @@ let cardHtml = member.map((mv) => {
   );
 });
 function Cards(props) {
+  
   const [MembersOpen, setMembersOpen] = useState("shorter");
   const [MembersCardState, setMembersCardState] = useState("Show More");
 
@@ -141,8 +143,12 @@ function Cards(props) {
       </div>
     );
   } else if (props.id == "notice") {
+    let noticeStyle=(!(props.buttonDiscord && props.buttonForm))
+    ? null
+    : "exists";
+    
     return (
-      <div className="glassCards glass parallaxEl" id={props.id}>
+      <div className={`glassCards glass parallaxEl ${noticeStyle}`} id={props.id}>
         {Object.prototype.hasOwnProperty.call(props, "title") ? (
           <div className="cardTitle">{props.title}</div>
         ) : null}
@@ -151,7 +157,7 @@ function Cards(props) {
             {props.content}
             <div className="noticeSpButtons">
             {
-  Object.prototype.hasOwnProperty.call(props, "buttonDiscord") && props.buttonDiscord ? (
+  props.buttonDiscord ? (
     <a href={props.buttonDiscord}>
       <button className="discordButton">
         <img src="/discord_logo.png" alt="Discord Logo" />
@@ -161,7 +167,7 @@ function Cards(props) {
 }
 
 {
-  Object.prototype.hasOwnProperty.call(props, "buttonDiscord") && props.buttonDiscord ? (
+  props.buttonForm ? (
     <a href={props.buttonForm}>
       <button className="formButton">
         <img src="/forms_logo.png" alt="Forms Logo" />
