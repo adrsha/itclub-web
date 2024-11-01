@@ -2,11 +2,11 @@
 import "./Cards.css";
 import member from "../../data/Members.json";
 import dummyImage from "/president.png";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { lenis } from "../Lenis/Lenis.js";
 
 let cardHtml = member.map((mv) => {
- 
+
   return (
     <div key={mv.attr} className="tablet" id={mv.attr}>
       <img src={dummyImage} alt="" />
@@ -17,8 +17,10 @@ let cardHtml = member.map((mv) => {
     </div>
   );
 });
+
+
 function Cards(props) {
-  
+  const [fullScreenImageStyle, setFullScreenImageStyle] = useState({ position: "absolute", top: "50vh", padding: 0, right: "12vw", height: "fit-content", width: "fit-content" })
   const [MembersOpen, setMembersOpen] = useState("shorter");
   const [MembersCardState, setMembersCardState] = useState("Show More");
 
@@ -48,7 +50,20 @@ function Cards(props) {
     );
   } else if (props.id == "image") {
     return (
-	<div className="glassCards" id={props.id}>
+      <div
+        style={fullScreenImageStyle}
+        className="glassCards"
+        id={props.id}
+        onClick={
+          () => {
+            if (fullScreenImageStyle.position == "absolute") {
+              setFullScreenImageStyle({ height: "100vh", width: "100vw", position: "fixed", top: 0, right: 0 })
+            } else {
+              setFullScreenImageStyle({ position: "absolute", top: "50vh", padding: 0, right: "12vw", height: "fit-content", width: "fit-content" })
+            }
+          }
+        }
+      >
         <img src={props.src} />
       </div>
     );
@@ -143,10 +158,10 @@ function Cards(props) {
       </div>
     );
   } else if (props.id == "notice") {
-    let noticeStyle=(!(props.buttonDiscord && props.buttonForm))
-    ? null
-    : "exists";
-    
+    let noticeStyle = (!(props.buttonDiscord && props.buttonForm))
+      ? null
+      : "exists";
+
     return (
       <div className={`glassCards glass parallaxEl ${noticeStyle}`} id={props.id}>
         {Object.prototype.hasOwnProperty.call(props, "title") ? (
@@ -156,25 +171,25 @@ function Cards(props) {
           <div className="cardContent" id="noticeContent">
             {props.content}
             <div className="noticeSpButtons">
-            {
-  props.buttonDiscord ? (
-    <a href={props.buttonDiscord}>
-      <button className="discordButton">
-        <img src="/discord_logo.png" alt="Discord Logo" />
-      </button>
-    </a>
-  ) : null
-}
+              {
+                props.buttonDiscord ? (
+                  <a href={props.buttonDiscord}>
+                    <button className="discordButton">
+                      <img src="/discord_logo.png" alt="Discord Logo" />
+                    </button>
+                  </a>
+                ) : null
+              }
 
-{
-  props.buttonForm ? (
-    <a href={props.buttonForm}>
-      <button className="formButton">
-        <img src="/forms_logo.png" alt="Forms Logo" />
-      </button>
-    </a>
-  ) : null
-}
+              {
+                props.buttonForm ? (
+                  <a href={props.buttonForm}>
+                    <button className="formButton">
+                      <img src="/forms_logo.png" alt="Forms Logo" />
+                    </button>
+                  </a>
+                ) : null
+              }
             </div>
           </div>
         ) : null}
