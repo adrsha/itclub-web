@@ -33,7 +33,8 @@ function Countdown() {
   const [mins, setMins] = useState(0);
   const [secs, setSec] = useState(0);
   let today = new Date();
-  let tsec = (deadline.getTime() - today.getTime()) / 1000;
+  let time = (deadline.getTime() - today.getTime()) / 1000;
+  let tsec = (time<61596237)?time:null;
 
   function UpdateDate(tsec) {
     setDays(
@@ -63,7 +64,7 @@ function Countdown() {
   }
   useEffect(() => {
     UpdateDate(tsec);
-
+    console.log(tsec)
     setInterval(() => {
       today = new Date();
       tsec = (deadline.getTime() - today.getTime()) / 1000;
@@ -73,7 +74,7 @@ function Countdown() {
     }, 1000);
   }, []);
 
-  if (tsec <= 0) {
+  if (tsec <= 0 && tsec!=null) {
     return (
       <div className="countdown confetti">
         <audio id="myAudio">
@@ -104,7 +105,8 @@ function Countdown() {
     );
   } else {
     return (
-      <>
+      (tsec > 0 && tsec!=null)?
+      (<>
         <div className="countdown">
           <div className="countdownObj">
             <div className="dayshour">
@@ -121,7 +123,24 @@ function Countdown() {
           </div>
           <img className="mouseimg" src={mouseImg} alt="mouse img" />
         </div>
-      </>
+      </>):(<>
+        <div className="countdown">
+          <div className="countdownObj">
+            <div className="dayshour">
+             ∞
+            </div>
+            <div className="minsec">
+             ∞
+            </div>
+          </div>
+          <div className="notcountdown">
+            No active Programs <br />
+            For now :|
+            <br />
+          </div>
+          <img className="mouseimg" src={mouseImg} alt="mouse img" />
+        </div>
+      </>)
     );
   }
 }
