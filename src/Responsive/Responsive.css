@@ -1,7 +1,6 @@
-
-/* LARGE SCREENS */
-
-
+:root{
+  --buttonWidth : 20vw;
+}
 /* MEDIUM SCREENS */
 
 @media (max-width: 1200px){
@@ -93,9 +92,41 @@
     height: 4vh;
     width: 9vh;
   }
-  .aboutUs img.parallaxEl{
+  /*  */
+  .aboutUs{
+    padding-left: 5vw;
+    padding-right: 5vw;
+    margin: 3vw;
+  }
+
+  .aboutUs img{
     display: none;
   }
+  
+  .aboutUsTitle {
+    font-size: 4.2em;
+    margin-bottom: 1em;
+  }
+  .aboutUsContent{
+    padding: 4rem;
+  }
+  .aboutUsText p{
+    padding: 0.5rem;
+    font-size: 1.5em;
+  }
+  
+  .aboutUsText {
+    margin-bottom: 3em;
+  }
+  #membersButton button{
+    width: var(--buttonWidth);
+    display: flex;
+    justify-content: center;
+    font-size: 1.5em;
+    padding-left: 3em;
+    padding-right: 3em;
+  }
+  /*  */
   .pageContent #image{
     display: none;
   }
@@ -141,6 +172,7 @@
   nav.NavContainer .NavItems > .NavItemIcons{
     display: none;
   }
+  
 }
 
 /* SUPER SMALL SCREENS */
