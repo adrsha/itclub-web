@@ -64,7 +64,7 @@
   width: 33em;
   height: 33em;
   z-index: 4;
-  position: relative;
+  /* position: relative; */
   align-items: center;
   border-radius: 50%;
   justify-content: center;
