@@ -64,7 +64,7 @@
   width: 33em;
   height: 33em;
   z-index: 4;
-  position: relative;
+  /* position: relative; */
   align-items: center;
   border-radius: 50%;
   justify-content: center;
@@ -104,10 +104,15 @@
   font-size: 1rem;
   gaps: 1rem;
   text-align: left;
+  <<<<<<< HEAD
+}
+
+.exists::before {
+  =======
 }
 
 #notice #noticeContent::before {
-  content: "NEW NOTICE!!";
+  >>>>>>>4f4dc5d (styles: fullscreen image) content: "NEW NOTICE!!";
   text-align: center;
   color: var(--color4);
   background-color: var(--color1);
