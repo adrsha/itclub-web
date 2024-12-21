@@ -104,15 +104,10 @@
   font-size: 1rem;
   gaps: 1rem;
   text-align: left;
-  <<<<<<< HEAD
-}
-
-.exists::before {
-  =======
 }
 
 #notice #noticeContent::before {
-  >>>>>>>4f4dc5d (styles: fullscreen image) content: "NEW NOTICE!!";
+  content: "NEW NOTICE!!";
   text-align: center;
   color: var(--color4);
   background-color: var(--color1);
