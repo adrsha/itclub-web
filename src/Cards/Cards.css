@@ -82,7 +82,7 @@
   margin: 5vw;
 }
 
-.pageContent::before {
+.pageContent#homePageContent::before {
   content: "SCROLL DOWN";
   color: var(--color1);
   font-family: "JetBrains Mono", monospace;

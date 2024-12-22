@@ -1,9 +1,9 @@
 import Countdown from "./countdown/Countdown.jsx";
-import isMobile from "./ExtraFuncs.js";
 import Nav from "./Nav/Nav.jsx";
 import ContactUs from "./ContactUs/ContactUs.jsx";
 import AboutUs from "./AboutUs/AboutUs.jsx";
 import Footer from "./Footer/Footer.jsx";
+import isMobile from "./ExtraFuncs.js";
 import Parallax from "./Parallax/Parallax.js";
 import Cards from "./Cards/Cards.jsx";
 import "./App.css";
@@ -22,7 +22,7 @@ function App() {
       <LenisComponent />
       {isMobile() ? null : <Parallax />}
       <Countdown />
-      <div className="pageContent">
+      <div className="pageContent" id="homePageContent">
         <Cards
           id="circleButtons"
           title="KEC IT Club"
