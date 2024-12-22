@@ -148,3 +148,8 @@ html.lenis, html.lenis body {
   background-color: var(--color4);
   border-radius: 1rem;
 }
+
+body.overlay-active {
+  overflow: hidden;  /* Prevent scrolling */
+  position: fixed;   /* Optionally, to prevent page from jumping */
+}
