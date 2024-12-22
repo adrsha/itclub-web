@@ -17,7 +17,7 @@ import { LenisComponent } from "./Lenis/Lenis.js";
 function App() {
   return (
     <>
-      <Nav events contactUs aboutUs notices />
+      <Nav events contactUs aboutUs notices dristi/>
       <Lines />
       <LenisComponent />
       {isMobile() ? null : <Parallax />}

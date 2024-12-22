@@ -5,6 +5,7 @@ import aboutImg from "/about_us.png";
 import contactImg from "/contact.png";
 import eventsImg from "/events.png";
 import noticeImg from "/notice.png";
+import dristiimg from "/dristi_logo_small.png"
 import { useState, useEffect } from "react";
 import { lenis } from "../Lenis/Lenis.js";
 import isMobile from "../ExtraFuncs.js";
@@ -136,6 +137,14 @@ function Nav(props) {
               Notices
               <span className="NavItemIcons glass">
                 <img src={noticeImg} alt="" />
+              </span>
+            </a>
+          ) : null}
+          {Object.prototype.hasOwnProperty.call(props, "dristi") ? (
+            <a href="/dristi" className="NavItems" id="events_nav">
+              Dristi
+              <span className="NavItemIcons glass">
+                <img src={dristiimg} alt="" />
               </span>
             </a>
           ) : null}
