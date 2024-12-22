@@ -69,6 +69,7 @@ function Cards(props) {
                   zIndex: 10,
                   top: 0,
                   right: 0,
+                  backgroundColor: "var(--color4aA)",
               })
             } else {
               setFullScreenImageStyle({
