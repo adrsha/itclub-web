@@ -18,13 +18,13 @@
     width: 60vw;
   }
 
-  .glassCards#image{
-    position: static;
-    width: 70vw;
-  }
-  .glassCards#image img{
-    width: 70vw;
-  }
+  /* .glassCards#image{ */
+  /*   position: static; */
+  /*   width: 70vw; */
+  /* } */
+  /* .glassCards#image img{ */
+  /*   width: 70vw; */
+  /* } */
 
   #ImgDetailCard  .idcContent{
     flex-direction: column-reverse;

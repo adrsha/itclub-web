@@ -20,7 +20,12 @@ let cardHtml = member.map((mv) => {
 
 
 function Cards(props) {
-  const [fullScreenImageStyle, setFullScreenImageStyle] = useState({ position: "absolute", top: "50vh", padding: 0, right: "12vw", height: "fit-content", width: "fit-content" })
+  const [fullScreenImageStyle, setFullScreenImageStyle] = useState({
+      position: "absolute",
+      top: "50vh",
+      padding: 0,
+      right: "12vw",
+  })
   const [MembersOpen, setMembersOpen] = useState("shorter");
   const [MembersCardState, setMembersCardState] = useState("Show More");
 
@@ -57,14 +62,36 @@ function Cards(props) {
         onClick={
           () => {
             if (fullScreenImageStyle.position == "absolute") {
-              setFullScreenImageStyle({ height: "100vh", width: "100vw", position: "fixed", top: 0, right: 0 })
+              setFullScreenImageStyle({
+                  height: "100vh",
+                  width: "100vw",
+                  position: "fixed",
+                  zIndex: 10,
+                  top: 0,
+                  right: 0,
+              })
             } else {
-              setFullScreenImageStyle({ position: "absolute", top: "50vh", padding: 0, right: "12vw", height: "fit-content", width: "fit-content" })
+              setFullScreenImageStyle({
+                  position: "absolute",
+                  top: "50vh",
+                  padding: 0,
+                  right: "12vw",
+              })
             }
           }
         }
       >
-        <img src={props.src} />
+        <img src={props.src} 
+                    style={ 
+                      (fullScreenImageStyle.position == "fixed")
+                        ? {
+                                objectFit: "contain",
+                              border: "none",
+                              outline: "none",
+                        }
+                        : { }
+                    }
+                />
       </div>
     );
   } else if (props.id == "MembersCard") {

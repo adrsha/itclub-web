@@ -23,27 +23,29 @@
   justify-content: center;
 }
 
-/* .glassCards#image { */
-/*   position: absolute; */
-/*   top: 50vh; */
-/*   padding: 0; */
-/*   right: 12vw; */
-/*   height: fit-content; */
-/*   width: fit-content; */
-/* } */
+.glassCards#image {
+  height: 25vw;
+  width: 25vw;
+  border-radius: 0vh;
+  background-color: var(--color4aA);
+}
 
 .glassCards#image>img {
-  height: 55vh;
-  object-fit: contain;
+    width: 100%;
+    height: 100%;
+  object-fit: cover;
   border-radius: 5vh;
-  border: 3vh solid var(--color4aA);
   filter: sepia(100%) saturate(300%) brightness(90%) hue-rotate(150deg);
   transition: 0.3s ease;
+  border: 20px solid var(--color3A);
+  outline: 2px solid var(--color1A);
 }
 
 .glassCards#image>img:hover {
   filter: brightness(100%);
-  border: 5vh solid var(--color4aA);
+  outline: 1px solid var(--color1A);
+  border: 0px solid var(--color1A);
+  border-radius: 1vh;
 }
 
 .glassCards .cardTitle {
@@ -104,6 +106,10 @@
   font-size: 1rem;
   gaps: 1rem;
   text-align: left;
+}
+
+
+#notice #noticeContent::before {
   content: "NEW NOTICE!!";
   text-align: center;
   color: var(--color4);
