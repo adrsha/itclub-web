@@ -9,6 +9,7 @@ import Cards from "./Cards/Cards.jsx";
 import "./App.css";
 import "./Responsive/Responsive.css";
 import "./Animations/Animations.css";
+// import { Canvas } from "./Canvas/canvas.jsx";
 import posterImg from "/poster_AIML.png";
 import notices from "../data/Notices.json";
 import Lines from "./Lines/Lines.jsx";
@@ -18,6 +19,7 @@ function App() {
   return (
     <>
       <Nav events contactUs aboutUs notices dristi/>
+
       <Lines />
       <LenisComponent />
       {isMobile() ? null : <Parallax />}

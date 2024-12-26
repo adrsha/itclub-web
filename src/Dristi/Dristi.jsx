@@ -16,7 +16,7 @@ export default function Dristi(params) {
             <LenisComponent />
             {isMobile() ? null : <Parallax />}
             <div className="pageContent">
-                <div className="glassCards" id="image">
+                <div className="glassCards">
                 </div>
             </div>
         </>

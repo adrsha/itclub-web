@@ -20,7 +20,7 @@ let noticesHtml = noticeData.map((noti) => {
           button2="Learn More"
         />
       </div>
-    );
+    )
   } else {
     return (
       <div key={noti.id} className="Eventlists">

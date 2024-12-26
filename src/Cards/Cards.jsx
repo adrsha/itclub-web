@@ -221,7 +221,7 @@ function Cards(props) {
             </div>
             </div>
         ): null
-        };
+        }
         </div>
         )
     } else if (props.id == "image") {
