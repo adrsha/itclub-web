@@ -68,11 +68,21 @@ function Nav(props) {
       <a href="/" className="logo">
         <img src={logo} />
       </a>
-      <div className="NavOpener" onClick={() => setDisplay("popIn")}>
-        <div className="hamburger top"></div>
-        <div className="hamburger middle"></div>
-        <div className="hamburger bottom"></div>
+
+      <div className="NavContents">
+          <div  className="EventLogo">
+          <a href="/dristi">
+            <div className="EventLogoinner"></div>
+            D R I S T I
+          </a>
+          </div>
+        <div className="NavOpener" onClick={() => setDisplay("popIn")}>
+          <div className="hamburger top"></div>
+          <div className="hamburger middle"></div>
+          <div className="hamburger bottom"></div>
+        </div>
       </div>
+      
 
       <div
         className={"navContainerContainer " + navDisplay}

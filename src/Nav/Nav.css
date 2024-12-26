@@ -5,11 +5,57 @@ li{
     list-style: none;
 }
 
-div.NavOpener{
+/* N A V B A R */
+
+.NavContents{
     position: fixed;
     top:5vh;
     right: 5%;
     z-index: 3;
+    height: 4vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+/* NAVBAR EVENT */
+.EventLogo{
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Monomaniac One";
+    color: var(--color1);
+    font-size: 1.5rem;
+    transition: 4s ease;
+}
+.EventLogo :hover{
+    text-shadow: 1px 1px 0px var(--color1);
+}
+.EventLogo a{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.EventLogo a .EventLogoinner{
+    width: 0px;
+    height: 2.5vw;
+    background-image: url("/dristi_logo_small.png");
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: 0.3s ease;
+}
+.EventLogo:hover a .EventLogoinner{
+    width: 2.5vw;
+    height: 2.5vw;
+}
+/* NAVBAR HAMBURGER */
+div.NavOpener{
+    width: 4vw;
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -81,7 +127,6 @@ div.navContainerContainer{
     margin: 0px;
     z-index: 10;
 }
-
 
 nav.NavContainer{
     position: absolute;
