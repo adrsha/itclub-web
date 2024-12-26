@@ -53,7 +53,6 @@
 }
 
 .specialEventContent{
-  position: relative;
   border-radius: 20vw;
   min-width: 50vw;
   max-width: 50vw;
@@ -65,4 +64,45 @@
   color: var(--color1);
   font-family: "Monomaniac One", cursive;
   font-size: 3rem;
+}
+
+.specialEventSwitcher{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    bottom: 0;
+    z-index: 1;
+}
+
+.specialEventSwitcher button{
+    border: none;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bolder;
+    cursor: pointer;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    white-space: nowrap;
+    transition: 0.2s;
+    background-color: var(--color1);
+}
+
+.specialEventSwitcher button.prevEvent{
+    border-radius: 4rem 1rem 1rem 4rem;
+    border-right: var(--color4) solid 1rem;
+}
+.specialEventSwitcher button.nextEvent{
+    border-radius: 1rem 4rem 4rem 1rem;
+    border-left: var(--color4) solid 1rem;
+}
+
+.specialEventSwitcher button.prevEvent:hover{
+  border-right: var(--color4) solid 2rem;
+}
+.specialEventSwitcher button.nextEvent:hover{
+  border-left: var(--color4) solid 2rem;
 }

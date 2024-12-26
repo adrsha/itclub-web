@@ -21,7 +21,7 @@ function DristiEvents(props){
     )
 }
 
-        
+
 
 export default function Dristi(params) {
     const [currentEvent, setCurrentEvent] = useState(0);
@@ -29,7 +29,7 @@ export default function Dristi(params) {
     useEffect(() => {
         document.getElementById("root").classList.add("dristi");
     },[])
-    
+
     return (
         <div id="specialEventRoot">
             <Nav events contactUs aboutUs notices dristi/>
@@ -78,14 +78,14 @@ export default function Dristi(params) {
                     } else {
                         setCurrentEvent(prevCurrentEvent => (prevCurrentEvent-1));
                     }
-                } }>Previous Event</button>
+                } }></button>
                 <button className="nextEvent" onClick={ ()=>{
                     if (currentEvent == Math.floor(events.length - 1)){
                         setCurrentEvent(0);
                     } else {
                         setCurrentEvent(prevCurrentEvent => (prevCurrentEvent+1));
                     }
-                } }>Next Event</button>
+                } }></button>
             </div>
             <Footer />
         </div>
