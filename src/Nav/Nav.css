@@ -43,7 +43,6 @@ li{
 .EventLogo a .EventLogoinner{
     width: 0px;
     height: 2.5vw;
-    background-image: url("/dristi_logo_small.png");
     background-position: top left;
     background-size: cover;
     background-repeat: no-repeat;

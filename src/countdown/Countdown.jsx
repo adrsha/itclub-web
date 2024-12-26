@@ -64,7 +64,6 @@ function Countdown() {
   }
   useEffect(() => {
     UpdateDate(tsec);
-    console.log(tsec)
     setInterval(() => {
       today = new Date();
       tsec = (deadline.getTime() - today.getTime()) / 1000;

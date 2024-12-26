@@ -5,10 +5,12 @@ import aboutImg from "/about_us.png";
 import contactImg from "/contact.png";
 import eventsImg from "/events.png";
 import noticeImg from "/notice.png";
-import dristiimg from "/dristi_logo_small.png"
-import { useState, useEffect } from "react";
+import { useState, useEffect, React } from "react";
 import { lenis } from "../Lenis/Lenis.js";
 import isMobile from "../ExtraFuncs.js";
+import { Link, useLocation } from 'react-router-dom';/*for getting current page*/
+import eventData from "/data/Events.json";
+
 
 function Nav(props) {
   useEffect(() => {
@@ -63,6 +65,10 @@ function Nav(props) {
   }, []);
   let [navDisplay, setDisplay] = useState("hidden");
 
+  const location = useLocation();
+  const EventData = eventData[0];
+
+
   return (
     <>
       <a href="/" className="logo">
@@ -70,19 +76,23 @@ function Nav(props) {
       </a>
 
       <div className="NavContents">
-          <div  className="EventLogo">
-          <a href="/dristi">
-            <div className="EventLogoinner"></div>
-            D R I S T I
-          </a>
-          </div>
+        {
+          EventData.display && location.pathname == '/' && (
+            <div className="EventLogo">
+              <a href={EventData.eventLink}>
+                <div className="EventLogoinner" style={{backgroundImage: `url(${EventData.eventImg})`}}></div>
+                {EventData.eventName}
+              </a>
+            </div>
+          )
+        }
         <div className="NavOpener" onClick={() => setDisplay("popIn")}>
           <div className="hamburger top"></div>
           <div className="hamburger middle"></div>
           <div className="hamburger bottom"></div>
         </div>
       </div>
-      
+
 
       <div
         className={"navContainerContainer " + navDisplay}
@@ -150,11 +160,11 @@ function Nav(props) {
               </span>
             </a>
           ) : null}
-          {Object.prototype.hasOwnProperty.call(props, "dristi") ? (
-            <a href="/dristi" className="NavItems" id="events_nav">
-              Dristi
+          {(Object.prototype.hasOwnProperty.call(props, "dristi") && EventData.display) ? (
+            <a href={EventData.eventLink} className="NavItems" id="events_nav">
+              {EventData.eventName}
               <span className="NavItemIcons glass">
-                <img src={dristiimg} alt="" />
+                <img src={EventData.eventImg} alt="" />
               </span>
             </a>
           ) : null}
