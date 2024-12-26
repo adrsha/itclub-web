@@ -1,4 +1,69 @@
-.pageContent{
-    background-image: url("/dristi _bg.png");
-    background-repeat: repeat;
+:root {
+  --dristi_color1: #4FB3E5;
+  --dristi_color2: #2DAE8B;
+  --dristi_color3: #7B3494;
+  --dristi_color4: #F26422;
+  --dristi_color5: #2C1D5B;
+  --dristi_color1l: #A8D9F4;
+  --dristi_color2l: #96D4C4;
+  --dristi_color3l: #BB99C8;
+  --dristi_color4l: #F9B18F;
+  --dristi_color5l: #948DAC;
+  }
+
+#root.dristi{
+    background-color: var(--color4aA);
+    background-image: url("/dristi_pattern.png");
+    background-size: 3rem 3rem;
+    background-attachment: fixed;
+    background-position: top;
+    box-shadow: inset 0 0 100px 100px var(--color4);
 }
+
+.specialEventHeader {
+  color: var(--color1);
+  height: 30vw;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  font-family: "Monomaniac One", cursive;
+  font-size: 15vw;
+  z-index: 1;
+  position: relative;
+  text-shadow: 0.5rem 0.5rem 0 var(--dristi_color1), -0.5rem -0.5rem 0 var(--dristi_color2), 0.5rem -0.5rem 0 var(--dristi_color3), -0.5rem 0.5rem 0 var(--dristi_color4), 1rem 1.0rem 0 var(--dristi_color5);
+}
+
+.specialEventsSubHeader {
+  color: var(--color1);
+  font-family: "Monomaniac One", cursive;
+  font-size: 3vw;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  z-index: 1;
+  /* position: relative; */
+  /* text-shadow: 0.5rem 0.5rem 0 var(--dristi_color1), -0.5rem -0.5rem 0 var(--dristi_color2), 0.5rem -0.5rem 0 var(--dristi_color3), -0.5rem 0.5rem 0 var(--dristi_color4), 1rem 1.0rem 0 var(--dristi_color5); */
+}
+
+.specialEventsList{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.specialEventContent{
+  position: relative;
+  border-radius: 20vw;
+  min-width: 50vw;
+  max-width: 50vw;
+  height: fit-content;
+  padding: 5vh;
+  background-color: var(--color4);
+}
+.specialEventContentTitle {
+  color: var(--color1);
+  font-family: "Monomaniac One", cursive;
+  font-size: 3rem;
+}
+>>>>>>> b86014c ([Added] Dristi specialEvents page)

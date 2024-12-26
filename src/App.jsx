@@ -45,18 +45,6 @@ function App() {
           button2="All Events"
           link2="/events"
         />
-        {
-          // <Cards 
-          // id="DetailCard"
-          // description="Projects done inside as well as conducted by IT Club, via events and hackathons as well as selection procedures."
-          // title="Our Projects"
-          // button1="Learn More"
-          // extraClass="projectDetailsCard"
-          // link1="/projects"
-          // button2="Explore"
-          // link2="/events"
-          // />
-        }
       </div>
       <AboutUs />
       <ContactUs />
