@@ -76,11 +76,17 @@
 img.specialEventContentImg{
     object-fit: cover;
     width: 100%;
-    border-radius: 1vw;
+    border-radius: 2vw;
     margin: 0px;
+    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.1)
 }
 .specialEventContentTime{
-    color: var(--color1);
+    background-color: var(--color1e);
+    border-radius: 10px;
+    width: fit-content;
+    padding: 0.2em 1em;
+    font-weight: bolder;
+    margin: 1em auto ;
 }
 .specialEventsDesc{
     color: var(--color1);
@@ -89,12 +95,12 @@ img.specialEventContentImg{
 }
 
 
-@media (max-width: 768px) {
-    .specialEventsList {
-        flex-direction: column;
-    }
+/* @media (max-width: 600px) { */
+/*     .specialEventsList { */
+/*         flex-direction: column; */
+/*     } */
     
-    .masonry-column {
-        width: 100%;
-    }
-}
+/*     .masonry-column { */
+/*         width: 100%; */
+/*     } */
+/* } */
