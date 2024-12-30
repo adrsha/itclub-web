@@ -10,16 +10,19 @@ function Lines() {
   const innerHeightRef = useRef(0);
   const bulbsRef = useRef([]);
 
-  useEffect(() => {
-    heightRef.current = document.documentElement.getBoundingClientRect().height;//bounding box of the root(may not be visible)
-    innerHeightRef.current = window.innerHeight; //height of viewport, can change due to resize
+useEffect(() => {
+  setTimeout(() => {
+    heightRef.current = document.documentElement.getBoundingClientRect().height;
+    innerHeightRef.current = window.innerHeight;
     bulbsRef.current = document.querySelectorAll(".bulb");
-  }, []);
+    console.log(heightRef.current, " : ", innerHeightRef.current);
+  }, 1);
+}, []);
 
   const calculateBulbPosition = useCallback((scroll) => {
     return (
       scroll +
-      (scroll / (heightRef.current - innerHeightRef.current+10)) *
+      (scroll / (heightRef.current-innerHeightRef.current)) *
         innerHeightRef.current
        //[scroll / (heightRef.current - innerHeightRef.current + 300)) *innerHeightRef.current] gives how much content can be scrolled that is not visible
     );
@@ -42,7 +45,7 @@ function Lines() {
   const updateBulbPositions = useCallback(() => {
     const offsets = [0, -100, -200]; // Offsets for left, center, and right bulbs
     bulbsRef.current.forEach((bulb, index) => {
-      bulb.style.transform = `translate3d(0, ${scrollY + offsets[index]}px, 0)`;
+      bulb.style.transform = `translate3d(0, ${scrollY}px, 0)`;
     });
 
     rafIdRef.current = requestAnimationFrame(updateBulbPositions);
