@@ -5,8 +5,8 @@ import dummyImage from "/president.png";
 import { useState, useEffect } from "react";
 import { lenis } from "../Lenis/Lenis.js";
 
-
 let cardHtml = member.map((mv) => {
+
     return (
         <div key={mv.attr} className="tablet" id={mv.attr}>
             <img src={dummyImage} alt="" />
@@ -17,6 +17,7 @@ let cardHtml = member.map((mv) => {
         </div>
     );
 });
+
 
 function Cards(props) {
   const [fullScreenImageStyle, setFullScreenImageStyle] = useState({

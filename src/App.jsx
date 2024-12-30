@@ -1,24 +1,24 @@
-import Countdown from "./countdown/Countdown.jsx";
-import Nav from "./Nav/Nav.jsx";
-import ContactUs from "./ContactUs/ContactUs.jsx";
-import AboutUs from "./AboutUs/AboutUs.jsx";
-import Footer from "./Footer/Footer.jsx";
-import isMobile from "./ExtraFuncs.js";
-import Parallax from "./Parallax/Parallax.js";
-import Cards from "./Cards/Cards.jsx";
-import "./App.css";
-import "./Responsive/Responsive.css";
-import "./Animations/Animations.css";
+import Countdown from './countdown/Countdown.jsx';
+import Nav from './Nav/Nav.jsx';
+import ContactUs from './ContactUs/ContactUs.jsx';
+import AboutUs from './AboutUs/AboutUs.jsx';
+import Footer from './Footer/Footer.jsx';
+import isMobile from './ExtraFuncs.js';
+import Parallax from './Parallax/Parallax.js';
+import Cards from './Cards/Cards.jsx';
+import './App.css';
+import './Responsive/Responsive.css';
+import './Animations/Animations.css';
 // import { Canvas } from "./Canvas/canvas.jsx";
-import posterImg from "/poster_AIML.png";
-import notices from "../data/Notices.json";
-import Lines from "./Lines/Lines.jsx";
-import { LenisComponent } from "./Lenis/Lenis.js";
+import posterImg from '/poster_AIML.png';
+import notices from '../data/Notices.json';
+import Lines from './Lines/Lines.jsx';
+import { LenisComponent } from './Lenis/Lenis.js';
 
 function App() {
   return (
     <>
-      <Nav events contactUs aboutUs notices dristi/>
+      <Nav events contactUs aboutUs notices dristi />
 
       <Lines />
       <LenisComponent />
@@ -33,7 +33,12 @@ function App() {
           button2="Contact Us"
           link2="#contactUs"
         />
-        <Cards id="image" src={notices[0].posterImg ? notices[0].posterImg : "/defaultPoster.png"} /> 
+        <Cards
+          id="image"
+          src={
+            notices[0].posterImg ? notices[0].posterImg : '/defaultPoster.png'
+          }
+        />
         <Cards
           id="notice"
           title={notices[0].noticeHead}

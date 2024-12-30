@@ -44,65 +44,48 @@
   /* text-shadow: 0.5rem 0.5rem 0 var(--dristi_color1), -0.5rem -0.5rem 0 var(--dristi_color2), 0.5rem -0.5rem 0 var(--dristi_color3), -0.5rem 0.5rem 0 var(--dristi_color4), 1rem 1.0rem 0 var(--dristi_color5); */
 }
 
-.specialEventsList{
+.specialEventsList {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 0;
-    transition: 0.5s ease-in-out;
+    gap: 1rem;
+    padding: 10px;
+    width: 100%;
 }
 
-.specialEventContent{
-  border-radius: 20vw;
-  min-width: 50vw;
-  max-width: 50vw;
-  height: fit-content;
-  padding: 5vh;
-  background-color: var(--color4);
+.masonry-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
+
+.specialEventContent {
+    border-radius: 5vw;
+    padding: 5rem;
+    background-color: var(--color4);
+    width: 100%;
+    break-inside: avoid;
+    margin-bottom: 1rem;
+}
+
 .specialEventContentTitle {
   color: var(--color1);
   font-family: "Monomaniac One", cursive;
   font-size: 3rem;
 }
 
-.specialEventSwitcher{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-    bottom: 0;
-    z-index: 1;
+.specialEventContentTime{
+    color: var(--color1);
+}
+.specialEventsDesc{
+    color: var(--color1)
 }
 
-.specialEventSwitcher button{
-    border: none;
-    font-family: "JetBrains Mono", monospace;
-    font-weight: bolder;
-    cursor: pointer;
-    padding-left: 1rem;
-    padding-right: 1rem;
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-    white-space: nowrap;
-    transition: 0.2s;
-    background-color: var(--color1);
-}
-
-.specialEventSwitcher button.prevEvent{
-    border-radius: 4rem 1rem 1rem 4rem;
-    border-right: var(--color4) solid 1rem;
-}
-.specialEventSwitcher button.nextEvent{
-    border-radius: 1rem 4rem 4rem 1rem;
-    border-left: var(--color4) solid 1rem;
-}
-
-.specialEventSwitcher button.prevEvent:hover{
-  border-right: var(--color4) solid 2rem;
-}
-.specialEventSwitcher button.nextEvent:hover{
-  border-left: var(--color4) solid 2rem;
+@media (max-width: 768px) {
+    .specialEventsList {
+        flex-direction: column;
+    }
+    
+    .masonry-column {
+        width: 100%;
+    }
 }
