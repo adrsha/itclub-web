@@ -18,7 +18,7 @@ function DristiEvents(props) {
       <div
         className="specialEventContent parallaxEl"
         ref={contentRef}
-          data-lerp={props.totalCols % 2 != 0 ? (props.column == Math.ceil(props.totalCols/2) ? (props.column * 10):-15) : 0}
+          data-lerp={props.totalCols % 2 != 0 ? (props.column == Math.ceil(props.totalCols/2) ? (props.column * 10):-15) : 5}
       >
         {props.posterpath ? (
           <img className="specialEventContentImg" src={props.posterpath} />
@@ -39,6 +39,24 @@ function EventsList() {
 
   const events = [
     {
+      name: 'UI/UX',
+      time: ' 6-7 hours event, Day 2',
+      desc: 'UI/UX Design Competition challenges participants to create user-friendly and visually appealing interfaces.',
+      posterpath: '/UI_UX_poster.png',
+    },
+    {
+      name: 'Valorant Tournament',
+      time: 'Day 1-3',
+      desc: 'Valorant Esports Tournament is a competitive gaming event where participants battle in the popular tactical shooter game, Valorant. Players showcase their strategic thinking, teamwork, and gaming skills in high-energy matches.',
+      posterpath: '/valo_poster.png',
+    },
+    {
+      name: 'PUBG Tournament',
+      time: 'Day 2',
+      desc: 'PUBG Esports Tournament is a competitive gaming event where players compete in the intense battle royale game, PlayerUnknown\'s Battlegrounds (PUBG). Contestants demonstrate their tactical thinking, survival instincts, teamwork, and combat skills in high-stakes matches, vying for victory in this fast-paced and strategic environment',
+      posterpath: '/pubg_poster.png',
+    },
+    {
       name: 'Hackathon',
       time: '48 hours event, Day 1 - Day 2',
       desc: 'The Hackathon at Dristi 3.0 is a 48-hour event where teams will collaborate to develop innovative solutions to real-world challenges. Participants will work under time constraints, tackling problems related to AI, while receiving guidance from mentors.',
@@ -54,18 +72,6 @@ function EventsList() {
       name: 'Competitive Coding',
       time: '7-8 hours event, Day 2',
       desc: 'Competitive Coding is a contest where participants solve complex coding problems within strict time limits. This event tests their problem-solving abilities, coding efficiency, and logical thinking.',
-      posterpath: '/defaultPoster.png',
-    },
-    {
-      name: 'UI/UX',
-      time: ' 6-7 hours event, Day 2',
-      desc: 'UI/UX Design Competition challenges participants to create user-friendly and visually appealing interfaces.',
-      posterpath: '/defaultPoster.png',
-    },
-    {
-      name: 'Valorant Tournament',
-      time: 'Day 1',
-      desc: 'Valorant Esports Tournament is a competitive gaming event where participants battle in the popular tactical shooter game, Valorant. Players showcase their strategic thinking, teamwork, and gaming skills in high-energy matches.',
       posterpath: '/defaultPoster.png',
     },
   ];
