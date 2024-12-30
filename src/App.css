@@ -18,8 +18,9 @@
   --color1e: #29B1EA;
   --color2: #000000;
   --color3: #090f11;
-  --color3A: #090f1125;
+  --color3a: #0B1317;
   --color3e: #0A1A20;
+  --color3A:  rgba(40,116, 168, 0.2);
   --color4: #0d161b;
   --color4a: #0E1E28;
   --color4aA: rgba(14, 30, 40, 0.5);
@@ -41,6 +42,7 @@ html, body{
   background-color: #090f11;
   margin: 0;
   padding: 0;
+  font-size: 16px;
 }
 
 a{
@@ -75,16 +77,18 @@ canvas{
   position: relative;
   justify-content: center;
   align-items: center;
-  background-color: var(--color3);
-  background-image: url("/main_tile.png");
-  background-size: 4rem 4rem;
+  background-color: var(--color4);
+  /* background-image: url("/temp_tile.png"); */
+  background-size: 2rem 2rem;
   background-attachment: fixed;
   background-position: top;
-  box-shadow: inset 0 0 100px 100px var(--color3);
+  /* box-shadow: inset 0 0 100px 100px var(--color3a); */
 }
 
 .glass{
     background: color-mix(in srgb, var(--color3A) 10%, var(--color4aA) 80%);
+    background: url('/main_tile.png');
+    background-size: 3rem, 3rem;
     /* background: radial-gradient(var(--color3A) 10%, var(--color4aA) 80%); */
     backdrop-filter: blur(10px);
     border: 1px solid var(--color3A);

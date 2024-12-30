@@ -25,7 +25,7 @@ function Cards(props) {
       padding: 0,
       right: "12vw",
   })
-  const [MembersOpen, setMembersOpen] = useState("shorter");
+  // const [MembersOpen, setMembersOpen] = useState("shorter");
   const [MembersCardState, setMembersCardState] = useState("Show More");
 
   if (props.id == "circleButtons") {
@@ -88,7 +88,8 @@ function Cards(props) {
     } else if (props.id == "MembersCard") {
         return (
             <div
-                className={"glassCards glass parallaxEl " + MembersOpen}
+                className={"glassCards glass parallaxEl "}
+                           // + MembersOpen}
                 id="MembersCard"
             >
                 <div className="cardTitle">
@@ -97,20 +98,22 @@ function Cards(props) {
                     Members
                 </div>
                 <div className={"membersList"}>{cardHtml}</div>
-                <div
-                    className="tablet showMore"
-                    onClick={() => {
-                        if (MembersOpen == "shorter") {
-                            setMembersOpen("larger");
-                            setMembersCardState("Show Less");
-                        } else {
-                            setMembersOpen("shorter");
-                            setMembersCardState("Show More");
-                        }
-                    }}
-                >
-                    {MembersCardState}
-                </div>
+                {
+                // <div
+                //     className="tablet showMore"
+                //     onClick={() => {
+                //         if (MembersOpen == "shorter") {
+                //             setMembersOpen("larger");
+                //             setMembersCardState("Show Less");
+                //         } else {
+                //             setMembersOpen("shorter");
+                //             setMembersCardState("Show More");
+                //         }
+                //     }}
+                // >
+                //     {MembersCardState}
+                // </div>
+                }
             </div>
         );
     } else if (props.id == "ImgDetailCard") {

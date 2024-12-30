@@ -11,6 +11,9 @@ import Parallax from '../Parallax/Parallax.js';
 
 function DristiEvents(props) {
   const contentRef = useRef(null);
+    let centerColStyle = {
+        marginTop : "-5rem"
+  }
 
   console.log(props);
   return (
@@ -19,10 +22,24 @@ function DristiEvents(props) {
       <div
         className={
           'specialEventContent' +
-          (props.column != Math.ceil(props.totalCols / 2) ? "" : ' parallaxEl')
+          (props.column != Math.ceil(props.totalCols / 2) ? '' : ' parallaxEl')
         }
+          style={(
+          props.totalCols % 2 != 0
+            ? props.column != Math.ceil(props.totalCols / 2)
+            ? null : centerColStyle
+              : null
+          )
+              // props.column != Math.ceil(props.totalCols / 2) ? null : centerColStyle)}
+                }
         ref={contentRef}
-        data-lerp={props.totalCols % 2 != 0 ? props.column == Math.ceil(props.totalCols / 2) ? 5 : 0 : 0}
+        data-lerp={
+          props.totalCols % 2 != 0
+            ? props.column == Math.ceil(props.totalCols / 2)
+              ? 5
+              : 0
+            : 0
+        }
       >
         {props.posterpath ? (
           <img className="specialEventContentImg" src={props.posterpath} />
@@ -96,25 +113,31 @@ function EventsList() {
     },
   ];
 
-  useEffect(() => {
-    const updateLayout = () => {
-      const container = containerRef.current;
-      if (!container) return;
+useEffect(() => {
+ const updateLayout = () => {
+   const container = containerRef.current;
+   if (!container) return;
+   const containerWidth = container.offsetWidth;
+   const numColumns = containerWidth > 1200 ? 3 : containerWidth > 500 ? 2 : 1;
+   const newColumns = Array(numColumns).fill().map(() => []);
+   
+   const middleColumn = Math.floor((numColumns - 1) / 2);
+   const columnOrder = [middleColumn];
+   
+   // Add columns left to right after middle
+   for(let i = 0; i < middleColumn; i++) {
+     columnOrder.push(i);
+   }
+   for(let i = middleColumn + 1; i < numColumns; i++) {
+     columnOrder.push(i); 
+   }
 
-      const containerWidth = container.offsetWidth;
-      const numColumns =
-        containerWidth > 1200 ? 3 : containerWidth > 500 ? 2 : 1;
-
-      const newColumns = Array(numColumns)
-        .fill()
-        .map(() => []); // make an array for each elements
-      events.forEach((event, index) => {
-        const columnIndex = index % numColumns;
-        newColumns[columnIndex].push(event);
-      });
-
-      setColumns(newColumns);
-    };
+   events.forEach((event, index) => {
+     const columnIndex = columnOrder[index % numColumns];
+     newColumns[columnIndex].push(event);
+   });
+   setColumns(newColumns);
+ };
 
     updateLayout();
     window.addEventListener('resize', updateLayout);

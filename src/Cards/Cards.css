@@ -1,5 +1,6 @@
 .glassCards {
   padding: 10vh;
+  border: 2px solid var(--color3A);
   border-radius: 10vh;
   color: var(--color1);
   font-family: "Quicksand";
@@ -63,9 +64,9 @@
 .glassCards .cardTitle {
   font-family: "JetBrains Mono", monospace;
   font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
   font-size: 2.5em;
   margin-top: 0rem;
   margin-bottom: 2vh;
@@ -197,9 +198,12 @@
   justify-content: space-between;
   padding-left: 1rem;
   padding-right: 1rem;
-  background-color: var(--color4aA);
+  transition: 0.2s ease;
   width: 15vw;
   min-width: 15em;
+}
+.tablet:hover{
+  background-color: var(--color4);
 }
 
 .tablet img {

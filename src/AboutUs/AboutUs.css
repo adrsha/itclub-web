@@ -75,43 +75,47 @@
 div.glassCards#MembersCard{
   position: absolute;
   top: -20vh;
-  padding: 3vw;
-  padding-left: 5vw;
+  padding: 4vw;
+  border-right: none;
+  padding-right: 5vw;
   min-width: 27vw;
-  width: 27vw;
-  right: 0vw;
+  width: fit-content;
+  right: -15vw;
+  border-radius: 5vw 0vw 0vw 5vw;
 }
 
 
 
 div.glassCards#MembersCard> div.membersList{
   transition: all .2s;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-end;
-  gap: 0.2rem;
-  flex-wrap: wrap;
-  width: 100%;
-  position: relative;
-  height: 60vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* overflow: hidden; */
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* align-items: flex-start; */
+  /* justify-content: flex-end; */
+  /* gap: 0.2rem; */
+  /* flex-wrap: wrap; */
+  /* width: 100%; */
+  /* position: relative; */
+  /* height: 60vh; */
 }
 
-.tablet.showMore{
-  position: absolute;
-  color: var(--color1);
-  min-width: 5em;
-  top: 50%;
-  left: 0;
-  transform: rotate(90deg) translateY(calc(50% - 1vw));
-  width: fit-content;
-}
+/* .tablet.showMore{ */
+/*   position: absolute; */
+/*   color: var(--color1); */
+/*   min-width: 5em; */
+/*   top: 50%; */
+/*   left: 0; */
+/*   transform: rotate(90deg) translateY(calc(50% - 1vw)); */
+/*   width: fit-content; */
+/* } */
 
-div.glassCards#MembersCard.shorter{
-  animation: slideIn .5s ease-in forwards;
-}
-div.glassCards#MembersCard.larger{
-  animation: slideOut 1s ease forwards;
-}
+/* div.glassCards#MembersCard.shorter{ */
+/*   animation: slideIn .5s ease-in forwards; */
+/* } */
+/* div.glassCards#MembersCard.larger{ */
+/*   animation: slideOut 1s ease forwards; */
+/* } */
 
