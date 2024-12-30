@@ -60,7 +60,7 @@
 
 .specialEventContent {
     border-radius: 5vw;
-    padding: 5rem;
+    padding-bottom: 5rem;
     background-color: var(--color4);
     width: 100%;
     break-inside: avoid;
@@ -73,12 +73,21 @@
   font-size: 3rem;
 }
 
+img.specialEventContentImg{
+    object-fit: cover;
+    width: 100%;
+    border-radius: 1vw;
+    margin: 0px;
+}
 .specialEventContentTime{
     color: var(--color1);
 }
 .specialEventsDesc{
-    color: var(--color1)
+    color: var(--color1);
+    padding-left: 2vw;
+    padding-right: 2vw;
 }
+
 
 @media (max-width: 768px) {
     .specialEventsList {
