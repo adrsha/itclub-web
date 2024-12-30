@@ -83,6 +83,21 @@
 
 @media (min-width: 0px) and (max-width: 800px) {
 
+
+  .NavContents{
+    width: 70vw;
+  }
+  .EventLogo{
+    background-color: var(--color3A);
+  }
+  .EventLogoinner:hover{
+    background-color: var(--color3);
+    border-radius: 15%;
+  }
+  .EventLogo:hover a .eventName {
+    width: 0vw;
+}
+
   div.aboutUsContent div.membersToggle div.glassCards#MembersCard{
       position: fixed;
       width: 100vw;

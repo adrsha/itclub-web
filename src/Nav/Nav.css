@@ -32,7 +32,7 @@ li {
     font-family: "Monomaniac One";
     color: var(--color1);
     font-size: 1.5rem;
-    transition: 4s ease;
+    border-radius: 15%;
 }
 
 .EventLogo :hover {
