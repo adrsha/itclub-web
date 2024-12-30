@@ -19,7 +19,7 @@ function Lines() {
   const calculateBulbPosition = useCallback((scroll) => {
     return (
       scroll +
-      (scroll / (heightRef.current - innerHeightRef.current+1)) *
+      (scroll / (heightRef.current - innerHeightRef.current+10)) *
         innerHeightRef.current
        //[scroll / (heightRef.current - innerHeightRef.current + 300)) *innerHeightRef.current] gives how much content can be scrolled that is not visible
     );

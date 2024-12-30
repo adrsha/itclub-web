@@ -1,5 +1,6 @@
 import Cards from "../Cards/Cards";
 import Footer from "../Footer/Footer";
+import isMobile from '../ExtraFuncs.js';
 import Nav from "../Nav/Nav";
 import Parallax from "../Parallax/Parallax";
 import eventData from "../../data/Events.json";
