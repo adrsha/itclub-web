@@ -66,6 +66,18 @@
     break-inside: avoid;
     margin-bottom: 1rem;
 }
+.specialEventButton{
+    margin: 2rem auto;
+    background: linear-gradient(to right, var(--color1a), var(--color1e));
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.5rem;
+    transition: 0.2s ease;
+    color: var(--color4);
+}
+.specialEventButton:hover{
+    box-shadow: 0 0 1.5rem var(--color1aA);
+    color: var(--color1);
+}
 
 .specialEventContentTitle {
   color: var(--color1);
@@ -100,7 +112,4 @@ img.specialEventContentImg{
 /*         flex-direction: column; */
 /*     } */
     
-/*     .masonry-column { */
-/*         width: 100%; */
-/*     } */
 /* } */

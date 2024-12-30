@@ -146,14 +146,15 @@ button.deactivated::before{
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 100%;
+    width: 115%;
+    animation: flicker 1s ease-in-out infinite;
     z-index: 0;
     transform: translate(-50%, -50%);
-    height: 100%;
+    height: 130%;
     border: 1px solid var(--color1a);
     outline: 1px solid var(--color1a) ;
     box-shadow: inset 0 0 1.0rem var(--color1aA), 0 0 1.5rem var(--color1aA);
-    outline-offset: 0.0rem;
+    outline-offset: 0.5rem;
     border-radius: inherit;
     /* background-color: var(--color1); */
     transition: 0.2s;
@@ -162,9 +163,9 @@ button.activated:hover {
     border-color: transparent;
 }
 button.deactivated:hover::before{
-    outline-offset: 0.5rem;
-    height: 130%;
-    width: 115%;
+    outline-offset: 0rem;
+    height: 100%;
+    width: 100%;
 }
 button.activated:hover::before {
     outline-offset: 0rem;
