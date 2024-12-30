@@ -188,14 +188,15 @@ function Cards(props) {
     let noticeStyle = (!(props.buttonDiscord && props.buttonForm))
       ? null
       : "exists";
-
+    let buttonNum = (props.buttonDiscord && props.buttonForm)?2 : 1;
+    let columnLinks = (buttonNum == 2)?"noticeContent" : "columnLink";
     return (
       <div className={`glassCards glass parallaxEl ${noticeStyle}`} id={props.id}>
         {Object.prototype.hasOwnProperty.call(props, "title") ? (
           <div className="cardTitle">{props.title}</div>
         ) : null}
         {Object.prototype.hasOwnProperty.call(props, "content") ? (
-          <div className="cardContent" id="noticeContent">
+          <div className="cardContent" id={columnLinks}>
             {props.content}
             <div className="noticeSpButtons">
               {
@@ -203,6 +204,7 @@ function Cards(props) {
                   <a href={props.buttonDiscord}>
                     <button className="discordButton">
                       <img src="/discord_logo.png" alt="Discord Logo" />
+                      {(buttonNum == 1)? "Discord" : ""}
                     </button>
                   </a>
                 ) : null
@@ -213,6 +215,7 @@ function Cards(props) {
                   <a href={props.buttonForm}>
                     <button className="formButton">
                       <img src="/forms_logo.png" alt="Forms Logo" />
+                      {(buttonNum == 1)? "Register" : ""}
                     </button>
                   </a>
                 ) : null
