@@ -80,8 +80,10 @@ function Nav(props) {
           EventData.display && location.pathname == '/' && (
             <div className="EventLogo">
               <a href={EventData.eventLink}>
-                <div className="EventLogoinner" style={{backgroundImage: `url(${EventData.eventImg})`}}></div>
+                <div className="eventName">
                 {EventData.eventName}
+                </div>
+                <div className="EventLogoinner" style={{backgroundImage: `url(${EventData.eventImg})`}}></div>
               </a>
             </div>
           )

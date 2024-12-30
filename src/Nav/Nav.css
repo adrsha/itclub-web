@@ -1,19 +1,21 @@
-:root{
+:root {
     --perspective: 200vh;
+    --logoWidth: 50px;
 }
-li{
+
+li {
     list-style: none;
 }
 
 /* N A V B A R */
 
-.NavContents{
+.NavContents {
     position: fixed;
-    top:5vh;
+    top: 5vh;
     right: 5%;
     z-index: 3;
     height: 4vh;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
@@ -22,7 +24,7 @@ li{
 }
 
 /* NAVBAR EVENT */
-.EventLogo{
+.EventLogo {
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -30,38 +32,52 @@ li{
     font-family: "Monomaniac One";
     color: var(--color1);
     font-size: 1.5rem;
-    transition: 4s ease;
+    border-radius: 15%;
 }
-.EventLogo :hover{
+
+.EventLogo :hover {
     text-shadow: 1px 1px 0px var(--color1);
 }
-.EventLogo a{
+
+.EventLogo a {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.EventLogo a .EventLogoinner{
-    width: 0px;
-    height: 2.5vw;
+
+.EventLogo .EventLogoinner {
+    width: var(--logoWidth);
+    height: var(--logoWidth);
+    background-position: top left;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.EventLogo .eventName {
+    width: 0;
+    overflow-x: hidden;
     background-position: top left;
     background-size: cover;
     background-repeat: no-repeat;
     transition: 0.3s ease;
+    white-space: nowrap;
 }
-.EventLogo:hover a .EventLogoinner{
-    width: 2.5vw;
-    height: 2.5vw;
+
+.EventLogo:hover a .eventName {
+    width: 6vw;
 }
+
 /* NAVBAR HAMBURGER */
-div.NavOpener{
+div.NavOpener {
     width: 4vw;
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     cursor: pointer;
 }
-.hamburger{
+
+.hamburger {
     margin: 0.3rem;
     width: 30px;
     height: 4px;
@@ -70,16 +86,16 @@ div.NavOpener{
     transition: 0.2s ease;
 }
 
-.NavOpener:hover .hamburger{
+.NavOpener:hover .hamburger {
     margin-top: 0.4rem;
 }
 
-.fixedNavBar{
+.fixedNavBar {
     position: fixed;
-    top:10vh;
+    top: 10vh;
 }
 
-.logo{
+.logo {
     position: fixed;
     top: 5vh;
     left: 5vw;
@@ -90,18 +106,21 @@ div.NavOpener{
     color: var(--color1);
     font-family: "JetBrains Mono", monospace;
 }
-.logo img{
+
+.logo img {
     aspect-ratio: 1;
     height: 100%;
     transition: 0.2s ease;
 }
-.logo::before{
+
+.logo::before {
     content: "KEC";
     position: absolute;
     top: 0%;
     transform: translate(-50%, calc(-100% - 0.5rem));
 }
-.logo::after{
+
+.logo::after {
     content: "CLUB";
     position: absolute;
     bottom: 0%;
@@ -110,7 +129,7 @@ div.NavOpener{
 }
 
 
-div.navContainerContainer{
+div.navContainerContainer {
     position: fixed;
     width: 100vw;
     top: 50%;
@@ -127,7 +146,7 @@ div.navContainerContainer{
     z-index: 10;
 }
 
-nav.NavContainer{
+nav.NavContainer {
     position: absolute;
     perspective: var(--perspective);
     perspective-origin: 50% 50%;
@@ -139,18 +158,19 @@ nav.NavContainer{
     height: 100%;
 }
 
-nav.NavContainer a{
+nav.NavContainer a {
     cursor: pointer;
 }
 
-nav.NavContainer .NavItems{
+nav.NavContainer .NavItems {
     font-size: 4vh;
     position: fixed;
     color: var(--color1);
     display: flex;
     border-radius: 3vh 0vh 0vh 3vh;
     transition: outline-offset 0.3s ease, background-color 0.2s ease;
-    transform: translate(-50%, -50%) rotateY(0deg); /* Ensure 3D context */
+    transform: translate(-50%, -50%) rotateY(0deg);
+    /* Ensure 3D context */
     left: 50%;
     border: 2px solid var(--color3A);
     width: fit-content;
@@ -162,40 +182,42 @@ nav.NavContainer .NavItems{
 }
 
 
- nav.NavContainer .NavItems:hover .NavItemIcons{
-     outline-offset: 9px;
+nav.NavContainer .NavItems:hover .NavItemIcons {
+    outline-offset: 9px;
     outline: 3px solid var(--color1e);
- }
+}
 
-.NavItems > .NavItemIcons{
+.NavItems>.NavItemIcons {
     position: absolute;
     backface-visibility: hidden;
     outline: 0px solid transparent;
     top: 0;
     outline-offset: 0px;
-    transition: outline,outline-offset 0.3s ease;
+    transition: outline, outline-offset 0.3s ease;
     right: 0vw;
-    transform: translate(100%, -20%) rotateY(0deg); /* Ensure 3D context */
+    transform: translate(100%, -20%) rotateY(0deg);
+    /* Ensure 3D context */
     height: 20vh;
     padding: 5vh;
     border-radius: 4vh;
 }
 
-.NavItems > .NavItemIcons img{
+.NavItems>.NavItemIcons img {
     height: 10vh;
     margin: auto;
 }
 
-.hidden{
+.hidden {
     animation: fadeOut 0.5s ease-in-out forwards;
     display: none;
 }
-.popIn{
+
+.popIn {
     animation: fadeIn 0.5s ease-in-out forwards;
     display: block;
 }
 
-#navDestroyer69{
+#navDestroyer69 {
     position: fixed;
     top: 10vh;
     left: 50%;
@@ -206,7 +228,7 @@ nav.NavContainer .NavItems{
     opacity: 0.5;
 }
 
-#navDestroyer69::after{
+#navDestroyer69::after {
     content: "CLOSE";
     position: absolute;
     opacity: 0;
@@ -218,9 +240,10 @@ nav.NavContainer .NavItems{
     pointer-events: none;
 }
 
-#navDestroyer69:hover{
+#navDestroyer69:hover {
     opacity: 1;
 }
-#navDestroyer69:hover::after{
+
+#navDestroyer69:hover::after {
     opacity: 1;
 }
