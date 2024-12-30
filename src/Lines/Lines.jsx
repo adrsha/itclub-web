@@ -1,7 +1,7 @@
-import "./Lines.css";
-import React, { useEffect, useState, useCallback, useRef } from "react";
-import { throttle } from "lodash";
-import { lenis } from "../Lenis/Lenis";
+import './Lines.css';
+import React, { useEffect, useState, useCallback, useRef } from 'react';
+import { throttle } from 'lodash';
+import { lenis } from '../Lenis/Lenis';
 
 function Lines() {
   const [scrollY, setScrollY] = useState(0);
@@ -10,22 +10,19 @@ function Lines() {
   const innerHeightRef = useRef(0);
   const bulbsRef = useRef([]);
 
-useEffect(() => {
-  setTimeout(() => {
-    heightRef.current = document.documentElement.getBoundingClientRect().height;
-    innerHeightRef.current = window.innerHeight;
-    bulbsRef.current = document.querySelectorAll(".bulb");
-    console.log(heightRef.current, " : ", innerHeightRef.current);
-  }, 1);
-}, []);
+  useEffect(() => {
+    setTimeout(() => {
+      heightRef.current = lenis.dimensions.scrollHeight;
+      innerHeightRef.current = window.innerHeight;
+      bulbsRef.current = document.querySelectorAll('.bulb');
+      console.log(heightRef.current, ' : ', innerHeightRef.current);
+    }, 1);
+  }, []);
 
-  const calculateBulbPosition = useCallback((scroll) => {
-    return (
-      scroll +
-      (scroll / (heightRef.current-innerHeightRef.current)) *
-        innerHeightRef.current
-       //[scroll / (heightRef.current - innerHeightRef.current + 300)) *innerHeightRef.current] gives how much content can be scrolled that is not visible
-    );
+  const calculateBulbPosition = useCallback(() => {
+      let newScroll = (lenis.animatedScroll ) / (lenis.dimensions.scrollHeight- window.innerHeight)
+      console.log(newScroll)
+    return newScroll * lenis.dimensions.scrollHeight;
   }, []);
 
   const handleScroll = useCallback(
@@ -36,9 +33,9 @@ useEffect(() => {
   );
 
   useEffect(() => {
-    lenis.on("scroll", handleScroll);
+    lenis.on('scroll', handleScroll);
     return () => {
-      lenis.off("scroll", handleScroll);
+      lenis.off('scroll', handleScroll);
     };
   }, [handleScroll]);
 

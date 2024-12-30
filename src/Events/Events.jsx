@@ -1,6 +1,5 @@
 import Cards from "../Cards/Cards";
 import Footer from "../Footer/Footer";
-import isMobile from '../ExtraFuncs.js';
 import Nav from "../Nav/Nav";
 import isMobile from '../ExtraFuncs.js';
 import Parallax from "../Parallax/Parallax";
