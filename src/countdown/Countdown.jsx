@@ -26,7 +26,6 @@ function Countdown() {
   // Get the data of the event
   const deadline = new Date(latestEvent.eventDate);
   const event = latestEvent.eventName;
-  console.log(latestEvent);
 
   // Countdown
   const [days, setDays] = useState(0);

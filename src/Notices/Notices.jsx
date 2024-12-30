@@ -30,8 +30,8 @@ let noticesHtml = noticeData.map((noti) => {
           description={noti.noticeBody}
           button1="View Events"
           button2="Learn More"
-          link1="/events"
-          link2="/#contactUs"
+          link1={noti.eventLink}
+          link2={noti.noticeInfoLink}
         />
         <div className="emptyspace"></div>
       </div>

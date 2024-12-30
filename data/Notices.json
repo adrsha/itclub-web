@@ -1,9 +1,11 @@
 [
   {
-    "noticeHead": "No Notices!",
-    "noticeBody": "There are no new notices currently! Please come back another time.",
-    "buttonDiscord": "",
+    "noticeHead": "DRISTI",
+    "noticeBody": "Vision Beyond Imagination",
+    "buttonDiscord": "https://discord.com/channels/1189130011005964298/1322600435856703631",
     "buttonForm": "",
-    "posterImage": ""
+    "posterImage": "public/Dristi_poster.webp",
+    "eventLink": "/events",
+    "noticeInfoLink": "/dristi"
   }
 ]

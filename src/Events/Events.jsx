@@ -30,7 +30,9 @@ let eventHtml = eventData.map((ev) => {
           id="DetailCard"
           title={ev.eventName}
           button1="Roll In"
+          link1={ev.eventLink}
           button2="Learn More"
+          link2={ev.eventLink}
           description={ev.eventDescription}
         />
         <div className="emptyspace"></div>

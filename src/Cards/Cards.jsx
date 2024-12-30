@@ -173,6 +173,7 @@ function Cards(props) {
         <div className="cardActions">
           {Object.prototype.hasOwnProperty.call(props, "button1") ? (
             <a href={props.link1}>
+              {console.log(props)}
               <button className="activated">{props.button1}</button>
             </a>
           ) : null}
