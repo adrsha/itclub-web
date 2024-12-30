@@ -14,7 +14,12 @@ function DristiEvents(props) {
 
   return (
     <>
-      <div className="specialEventContent" ref={contentRef}>
+      {isMobile() ? null : <Parallax />}
+      <div
+        className="specialEventContent parallaxEl"
+        ref={contentRef}
+          data-lerp={props.totalCols % 2 != 0 ? (props.column == Math.ceil(props.totalCols/2) ? (props.column * 10):-15) : 0}
+      >
         {props.posterpath ? (
           <img className="specialEventContentImg" src={props.posterpath} />
         ) : (
@@ -102,6 +107,8 @@ function EventsList() {
               time={event.time}
               desc={event.desc}
               posterpath={event.posterpath}
+              column={columnIndex + 1}
+              totalCols={columns.length}
             />
           ))}
         </div>
@@ -116,7 +123,7 @@ export default function Dristi() {
   }, []);
 
   return (
-    <div id="specialEventRoot">
+    <>
       <Nav events contactUs aboutUs notices dristi />
       <Lines />
       <LenisComponent />
@@ -125,6 +132,6 @@ export default function Dristi() {
       <div className="specialEventsSubHeader">IT Club Events</div>
       <EventsList />
       <Footer />
-    </div>
+    </>
   );
 }
