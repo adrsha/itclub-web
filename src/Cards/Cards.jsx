@@ -39,7 +39,7 @@ function Cards(props) {
               lenis.scrollTo("#aboutUs");
             }}
           >
-            <button className="activated">{props.button1}</button>
+            <button className="charged">{props.button1}</button>
           </a>
           <a
             onMouseDown={(e) => {
@@ -47,7 +47,7 @@ function Cards(props) {
               lenis.scrollTo("#contactUs");
             }}
           >
-            <button className="deactivated">{props.button2}</button>
+            <button className="discharged">{props.button2}</button>
           </a>
         </div>
       </div>

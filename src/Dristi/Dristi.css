@@ -90,7 +90,7 @@ img.specialEventContentImg{
     border-radius: 2vw;
     margin: 0px;
     box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.1);
-    filter: sepia(100%) saturate(300%) brightness(30%) hue-rotate(150deg);
+    filter: sepia(100%) saturate(300%) brightness(60%) hue-rotate(150deg);
     transition: 0.3s ease;
 }
 img.specialEventContentImg:hover{

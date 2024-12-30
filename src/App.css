@@ -113,7 +113,7 @@ button{
     font-size: 1em;
     white-space: nowrap;
 }
-button.activated{
+button.charged{
     position: relative;
     background-color: transparent;
     color: var(--color1);
@@ -121,7 +121,7 @@ button.activated{
     margin: 1.5rem;
     transition: 0.2s;
 }
-button.activated::before{
+button.charged::before{
     content: "";
     position: absolute;
     top: 50%;
@@ -138,7 +138,7 @@ button.activated::before{
     /* background-color: var(--color1); */
     transition: 0.2s;
 }
-button.deactivated{
+button.discharged{
     position: relative;
     background-color: transparent;
     color: var(--color1);
@@ -146,7 +146,7 @@ button.deactivated{
     margin: 1.5rem;
     outline-offset: 0.5rem;
 }
-button.deactivated::before{
+button.discharged::before{
     content: "";
     position: absolute;
     top: 50%;
@@ -164,18 +164,33 @@ button.deactivated::before{
     /* background-color: var(--color1); */
     transition: 0.2s;
 }
-button.activated:hover {
+button.charged:hover {
     border-color: transparent;
 }
-button.deactivated:hover::before{
+button.discharged:hover::before{
     outline-offset: 0rem;
     height: 100%;
     width: 100%;
 }
-button.activated:hover::before {
+button.charged:hover::before {
     outline-offset: 0rem;
     height: 100%;
     width: 100%;
+}
+
+button.activated {
+    background-color: var(--color1a);
+    color: var(--color2);
+}
+button.deactivated {
+    background: var(--color1a);
+    color: var(--color1);
+}
+[disabled]{
+    cursor: not-allowed;
+}
+[disabled]:after {
+    content: " 🚫 "
 }
 
 
