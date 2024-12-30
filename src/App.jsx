@@ -17,7 +17,6 @@ function App() {
   return (
     <>
       <Nav events contactUs aboutUs notices dristi />
-
       <Lines />
       <LenisComponent />
       {isMobile() ? null : <Parallax />}

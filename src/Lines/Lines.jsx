@@ -6,22 +6,14 @@ import { lenis } from '../Lenis/Lenis';
 function Lines() {
   const [scrollY, setScrollY] = useState(0);
   const rafIdRef = useRef(null);
-  const heightRef = useRef(0); //reference to the root height
-  const innerHeightRef = useRef(0);
   const bulbsRef = useRef([]);
 
   useEffect(() => {
-    setTimeout(() => {
-      heightRef.current = lenis.dimensions.scrollHeight;
-      innerHeightRef.current = window.innerHeight;
       bulbsRef.current = document.querySelectorAll('.bulb');
-      console.log(heightRef.current, ' : ', innerHeightRef.current);
-    }, 1);
   }, []);
 
   const calculateBulbPosition = useCallback(() => {
       let newScroll = (lenis.animatedScroll ) / (lenis.dimensions.scrollHeight- window.innerHeight)
-      console.log(newScroll)
     return newScroll * lenis.dimensions.scrollHeight;
   }, []);
 
@@ -40,7 +32,7 @@ function Lines() {
   }, [handleScroll]);
 
   const updateBulbPositions = useCallback(() => {
-    const offsets = [0, -100, -200]; // Offsets for left, center, and right bulbs
+    // const offsets = [0, -100, -200]; // Offsets for left, center, and right bulbs
     bulbsRef.current.forEach((bulb, index) => {
       bulb.style.transform = `translate3d(0, ${scrollY}px, 0)`;
     });

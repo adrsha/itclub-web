@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
-import "./Countdown.css";
-import eventData from "../../data/Events.json";
-import confettiImg1 from "/confetti1.gif";
-import confettiImg2 from "/confetti2.gif";
-import confettiImg3 from "/confetti3.gif";
-import confettiSound from "/sound.mp3";
-import mouseImg from "/m1.png";
+import { useState, useEffect } from 'react';
+import './Countdown.css';
+import eventData from '../../data/Events.json';
+import confettiImg1 from '/confetti1.gif';
+import confettiImg2 from '/confetti2.gif';
+import confettiImg3 from '/confetti3.gif';
+import confettiSound from '/sound.mp3';
+import mouseImg from '/m1.png';
 
 // get the latest event
 let latestEvent = eventData[0];
@@ -26,6 +26,7 @@ function Countdown() {
   // Get the data of the event
   const deadline = new Date(latestEvent.eventDate);
   const event = latestEvent.eventName;
+  console.log(latestEvent);
 
   // Countdown
   const [days, setDays] = useState(0);
@@ -34,29 +35,29 @@ function Countdown() {
   const [secs, setSec] = useState(0);
   let today = new Date();
   let time = (deadline.getTime() - today.getTime()) / 1000;
-  let tsec = (time<61596237)?time:null;
+  let tsec = time < 61596237 ? time : null;
 
   function UpdateDate(tsec) {
     setDays(
-      Math.floor(tsec / 86400).toLocaleString("en-US", {
+      Math.floor(tsec / 86400).toLocaleString('en-US', {
         minimumIntegerDigits: 2,
         useGrouping: false,
       }),
     );
     setHours(
-      Math.floor((tsec % 86400) / 3600).toLocaleString("en-US", {
+      Math.floor((tsec % 86400) / 3600).toLocaleString('en-US', {
         minimumIntegerDigits: 2,
         useGrouping: false,
       }),
     );
     setMins(
-      Math.floor((tsec % 3600) / 60).toLocaleString("en-US", {
+      Math.floor((tsec % 3600) / 60).toLocaleString('en-US', {
         minimumIntegerDigits: 2,
         useGrouping: false,
       }),
     );
     setSec(
-      Math.floor(tsec % 60).toLocaleString("en-US", {
+      Math.floor(tsec % 60).toLocaleString('en-US', {
         minimumIntegerDigits: 2,
         useGrouping: false,
       }),
@@ -73,7 +74,7 @@ function Countdown() {
     }, 1000);
   }, []);
 
-  if (tsec <= 0 && tsec!=null) {
+  if (tsec <= 0 && tsec != null) {
     return (
       <div className="countdown confetti">
         <audio id="myAudio">
@@ -103,9 +104,8 @@ function Countdown() {
       </div>
     );
   } else {
-    return (
-      (tsec > 0 && tsec!=null)?
-      (<>
+    return tsec > 0 && tsec != null ? (
+      <>
         <div className="countdown">
           <div className="countdownObj">
             <div className="dayshour">
@@ -116,21 +116,20 @@ function Countdown() {
             </div>
           </div>
           <div className="notcountdown">
-            left for <br />
-            {event}
+            time before
+            <br />
+              {event}
             <br />
           </div>
           <img className="mouseimg" src={mouseImg} alt="mouse img" />
         </div>
-      </>):(<>
+      </>
+    ) : (
+      <>
         <div className="countdown">
           <div className="countdownObj">
-            <div className="dayshour">
-             ∞
-            </div>
-            <div className="minsec">
-             ∞
-            </div>
+            <div className="dayshour">∞</div>
+            <div className="minsec">∞</div>
           </div>
           <div className="notcountdown">
             No active Programs <br />
@@ -139,7 +138,7 @@ function Countdown() {
           </div>
           <img className="mouseimg" src={mouseImg} alt="mouse img" />
         </div>
-      </>)
+      </>
     );
   }
 }

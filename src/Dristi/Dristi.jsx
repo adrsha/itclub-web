@@ -58,13 +58,13 @@ function EventsList() {
     },
     {
       name: 'UI/UX',
-      time: 'UI/UX is a 6-7 hours event, held in day 2 of Dristi.',
+      time: ' 6-7 hours event, Day 2',
       desc: 'UI/UX Design Competition challenges participants to create user-friendly and visually appealing interfaces.',
       posterpath: '/defaultPoster.png',
     },
     {
       name: 'Valorant Tournament',
-      time: 'Valorant tournament starts from day 1 of Dristi.',
+      time: 'Day 1',
       desc: 'Valorant Esports Tournament is a competitive gaming event where participants battle in the popular tactical shooter game, Valorant. Players showcase their strategic thinking, teamwork, and gaming skills in high-energy matches.',
       posterpath: '/defaultPoster.png',
     },
