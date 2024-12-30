@@ -13,3 +13,7 @@ export default function isMobile() {
     return false;
   }
 }
+
+export function fullScreenImg(){
+    
+}
