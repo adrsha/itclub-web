@@ -32,6 +32,7 @@
   z-index: 0;
   border: 20px solid var(--color3A);
   outline: 2px solid var(--color1A);
+  cursor: pointer;
 }
 
 

@@ -38,7 +38,7 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    background-color: var(--color3);
+    /* background-color: var(--color3); */
     color: var(--color1)
 }
 .notcountdown{
@@ -47,7 +47,7 @@
     padding-bottom: 1vw;
     font-family: "JetBrains Mono", monospace;
     font-weight: bold;
-    background-color: var(--color3);
+    /* background-color: var(--color3); */
     color: var(--color1);
 }
 .dayshour{

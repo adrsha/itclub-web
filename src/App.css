@@ -14,6 +14,7 @@
   --color1A:  rgba(105,205, 255, 0.2);
   --color1: #81BCE4;
   --color1a: #2270A5;
+  --color1aA: #2270A565;
   --color1e: #29B1EA;
   --color2: #000000;
   --color3: #090f11;
@@ -73,92 +74,124 @@ canvas{
   position: relative;
   justify-content: center;
   align-items: center;
+  background-color: var(--color3);
+  background-image: url("/main_tile.png");
+  background-size: 3rem 3rem;
+  background-attachment: fixed;
+  background-position: top;
+  box-shadow: inset 0 0 100px 100px var(--color3);
 }
 
 .glass{
-  background: color-mix(in srgb, var(--color3A) 10%, var(--color4aA) 80%);
-  /* background: radial-gradient(var(--color3A) 10%, var(--color4aA) 80%); */
-  backdrop-filter: blur(10px);
-  border: 1px solid var(--color3A);
+    background: color-mix(in srgb, var(--color3A) 10%, var(--color4aA) 80%);
+    /* background: radial-gradient(var(--color3A) 10%, var(--color4aA) 80%); */
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--color3A);
 }
 .glass-opti{
-  background: radial-gradient(var(--color3A) 10%, var(--color4aA) 80%);
-  border: 1px solid var(--color3A);
+    background: radial-gradient(var(--color3A) 10%, var(--color4aA) 80%);
+    border: 1px solid var(--color3A);
 }
 
 button{
-  border:none;
-  padding: 1rem;
-  padding-left: 1em;
-  padding-right: 1em;
-  border-radius: 1rem;
-  margin: 2px;
-  width: fit-content;
-  display: block;
-  font-family: "JetBrains Mono", monospace;
-  font-weight: bolder;
-  cursor: pointer;
-  font-size: 1em;
-  white-space: nowrap;
+    border:none;
+    padding: 1rem;
+    padding-left: 1em;
+    padding-right: 1em;
+    border-radius: 1rem;
+    margin: 2px;
+    width: fit-content;
+    display: block;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bolder;
+    cursor: pointer;
+    font-size: 1em;
+    white-space: nowrap;
 }
 button.activated{
-  background-color: var(--color1a);
-  color: var(--color1);
-  border: 3px solid var(--color1a);
-  transition: 0.2s;
+    position: relative;
+    background-color: transparent;
+    color: var(--color1);
+    border: 4px solid var(--color1a);
+    margin: 1.5rem;
+    transition: 0.2s;
+}
+button.activated::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 120%;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+    height: 140%;
+    border: 1px solid var(--color1a);
+    outline: 1px solid var(--color1a) ;
+    box-shadow: inset 0 0 1.5rem var(--color1aA), 0 0 1.5rem var(--color1aA);
+    outline-offset: 0.25rem;
+    border-radius: inherit;
+    /* background-color: var(--color1); */
+    transition: 0.2s;
 }
 button.deactivated{
-  border: 3px solid var(--color1a);
-  background-color:transparent;
-  color: var(--color1);
-  transition: 0.2s;
+    border: 1px solid var(--color1a);
+    margin: 1.5rem;
+    background-color:transparent;
+    color: var(--color1);
+    transition: 0.2s;
+    border: 4px solid var(--color1a);
+    outline-offset: 0.5rem;
 }
-button.activated:hover{
-  box-shadow: 0 10px 10px var(--color1a);
-  transform: translateY(-5px);
+button.activated:hover {
+    border-color: transparent;
+}
+button.activated:hover::before {
+    outline-offset: 0rem;
+    height: 100%;
+    width: 100%;
 }
 
 button.deactivated:hover{
-  box-shadow: 0 0.5em 1em var(--color1a), inset 0 -0.5em 1em var(--color1a);
-  transform: translateY(-5px);
+    box-shadow: 0 0.5em 1em var(--color1a), inset 0 -0.5em 1em var(--color1a);
+    transform: translateY(-5px);
 }
 
 
 /* LENIS Customization*/
 html.lenis, html.lenis body {
-  height: auto;
+    height: auto;
 }
 
 .lenis.lenis-smooth {
-  scroll-behavior: auto !important;
+    scroll-behavior: auto !important;
 }
 
 .lenis.lenis-smooth [data-lenis-prevent] {
-  overscroll-behavior: contain;
+    overscroll-behavior: contain;
 }
 
 .lenis.lenis-stopped {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .lenis.lenis-smooth iframe {
-  pointer-events: none;
+    pointer-events: none;
 }
 
 .showMore{
-  cursor: pointer;
-  color: var(--color1a);
-  font-weight: bolder;
-  padding: 1rem;
-  transition: 0.2s;
+    cursor: pointer;
+    color: var(--color1a);
+    font-weight: bolder;
+    padding: 1rem;
+    transition: 0.2s;
 }
 .showMore:hover{
-  color: var(--color1);
-  background-color: var(--color4);
-  border-radius: 1rem;
+    color: var(--color1);
+    background-color: var(--color4);
+    border-radius: 1rem;
 }
 
 body.overlay-active {
-  overflow: hidden;  /* Prevent scrolling */
-  position: fixed;   /* Optionally, to prevent page from jumping */
+    overflow: hidden;  /* Prevent scrolling */
+    position: fixed;   /* Optionally, to prevent page from jumping */
 }

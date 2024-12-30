@@ -84,19 +84,6 @@ function Cards(props) {
                     }
                 }
             />
-                // {
-                    // <img src={props.src} 
-                    //     style={ 
-                    //         (fullScreenImageStyle.position == "fixed")
-                    //             ? {
-                    //                 objectFit: "contain",
-                    //                 border: "none",
-                    //                 outline: "none",
-                    //             }
-                    //             : { }
-                    //     }
-                    // />
-                // }
         );
     } else if (props.id == "MembersCard") {
         return (
