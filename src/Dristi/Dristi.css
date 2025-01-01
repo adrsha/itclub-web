@@ -181,6 +181,21 @@ img.specialEventContentImg:hover {
   aspect-ratio: 1;
   border-radius: 50%;
 }
+.VODContainer .muteButton{
+  z-index: 2;
+  position: absolute;
+  background-color: transparent;
+    /* margin: auto; */
+  width: 12em;
+  left: calc(30vw - 6em);
+  bottom: 20%;
+    opacity: 0;
+    backdrop-filter: blur(10px);
+    transition: 0.2s ease;
+}
+.VODContainer:hover .muteButton {
+  opacity: 1;
+}
 
 .VODContainer:hover .playButton {
   opacity: 1;

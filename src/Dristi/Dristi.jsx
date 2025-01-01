@@ -194,8 +194,9 @@ function EventsList() {
 
 export default function Dristi() {
   const videoRef = useRef(null);
-  const [vidPlaying, setVidPlaying] = useState(false);
+  const [vidPlaying, setVidPlaying] = useState(true);
   const [progress, setProgress] = useState(0);
+  const [isMuted, setIsMuted] = useState(true);
 
   useEffect(() => {
     document.getElementById("root").classList.add("dristi");
@@ -243,18 +244,21 @@ export default function Dristi() {
       </div>
       <div className="affiliation">
         <div>
-        <span data-text="In Collaboration">
-          In Collaboration
-        </span>
-          <br/>
-        <span data-text="with">
-          with
-        </span>
+          <span data-text="In Collaboration">In Collaboration</span>
+          <br />
+          <span data-text="with">with</span>
         </div>
         <img src="logo_white.png" />
       </div>
       <div className="VODContainer">
-        <video className="advertVideo" ref={videoRef} loop poster="/advertThumbnail.png">
+        <video
+          className="advertVideo"
+          ref={videoRef}
+          loop
+          poster="/advertThumbnail.png"
+          autoPlay="true"
+          muted={isMuted}
+        >
           <source src="/demo.mp4" type="video/mp4" />
         </video>
         <button
@@ -285,7 +289,7 @@ export default function Dristi() {
               fill="none"
               stroke="#81BCE4"
               strokeWidth="2"
-              opacity="0.6"
+              opacity="1"
             />
 
             {vidPlaying ? (
@@ -306,6 +310,39 @@ export default function Dristi() {
                   fill="#2270A5"
                 />
               </>
+            )}
+          </svg>
+        </button>
+        <button
+          className="muteButton parallaxEl glass-opti"
+          onClick={() => {
+            setIsMuted(!isMuted);
+          }}
+          data-lerp={8}
+        >
+          <svg
+            width="30"
+            height="30"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {isMuted ? (
+              // Muted icon
+              <path
+                d="M11 5L6 9H2V15H6L11 19V5Z M23 9L17 15 M17 9L23 15"
+                stroke="#81BCE4"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
+            ) : (
+              // Unmuted icon
+              <path
+                d="M11 5L6 9H2V15H6L11 19V5Z M15 9C16.66 9 18 10.34 18 12C18 13.66 16.66 15 15 15"
+                stroke="#81BCE4"
+                strokeWidth="3"
+                strokeLinecap="round"
+              />
             )}
           </svg>
         </button>
