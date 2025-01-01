@@ -76,15 +76,15 @@ function EventsList() {
       formLinks: "#",
       allowRegister: true,
     },
-    {
-      name: "UI/UX Pre-event",
-      time: "Jan 9",
-      desc: "UI/UX Design Competition challenges participants to create user-friendly and visually appealing interfaces.",
-      posterpath: "/UI_UX_poster_preevent.png",
-      formLinks:
-        "https://docs.google.com/forms/d/e/1FAIpQLSfISjVz2FNHLMAUMJe-b9WT5B7HF5sSW_xjh9Bhc1lOg-rLhw/viewform?usp=dialog",
-      allowRegister: false,
-    },
+    // {
+    //   name: "UI/UX Pre-event",
+    //   time: "Jan 9",
+    //   desc: "UI/UX Design Competition challenges participants to create user-friendly and visually appealing interfaces.",
+    //   posterpath: "/UI_UX_poster_preevent.png",
+    //   formLinks:
+    //     "https://docs.google.com/forms/d/e/1FAIpQLSfISjVz2FNHLMAUMJe-b9WT5B7HF5sSW_xjh9Bhc1lOg-rLhw/viewform?usp=dialog",
+    //   allowRegister: false,
+    // },
     {
       name: "UI/UX",
       time: "Jan 10",
@@ -95,7 +95,7 @@ function EventsList() {
     },
     {
       name: "Valorant Tournament",
-      time: "Jan 9 - Jan 3",
+      time: "Jan 9 - Jan 11",
       desc: "Valorant Esports Tournament is a competitive gaming event where participants battle in the popular tactical shooter game, Valorant. Players showcase their strategic thinking, teamwork, and gaming skills in high-energy matches.",
       posterpath: "/valo_poster.png",
       formLinks: "https://forms.gle/kAJgrJKzo7pv9g8MA",
@@ -303,7 +303,7 @@ export default function Dristi() {
               <>
                 <path
                   d="M40,30 q0,-2 2,-2 l31,20 q2,1.5 0,3 l-31,20 q-2,1 -2,-1 z"
-                  fill="#4FB3E5"
+                  fill="#2270A5"
                 />
               </>
             )}
