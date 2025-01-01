@@ -249,7 +249,7 @@ export default function Dristi() {
       </div>
       <div className="VODContainer">
         <video className="advertVideo" ref={videoRef} loop>
-          <source src="https://drive.google.com/uc?export=download&id=1AO5KCfjuHqktK9TCPkzSJU0YVUXCBKJr" type="video/mp4" />
+          <source src="/demo.mp4" type="video/mp4" />
         </video>
         <button
           className={
