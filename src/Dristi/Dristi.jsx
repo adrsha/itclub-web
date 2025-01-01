@@ -243,7 +243,7 @@ export default function Dristi() {
       </div>
       <div className="affiliation">
         <span>
-                In affiliation <br/>with 
+                In Collaboration <br/>with 
         </span>
         <img src="logo.png"/>
       </div>
