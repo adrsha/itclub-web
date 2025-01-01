@@ -69,20 +69,28 @@ function EventsList() {
 
   const events = [
     {
-      name: "UI/UX",
-      time: "Jan 10",
-      desc: "UI/UX Design Competition challenges participants to create user-friendly and visually appealing interfaces.",
-      posterpath: "/UI_UX_poster.png",
-      formLinks: "https://forms.gle/QtPWLMCMN4utRfQd6",
-      allowRegister: false,
+      name: "Software Exhibition",
+      time: "Jan 9 - Jan 11",
+      desc: "The Software Exhibition is a platform where participants showcase innovative software projects, demonstrating their technical skills and creativity. This event highlights the latest advancements in software development and provides a space for learning and inspiration.",
+      posterpath: "/defaultPoster.png",
+      formLinks: "#",
+      allowRegister: true,
     },
     {
       name: "UI/UX Pre-event",
       time: "Jan 9",
       desc: "UI/UX Design Competition challenges participants to create user-friendly and visually appealing interfaces.",
-      posterpath: "/UI_UX_poster.png",
+      posterpath: "/UI_UX_poster_preevent.png",
       formLinks:
         "https://docs.google.com/forms/d/e/1FAIpQLSfISjVz2FNHLMAUMJe-b9WT5B7HF5sSW_xjh9Bhc1lOg-rLhw/viewform?usp=dialog",
+      allowRegister: false,
+    },
+    {
+      name: "UI/UX",
+      time: "Jan 10",
+      desc: "UI/UX Design Competition challenges participants to create user-friendly and visually appealing interfaces.",
+      posterpath: "/UI_UX_poster.png",
+      formLinks: "https://forms.gle/QtPWLMCMN4utRfQd6",
       allowRegister: false,
     },
     {
@@ -122,14 +130,6 @@ function EventsList() {
       desc: "Competitive Coding is a contest where participants solve complex coding problems within strict time limits. This event tests their problem-solving abilities, coding efficiency, and logical thinking.",
       posterpath: "/defaultPoster.png",
       formLinks: "https://forms.gle/V2zUpcCjAJc3KFNYA",
-      allowRegister: false,
-    },
-    {
-      name: "Software Exhibition",
-      time: "Jan 9 - Jan 11",
-      desc: "The Software Exhibition is a platform where participants showcase innovative software projects, demonstrating their technical skills and creativity. This event highlights the latest advancements in software development and provides a space for learning and inspiration.",
-      posterpath: "/defaultPoster.png",
-      formLinks: "#",
       allowRegister: false,
     },
   ];
@@ -242,13 +242,19 @@ export default function Dristi() {
         <div className="specialEventsScroll">SCROLL DOWN</div>
       </div>
       <div className="affiliation">
-        <span>
-                In Collaboration <br/>with 
+        <div>
+        <span data-text="In Collaboration">
+          In Collaboration
         </span>
-        <img src="logo.png"/>
+          <br/>
+        <span data-text="with">
+          with
+        </span>
+        </div>
+        <img src="logo_white.png" />
       </div>
       <div className="VODContainer">
-        <video className="advertVideo" ref={videoRef} loop>
+        <video className="advertVideo" ref={videoRef} loop poster="/advertThumbnail.png">
           <source src="/demo.mp4" type="video/mp4" />
         </video>
         <button

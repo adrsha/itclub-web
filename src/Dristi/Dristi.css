@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap");
 :root {
   --dristi_color1: #4fb3e5;
   --dristi_color2: #2dae8b;
@@ -25,8 +25,8 @@
   height: 60vh;
   font-family: "Monomaniac One", cursive;
   font-size: min(12em, 20vw);
-    padding-top: 20vh;
-    padding-bottom: 5vh;
+  padding-top: 20vh;
+  padding-bottom: 5vh;
   z-index: 1;
   position: relative;
   text-shadow:
@@ -56,79 +56,29 @@
   transform: translate(-50%, 50%);
 }
 
-.affiliation{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    color: var(--color1);
-    font-size: 1.9em;
-    font-family: "Russo One";
-    font-weight: bolder;
-    margin: auto;
-    text-align: center;
-    width: 50%;
-    padding: 2em;
+.affiliation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik";
+  gap: 1em;
+  color: var(--color1);
+  font-size: 1.5em;
+  border-radius: 2em;
+  font-weight: bold;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: right;
+  width: fit-content;
+  padding: 2em;
 }
 .affiliation span {
-    text-align: right;
-    animation: glitch 1s linear infinite;
-    position: relative;
+  text-align: right;
+  position: relative;
 }
-
-@keyframes glitch {
-    2%, 64% {
-        transform: translate(2px,0) skew(0deg);
-    }
-    4%, 60% {
-        transform: translate(-2px,0) skew(0deg);
-    }
-    62% {
-        transform: translate(0,0) skew(5deg); 
-    }
-}
-
-.affiliation span:before,
-.affiliation span:after {
-    content: attr(data-text);
-    position: absolute;
-    left: 0;
-}
-
-.affiliation span:before {
-    animation: glitchTop 1s linear infinite;
-    clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-    -webkit-clip-path: polygon(0 0, 100% 0, 100% 33%, 0 33%);
-}
-
-@keyframes glitchTop {
-    2%, 64% {
-        transform: translate(2px,-2px);
-    }
-    4%, 60% {
-        transform: translate(-2px,2px);
-    }
-    62% {
-        transform: translate(13px,-1px) skew(-13deg); 
-    }
-}
-
-.affiliation span:after {
-    animation: glitchBottom 1.5s linear infinite;
-    clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-    -webkit-clip-path: polygon(0 67%, 100% 67%, 100% 100%, 0 100%);
-}
-
-@keyframes glitchBottom {
-    2%, 64% {
-        transform: translate(-2px,0);
-    }
-    4%, 60% {
-        transform: translate(-2px,0);
-    }
-    62% {
-        transform: translate(-22px,5px) skew(21deg); 
-    }
+.affiliation img {
+  height: 3em;
+  width: auto;
 }
 
 .specialEventsList {
@@ -201,7 +151,7 @@ img.specialEventContentImg:hover {
 .advertVideo {
   width: 60vw;
   height: auto;
-    margin-bottom: 10vh;
+  margin-bottom: 10vh;
   border-radius: 5vw;
   outline: 1px solid var(--color1A);
   outline-offset: 10px;
