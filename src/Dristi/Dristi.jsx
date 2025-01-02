@@ -93,9 +93,9 @@ function EventsList() {
       allowRegister: true,
     },
     {
-      name: "Software Exhibition",
+      name: "Projecct Demonstration",
       time: "Jan 9 - Jan 11",
-      desc: "The Software Exhibition is a platform where participants showcase innovative software projects, demonstrating their technical skills and creativity. This event highlights the latest advancements in software development and provides a space for learning and inspiration.",
+      desc: "The Project Demonstration is a platform where participants showcase innovative projects, demonstrating their technical skills and creativity. This event highlights the latest advancements in overall development and provides a space for learning and inspiration.",
       posterpath: "/call_for_project_software.png",
       formLinks: "https://docs.google.com/forms/d/16cyqSta5w9aqd0XjonMzGfmtR2mWeRL43MaDYsa0IHo/edit",
       allowRegister: true,
