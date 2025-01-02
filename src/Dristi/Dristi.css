@@ -23,7 +23,7 @@
 
 .specialEventHeader {
   color: var(--color1);
-  height: 60vh;
+  height: min(calc(30vh + 30vw), 60vh);
   font-family: "Monomaniac One", cursive;
   font-size: min(12em, 20vw);
   padding-top: 20vh;
@@ -41,7 +41,7 @@
 .specialEventsScroll {
   color: var(--color1);
   font-family: "Monomaniac One", cursive;
-  font-size: 1vw;
+  font-size: 1rem;
   position: relative;
   z-index: 1;
   margin: auto;
