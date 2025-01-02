@@ -1,12 +1,21 @@
 :root {
     --perspective: 200vh;
     --logoWidth: 50px;
+    --dristiBlur: 10px;
 }
 
 li {
     list-style: none;
 }
 /* N A V B A R */
+
+.theNav{
+    height: 0rem;
+    /* background: linear-gradient( var(--color4) , transparent); */
+    box-shadow: 0 10px 5vh 5vh var(--color4);
+    position: fixed;
+    width: 100vw;
+}
 
 .NavContents {
     position: fixed;
@@ -16,29 +25,30 @@ li {
     height: 4vh;
     align-items: center;
     cursor: pointer;
-    /* display: flex;
-    justify-content: space-evenly; */
+    display: flex;
+    justify-content: space-evenly;
 }
 
 /* NAVBAR EVENT */
 .EventLogo {
-    position: fixed;
-    left: calc(50vw - 25px);
-    float: left;
+    margin-right: 1em;
+    padding: 0.4rem 1.4rem;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     font-family: "Monomaniac One";
     color: var(--color1);
     font-size: 1.5rem;
-    border-radius: 15%;
+    border: 1px solid var(--color1);
+    border-radius: 15px;
+    box-shadow: 0 8px var(--dristiBlur) -4px var(--dristi_color1a),
+                -8px 0 var(--dristiBlur) -4px var(--dristi_color2a), 
+                0 -8px var(--dristiBlur) -4px var(--dristi_color3a),
+                8px 0 var(--dristiBlur) -4px var(--dristi_color4a),
+                inset 0 -8px var(--dristiBlur) -4px var(--dristi_color1a),
+                inset 8px 0 var(--dristiBlur) -4px var(--dristi_color2a), 
+                inset 0 8px var(--dristiBlur) -4px var(--dristi_color3a),
+                inset -8px 0 var(--dristiBlur) -4px var(--dristi_color4a);
+    
 }
-
-.EventLogo :hover {
-    text-shadow: 1px 1px 0px var(--color1);
-}
-
 .EventLogo a {
     display: flex;
     justify-content: center;
@@ -54,7 +64,6 @@ li {
 }
 
 .EventLogo .eventName {
-    width: 0;
     overflow-x: hidden;
     background-position: top left;
     background-size: cover;
@@ -62,11 +71,6 @@ li {
     transition: 0.3s ease;
     white-space: nowrap;
 }
-
-.EventLogo:hover a .eventName {
-    width: 6vw;
-}
-
 /* NAVBAR HAMBURGER */
 div.NavOpener {
     float: right;

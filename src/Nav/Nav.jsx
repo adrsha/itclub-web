@@ -71,7 +71,7 @@ function Nav(props) {
 
 
   return (
-    <>
+    <nav className="theNav">
       <Analytics />
       <a href="/" className="logo">
         <img src={logo} />
@@ -174,7 +174,7 @@ function Nav(props) {
           ) : null}
         </nav>
       </div>
-    </>
+    </nav>
   );
 }
 

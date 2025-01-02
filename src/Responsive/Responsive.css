@@ -79,13 +79,17 @@
 /* SMALL SCREENS */
 
 @media (min-width: 0px) and (max-width: 800px) {
-
+  .theNav{
+    box-shadow: 0 10px 15vh 15vh var(--color4);
+}
 
   .NavContents{
-    width: 70vw;
+    width: fit-content;
   }
   .EventLogo{
     background-color: var(--color3A);
+    position: fixed;
+    left: calc(50vw - 25px);
   }
   .EventLogoinner:hover{
     background-color: var(--color3);
@@ -94,7 +98,6 @@
   .EventLogo:hover a .eventName {
     width: 0vw;
 }
-
   div.aboutUsContent div.membersToggle div.glassCards#MembersCard{
       position: fixed;
       width: 100vw;
@@ -118,10 +121,6 @@
     div.membersList .tablet{
         min-width: 40vw;
     }
-  
-  /* #membersButton button{ */
-  /*     z-index: 0; */
-  /* } */
   .contactUsContent{
     display: flex;
     justify-content: space-around;
@@ -143,7 +142,6 @@
     width: 40vw;
     padding: 10px;
   }
-  
   .contactUsContent>form input, .contactUsContent>form textarea{
     font-size: 1.5rem;
     width: 50vw;
@@ -162,7 +160,6 @@
     padding-right: 5vw;
     margin: 3vw;
   }
-
   .aboutUs img{
     display: none;
   }

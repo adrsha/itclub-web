@@ -1,15 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap");
 :root {
-  --dristi_color1: #4fb3e5;
-  --dristi_color2: #2dae8b;
-  --dristi_color3: #7b3494;
-  --dristi_color4: #f26422;
-  --dristi_color5: #2c1d5b;
-  --dristi_color1l: #a8d9f4;
-  --dristi_color2l: #96d4c4;
-  --dristi_color3l: #bb99c8;
-  --dristi_color4l: #f9b18f;
-  --dristi_color5l: #948dac;
+ 
 }
 
 #root.dristi {
