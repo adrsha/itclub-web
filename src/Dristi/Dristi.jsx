@@ -246,7 +246,10 @@ export default function Dristi() {
       <Nav events contactUs aboutUs notices dristi />
       <Lines />
       <LenisComponent />
-      {isMobile() ? null : <Parallax />}
+      {
+        // isMobile() ? null : <Parallax />
+      }
+      <Parallax />
       <div className="specialEventHeader">
         Dristi 3.0
         <div className="specialEventsScroll">SCROLL DOWN</div>

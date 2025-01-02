@@ -46,7 +46,10 @@ function App() {
             <Nav events contactUs aboutUs notices dristi />
             <Lines />
             <LenisComponent />
-            {isMobile() ? null : <Parallax />}
+          {
+            // isMobile() ? null : <Parallax />
+          }
+          <Parallax />
             <Countdown />
             <div className="pageContent" id="homePageContent">
                 <Cards

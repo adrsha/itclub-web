@@ -47,7 +47,10 @@ function Events() {
       <Nav home notices />
       <Lines />
       <LenisComponent />
-      {isMobile() ? null : <Parallax />}
+      {
+        // isMobile() ? null : <Parallax />
+      }
+      <Parallax />
       <div className="eventTitle">Our Events</div>
       <div className="events">
         <div className="eventContent">{eventHtml}</div>
