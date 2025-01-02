@@ -97,7 +97,7 @@ function EventsList() {
       time: "Jan 9 - Jan 11",
       desc: "Mobile Legends Tournament is a competitive gaming event where participants showcase their skills in the popular mobile MOBA game, Mobile Legends: Bang Bang. This tournament tests their teamwork, strategic thinking, and individual gameplay abilities under intense and fast-paced conditions.",
       posterpath: "/ML_post.png",
-      formLinks: "https://forms.gle/V2zUpcCjAJc3KFNYA",
+      formLinks: "https://docs.google.com/forms/d/e/1FAIpQLSeBqhDFuHyEvvbwm6M8R1VB8fS-jmWncEFZ6Rpr4sHPEa_WNA/viewform?usp=sharing",
       allowRegister: true,
     },
     {
