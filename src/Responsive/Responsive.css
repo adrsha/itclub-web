@@ -112,7 +112,12 @@
   }
   div.membersList{
       display: flex;
+      margin-left: 3vw;
+      margin-right: 3vw;
   }
+    div.membersList .tablet{
+        min-width: 40vw;
+    }
   
   /* #membersButton button{ */
   /*     z-index: 0; */
