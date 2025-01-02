@@ -79,7 +79,7 @@
   flex-direction: column;
   width: 33em;
   height: 33em;
-  z-index: 4;
+  z-index: 2;
   /* position: relative; */
   align-items: center;
   border-radius: 50%;

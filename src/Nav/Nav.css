@@ -6,7 +6,6 @@
 li {
     list-style: none;
 }
-
 /* N A V B A R */
 
 .NavContents {
@@ -15,16 +14,17 @@ li {
     right: 5%;
     z-index: 3;
     height: 4vh;
-    display: flex;
     align-items: center;
-    justify-content: center;
     cursor: pointer;
-    display: flex;
-    justify-content: space-evenly;
+    /* display: flex;
+    justify-content: space-evenly; */
 }
 
 /* NAVBAR EVENT */
 .EventLogo {
+    position: fixed;
+    left: calc(50vw - 25px);
+    float: left;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -69,6 +69,7 @@ li {
 
 /* NAVBAR HAMBURGER */
 div.NavOpener {
+    float: right;
     width: 4vw;
     display: flex;
     flex-direction: column;
