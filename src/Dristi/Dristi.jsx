@@ -89,7 +89,7 @@ function EventsList() {
       time: "Jan 9 - Jan 11",
       desc: "FIFA Esports Tournament is a competitive gaming event where players showcase their mastery of the globally popular football simulation game, FIFA. Contestants demonstrate their strategic gameplay, quick decision-making, teamwork, and technical skills in intense matches, vying for victory in this dynamic and highly competitive environment.",
       posterpath: "/fifa_poster.png",
-      formLinks: "https://forms.gle/cZGutgnAXSChxQCMA",
+      formLinks: "https://docs.google.com/forms/d/1B7CfDCdUnTQPtda9-Pnlp9tiWlv1JTEoxTXqZe_bcUc/edit?usp=drive_web",
       allowRegister: true,
     },
     {
