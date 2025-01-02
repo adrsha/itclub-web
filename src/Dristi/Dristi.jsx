@@ -85,6 +85,14 @@ function EventsList() {
       allowRegister: true,
     },
     {
+      name: "FIFA Tournament",
+      time: "Jan 9 - Jan 11",
+      desc: "FIFA Esports Tournament is a competitive gaming event where players showcase their mastery of the globally popular football simulation game, FIFA. Contestants demonstrate their strategic gameplay, quick decision-making, teamwork, and technical skills in intense matches, vying for victory in this dynamic and highly competitive environment.",
+      posterpath: "/fifa_poster.png",
+      formLinks: "https://forms.gle/cZGutgnAXSChxQCMA",
+      allowRegister: true,
+    },
+    {
       name: "Mobile Legends",
       time: "Jan 9 - Jan 11",
       desc: "Mobile Legends Tournament is a competitive gaming event where participants showcase their skills in the popular mobile MOBA game, Mobile Legends: Bang Bang. This tournament tests their teamwork, strategic thinking, and individual gameplay abilities under intense and fast-paced conditions.",
