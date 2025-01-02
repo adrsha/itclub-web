@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import "./Nav.css";
 import logo from "/logo.png";
 import closeImg from "/close.png";
@@ -71,6 +72,7 @@ function Nav(props) {
 
   return (
     <>
+      <Analytics />
       <a href="/" className="logo">
         <img src={logo} />
       </a>

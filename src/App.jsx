@@ -1,4 +1,3 @@
-
 import React, { useState, useEffect } from 'react';
 import Countdown from './countdown/Countdown.jsx';
 import Nav from './Nav/Nav.jsx';
