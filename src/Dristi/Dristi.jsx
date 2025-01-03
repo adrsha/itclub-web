@@ -69,6 +69,14 @@ function EventsList() {
 
   const events = [
     {
+      name: "Hackathon",
+      time: "Jan 9 - Jan 11",
+      desc: "The Hackathon at Dristi 3.0 is a 48-hour event where teams will collaborate to develop innovative solutions to real-world challenges. Participants will work under time constraints, tackling problems related to AI, while receiving guidance from mentors.",
+      posterpath: "/hackathon_poster.png",
+      formLinks: "https://docs.google.com/forms/d/16qY08JD83kgnpxAN2aCZceZ7BvwJy9LGbg46y0Lu-2k/edit",
+      allowRegister: true,
+    },
+    {
       name: "Valorant Tournament",
       time: "Jan 9 - Jan 11",
       desc: "Valorant Esports Tournament is a competitive gaming event where participants battle in the popular tactical shooter game, Valorant. Players showcase their strategic thinking, teamwork, and gaming skills in high-energy matches.",
@@ -117,22 +125,6 @@ function EventsList() {
     //     "https://docs.google.com/forms/d/e/1FAIpQLSfISjVz2FNHLMAUMJe-b9WT5B7HF5sSW_xjh9Bhc1lOg-rLhw/viewform?usp=dialog",
     //   allowRegister: false,
     // },
-    {
-      name: "UI/UX",
-      time: "Jan 10",
-      desc: "UI/UX Design Competition challenges participants to create user-friendly and visually appealing interfaces.",
-      posterpath: "/UI_UX_poster.png",
-      formLinks: "https://forms.gle/QtPWLMCMN4utRfQd6",
-      allowRegister: false,
-    },
-    {
-      name: "Hackathon",
-      time: "Jan 9 - Jan 11",
-      desc: "The Hackathon at Dristi 3.0 is a 48-hour event where teams will collaborate to develop innovative solutions to real-world challenges. Participants will work under time constraints, tackling problems related to AI, while receiving guidance from mentors.",
-      posterpath: "/defaultPoster.png",
-      formLinks: "#",
-      allowRegister: false,
-    },
     // {
     //   name: 'Quick Code',
     //   time: 'Everyday upto 50 Questions',
@@ -147,6 +139,14 @@ function EventsList() {
       desc: "Competitive Coding is a contest where participants solve complex coding problems within strict time limits. This event tests their problem-solving abilities, coding efficiency, and logical thinking.",
       posterpath: "/competitive_poster.png",
       formLinks: "https://forms.gle/V2zUpcCjAJc3KFNYA",
+      allowRegister: true,
+    },
+    {
+      name: "UI/UX",
+      time: "Jan 10",
+      desc: "UI/UX Design Competition challenges participants to create user-friendly and visually appealing interfaces.",
+      posterpath: "/UI_UX_poster.png",
+      formLinks: "https://forms.gle/QtPWLMCMN4utRfQd6",
       allowRegister: false,
     },
   ];
