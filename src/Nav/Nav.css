@@ -47,6 +47,18 @@ li {
                 inset 8px 0 var(--dristiBlur) -4px var(--dristi_color2a), 
                 inset 0 8px var(--dristiBlur) -4px var(--dristi_color3a),
                 inset -8px 0 var(--dristiBlur) -4px var(--dristi_color4a);
+    transition: 0.2s ease;
+    
+}
+.EventLogo:hover{
+    box-shadow: 0 8px var(--dristiBlur) -0px var(--dristi_color1a),
+                -8px 0 var(--dristiBlur) -0px var(--dristi_color2a), 
+                0 -8px var(--dristiBlur) -0px var(--dristi_color3a),
+                8px 0 var(--dristiBlur) -0px var(--dristi_color4a),
+                inset 0 -8px var(--dristiBlur) -0px var(--dristi_color1a),
+                inset 8px 0 var(--dristiBlur) -0px var(--dristi_color2a), 
+                inset 0 8px var(--dristiBlur) -0px var(--dristi_color3a),
+                inset -8px 0 var(--dristiBlur) -0px var(--dristi_color4a);
     
 }
 .EventLogo a {
