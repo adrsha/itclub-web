@@ -109,7 +109,7 @@ function EventsList() {
       allowRegister: true,
     },
     {
-      name: "Projecct Demonstration",
+      name: "Project Demonstration",
       time: "Jan 9 - Jan 11",
       desc: "The Project Demonstration is a platform where participants showcase innovative projects, demonstrating their technical skills and creativity. This event highlights the latest advancements in overall development and provides a space for learning and inspiration.",
       posterpath: "/call_for_project_software.png",
