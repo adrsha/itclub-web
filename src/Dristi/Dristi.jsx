@@ -147,7 +147,7 @@ function EventsList() {
       desc: "UI/UX Design Competition challenges participants to create user-friendly and visually appealing interfaces.",
       posterpath: "/UI_UX_poster.png",
       formLinks: "https://forms.gle/QtPWLMCMN4utRfQd6",
-      allowRegister: false,
+      allowRegister: true,
     },
   ];
 
