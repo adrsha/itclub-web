@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import { lenis } from "../Lenis/Lenis.js";
 
 
-let cardHtml = member.map((mv) => {
+let cardHtml = member.map((mv) => {;
     return (
         <div key={mv.attr} className="tablet" id={mv.attr}>
             <img src={dummyImage} alt="" />

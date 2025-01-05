@@ -1,0 +1,30 @@
+
+.countdown{
+    font-family: "Monomaniac One", sans-serif;
+    display: flex;
+    flex-direction: column;
+    font-size: 6rem;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+    animation: fadeIn 1s linear forwards;
+}
+.countdownObj{
+    margin-top: 20vh;
+    margin-bottom: 5vh;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    /* background-color: var(--color3); */
+    color: var(--color1)
+}
+.notcountdown{
+    z-index: 1;
+    font-size: 1.3rem;
+    padding-bottom: 1vw;
+    font-family: "JetBrains Mono", monospace;
+    font-weight: bold;
+    /* background-color: var(--color3); */
+    color: var(--color1);
+}
+
