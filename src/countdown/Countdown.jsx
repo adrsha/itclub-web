@@ -22,7 +22,7 @@ for (let i = 0; i < eventData.length; i++) {
   }
 }
 
-function Countdown() {
+function Countdown(props) {
   // Get the data of the event
   const deadline = new Date(latestEvent.eventDate);
   const event = latestEvent.eventName;

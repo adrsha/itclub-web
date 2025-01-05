@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App.jsx";
 import Events from "./Events/Events.jsx";
 import Notices from "./Notices/Notices.jsx";
+import Dristi from "./Dristi/Dristi.jsx"
 import Hackathon from "./Hackathon/Hackathon.jsx"
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
