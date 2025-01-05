@@ -25,14 +25,15 @@ for (let i = 0; i < eventData.length; i++) {
 
 function Countdown(props) {
   // Get the data of the event
-  const deadline = new Date(latestEvent.eventDate);
+  let dateStr = (props.endDate)?new Date(props.endDate): new Date(latestEvent.eventDate);
+  let deadline = new Date(dateStr);
   const event = latestEvent.eventName;
 
+  let [days, setDays] = useState(0);
+  let [hours, setHours] = useState(0);
+  let [mins, setMins] = useState(0);
+  let [secs, setSec] = useState(0);
   // Countdown
-  const [days, setDays] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [mins, setMins] = useState(0);
-  const [secs, setSec] = useState(0);
   let today = new Date();
   let time = (deadline.getTime() - today.getTime()) / 1000;
   let tsec = time < 61596237 ? time : null;
@@ -74,7 +75,6 @@ function Countdown(props) {
     }, 1000);
   }, []);
 
-
   if (tsec <= 0 && tsec != null) {
     return (
       <div className="countdown confetti">
@@ -105,13 +105,13 @@ function Countdown(props) {
       </div>
     );
   }
-  else if (props.displayDays == 'true') {
+  else if (props.displayDays && tsec != null) {
     return (
       <>
-       <div className="countdown">
+        <div className="countdown">
           <div className="countdownObj">
             <div className="Rows">
-            <div className="hours countObjs">
+              <div className="hours countObjs">
                 {hours}
               </div>
               :
@@ -136,7 +136,7 @@ function Countdown(props) {
               <div className="days countObjs">
                 {days}
               </div>
-              
+
               <div className="hours countObjs">
                 {hours}
               </div>
@@ -145,7 +145,7 @@ function Countdown(props) {
               <div className="min countObjs">
                 {mins}
               </div>
-              
+
               <div className="sec countObjs">
                 {secs}
               </div>

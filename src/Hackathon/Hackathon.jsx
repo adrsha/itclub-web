@@ -10,7 +10,7 @@ import Countdown from "../countdown/Countdown.jsx";
 import Lines from "../Lines/Lines.jsx";
 import "./Hackathon.css";
 
-let EndTime = "Jan 9 25 00:00:00";
+let EndTime = "Jan 6 25 23:23:23";
 function Hackathon() {
   return (
     <>
@@ -20,7 +20,7 @@ function Hackathon() {
       <Parallax />
       <div className="hackathonComponent">
         <div className="upperHalf">
-          <Countdown displayDays="true"/>
+          <Countdown displayDays={true}  endDate = {EndTime}/>
           <div className="gitInfo">
             <div className="glass gitLatestCommit infoContents">
               <span id="latestCommitAuthor">

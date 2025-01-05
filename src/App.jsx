@@ -39,6 +39,7 @@ function App() {
         //Clearing the interval
         return () => clearInterval(interval);
     }, [noticeVal])
+    
 
 
     return (
