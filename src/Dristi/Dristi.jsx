@@ -71,7 +71,7 @@ function EventsList() {
     {
       name: "Hackathon",
       time: "Jan 9 - Jan 11",
-      desc: "The Hackathon at Dristi 3.0 is a 48-hour event where teams will collaborate to develop innovative solutions to real-world challenges. Participants will work under time constraints, tackling problems related to AI, while receiving guidance from mentors.",
+      desc: "The Hackathon at Dristi 3.0 is a 48-hour event where teams will collaborate to develop innovative solutions to real-world challenges.",
       posterpath: "/hackathon_poster.png",
       formLinks: "https://docs.google.com/forms/d/16qY08JD83kgnpxAN2aCZceZ7BvwJy9LGbg46y0Lu-2k/edit",
       allowRegister: true,

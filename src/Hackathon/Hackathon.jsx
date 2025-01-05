@@ -20,7 +20,7 @@ function Hackathon() {
       <Parallax />
       <div className="hackathonComponent">
         <div className="upperHalf">
-          <Countdown displayDays="true" />
+          <Countdown displayDays="true"/>
           <div className="gitInfo">
             <div className="glass gitLatestCommit infoContents">
               <span id="latestCommitAuthor">
