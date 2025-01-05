@@ -1,36 +1,71 @@
 import React, { useState, useEffect } from "react";
-// import Countdown from './countdown/Countdown.jsx';
-// import isMobile from './ExtraFuncs.js';
-// import Parallax from './Parallax/Parallax.js';
-// import Cards from './Cards/Cards.jsx';
-// import notices from '../data/Notices.json';
-// import Lines from './Lines/Lines.jsx';
-// import { LenisComponent } from './Lenis/Lenis.js';
+import './GitWatch.css'
 import GitWatchJSON from "../../data/GitWatch.json";
 
-// https://api.github.com/repos/ShresthaAnkit/InternTasks/commits
-
 export default function GitWatch() {
-  const [repoData, setRepoData] = useState(null);
-  GitWatchJSON.forEach((gw) => {
-    fetch(
-      `https://api.github.com/repos/${gw.username}/${gw.repository}/commits`,
-    ) // Replace with the actual URL
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        return response.json();
-      })
-      .then((data) => {
-        data.forEach((d) => {
-          setRepoData(<div className="gitData">{d.author}</div>);
-        });
-      })
-      .catch((error) => {
-        console.error("Error fetching the JSON:", error);
-      });
-  });
+  const [repoData, setRepoData] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
 
-  return <div>{repoData}</div>;
+  useEffect(() => {
+    const fetchAllRepoData = async () => {
+      try {
+        const promises = GitWatchJSON.map(gw => 
+          fetch(`https://api.github.com/repos/${gw.username}/${gw.repository}/commits`)
+            .then(response => {
+              if (!response.ok) {
+                throw new Error(`Failed to fetch data for ${gw.username}/${gw.repository}`);
+              }
+              return response.json();
+            })
+        );
+
+        const results = await Promise.all(promises);
+        
+        // Combine repository info with commit data
+        const enhancedData = results.map((commits, index) => ({
+          repository: `${GitWatchJSON[index].username}/${GitWatchJSON[index].repository}`,
+          commits: commits
+        }));
+
+        setRepoData(enhancedData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+        setError(error.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchAllRepoData();
+  }, []);
+
+  if (loading) {
+    return <div className="p-4">Loading repository data...</div>;
+  }
+
+  if (error) {
+    return <div className="p-4 text-red-600">Error: {error}</div>;
+  }
+
+  return (
+    <div className="p-4">
+      {repoData.map((repo, index) => (
+        <div key={index} className="mb-4">
+          <h2 className="text-xl font-bold">{repo.repository}</h2>
+          <ul className="mt-2">
+            {repo.commits.slice(0, 5).map((commit) => (
+              <li key={commit.sha} className="mb-2">
+                <p className="font-medium">{commit.commit.message}</p>
+                <p className="text-sm text-gray-600">
+                  By: {commit.commit.author.name} on{" "}
+                  {new Date(commit.commit.author.date).toLocaleDateString()}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
+    </div>
+  );
 }

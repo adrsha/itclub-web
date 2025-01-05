@@ -15,12 +15,12 @@ function Hackathon() {
             <Nav home events />
             <Lines />
             <LenisComponent />
-            <Parallax />
-            <GitWatch/>
+          <Parallax />
+          <div className = "hackathonComponent">
             <Countdown displayDays='true'/>
+            <GitWatch/>
+          </div>
             <Footer />
-
-
         </>
         )
     }
