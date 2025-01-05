@@ -310,37 +310,7 @@ function Cards(props) {
                 </div>
             </div>
         );
-    } else if (props.id == "DetailCard") {
-        return (
-            <div
-                className={
-                    "glassCards glass parallaxEl " +
-                        (props.extraClass ? props.extraClass : "")
-                }
-                id={props.id}
-            >
-                <div className="cardData">
-                    {Object.prototype.hasOwnProperty.call(props, "title") ? (
-                        <div className="cardTitle">{props.title}</div>
-                    ) : null}
-                    <div className="cardContent">{props.description}</div>
-                </div>
-                <hr />
-                <div className="cardActions">
-                    {Object.prototype.hasOwnProperty.call(props, "button1") ? (
-                        <a href={props.link1}>
-                            <button className="activated">{props.button1}</button>
-                        </a>
-                    ) : null}
-                    {Object.prototype.hasOwnProperty.call(props, "button2") ? (
-                        <a href={props.link2}>
-                            <button className="deactivated">{props.button2}</button>
-                        </a>
-                    ) : null}
-                </div>
-            </div>
-        );
-    } else if (props.id == "notice") {
+    }else if (props.id == "notice") {
         let noticeStyle = (!(props.buttonDiscord && props.buttonForm))
             ? null
             : "exists";
