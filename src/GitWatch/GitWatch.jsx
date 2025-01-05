@@ -10,7 +10,7 @@ export default function GitWatch() {
   useEffect(() => {
     const fetchAllRepoData = async () => {
       try {
-        const promises = GitWatchJSON.map(gw => 
+        const promises = GitWatchJSON.map(gw =>
           fetch(`https://api.github.com/repos/${gw.username}/${gw.repository}/commits`)
             .then(response => {
               if (!response.ok) {
@@ -21,7 +21,7 @@ export default function GitWatch() {
         );
 
         const results = await Promise.all(promises);
-        
+
         // Combine repository info with commit data
         const enhancedData = results.map((commits, index) => ({
           repository: `${GitWatchJSON[index].username}/${GitWatchJSON[index].repository}`,
@@ -49,21 +49,37 @@ export default function GitWatch() {
   }
 
   return (
-    <div className="p-4">
+    <div className="mainContainer">
       {repoData.map((repo, index) => (
-        <div key={index} className="mb-4">
-          <h2 className="text-xl font-bold">{repo.repository}</h2>
-          <ul className="mt-2">
-            {repo.commits.slice(0, 5).map((commit) => (
-              <li key={commit.sha} className="mb-2">
-                <p className="font-medium">{commit.commit.message}</p>
-                <p className="text-sm text-gray-600">
-                  By: {commit.commit.author.name} on{" "}
-                  {new Date(commit.commit.author.date).toLocaleDateString()}
-                </p>
-              </li>
-            ))}
-          </ul>
+        <div className="commitContainer">
+          <div key={index} className="eachCommit glass">
+            <h2 className="commitHeader">{repo.repository} commited ...</h2>
+            <ul className="moreDetails">
+              {repo.commits.slice(0, 5).map((commit) => (
+                <li key={commit.sha} className="mb-2">
+                  <p className="font-medium">{commit.commit.message}</p>
+                  <p className="text-sm text-gray-600">
+                    By: {commit.commit.author.name} on{" "}
+                    {new Date(commit.commit.author.date).toLocaleDateString()}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
+          <div key={index} className="eachCommit glass">
+            <h2 className="commitHeader">{repo.repository} commited ...</h2>
+            <ul className="moreDetails">
+              {repo.commits.slice(0, 5).map((commit) => (
+                <li key={commit.sha} className="mb-2">
+                  <p className="font-medium">{commit.commit.message}</p>
+                  <p className="text-sm text-gray-600">
+                    By: {commit.commit.author.name} on{" "}
+                    {new Date(commit.commit.author.date).toLocaleDateString()}
+                  </p>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       ))}
     </div>
