@@ -51,22 +51,8 @@ export default function GitWatch() {
   return (
     <div className="mainContainer">
       {repoData.map((repo, index) => (
-        <div className="commitContainer">
-          <div key={index} className="eachCommit glass">
-            <h2 className="commitHeader">{repo.repository} commited ...</h2>
-            <ul className="moreDetails">
-              {repo.commits.slice(0, 5).map((commit) => (
-                <li key={commit.sha} className="mb-2">
-                  <p className="font-medium">{commit.commit.message}</p>
-                  <p className="text-sm text-gray-600">
-                    By: {commit.commit.author.name} on{" "}
-                    {new Date(commit.commit.author.date).toLocaleDateString()}
-                  </p>
-                </li>
-              ))}
-            </ul>
-          </div>
-          <div key={index} className="eachCommit glass">
+        <div className="commitContainer glass">
+          <div key={index} className="eachCommit">
             <h2 className="commitHeader">{repo.repository} commited ...</h2>
             <ul className="moreDetails">
               {repo.commits.slice(0, 5).map((commit) => (

@@ -1,14 +1,18 @@
 .mainContainer{
     color : var(--color1);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap : 2em
+}
+.gitWatchContainer{
+    /* overflow-y: auto;
+    height: 60vh; */
 }
 .commitContainer{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.eachCommit{
-    margin-bottom: 2rem;
     padding-left: 2rem;
     padding-right: 2rem;
     border-radius: 1rem;
+    max-width: 30rem;
+    min-width: 20rem;
 }

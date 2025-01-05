@@ -3,5 +3,25 @@
         "username": "asur-zx",
         "repository": "pasm",
         "branch": "main"
-    }
+    },
+    {
+        "username" : "asur-zx",
+        "repository" : "2Du",
+        "branch" : "main"
+     },
+     {
+        "username" : "asur-zx",
+        "repository" : "2Du",
+        "branch" : "main"
+     },
+     {
+        "username" : "asur-zx",
+        "repository" : "2Du",
+        "branch" : "main"
+     },
+     {
+        "username" : "asur-zx",
+        "repository" : "miniGREP",
+        "branch" : "main"
+     }
 ]

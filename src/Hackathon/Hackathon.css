@@ -1,6 +1,19 @@
 .hackathonComponent{
-    display : flex;
-    width : 100%;
-    align-items : center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: space-around;
+}
+.upperHalf{
+    height: 100vh;
+}
+.gitWatchContainer{
+    overflow-y: auto;
+    padding: 2vh;
+}
+.hello{
+    background-color: black;
+}
+.bottomCommitDisplay{
+    background-color: black;
 }
