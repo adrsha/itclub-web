@@ -7,17 +7,16 @@
 // import notices from '../data/Notices.json';
 // import Lines from './Lines/Lines.jsx';
 // import { LenisComponent } from './Lenis/Lenis.js';
+import GitWatchJSON from '../../data/GitWatch.json';
 
 
 // https://api.github.com/repos/ShresthaAnkit/InternTasks/commits
-function GitWatch() {
+// GitWatchJSON.forEach((e)=>{})
 
-  // let projectHtml = projectData.map((pr) => {})
+console.log(GitWatchJSON)
+export default function GitWatch() {
   return(
-    <>
-
-    </>
+    <div>
+    </div>
   )
 }
-
-export default GitWatch();
