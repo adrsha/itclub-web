@@ -6,6 +6,7 @@ import confettiImg2 from '/confetti2.gif';
 import confettiImg3 from '/confetti3.gif';
 import confettiSound from '/sound.mp3';
 import mouseImg from '/m1.png';
+import { sec } from 'mathjs';
 
 // get the latest event
 let latestEvent = eventData[0];
@@ -73,6 +74,7 @@ function Countdown(props) {
     }, 1000);
   }, []);
 
+
   if (tsec <= 0 && tsec != null) {
     return (
       <div className="countdown confetti">
@@ -102,22 +104,57 @@ function Countdown(props) {
         />
       </div>
     );
+  }
+  else if (props.displayDays == 'true') {
+    return (
+      <>
+       <div className="countdown">
+          <div className="countdownObj">
+            <div className="Rows">
+            <div className="hours countObjs">
+                {hours}
+              </div>
+              :
+              <div className="min countObjs">
+                {mins}
+              </div>
+              :
+              <div className="sec countObjs">
+                {secs}
+              </div>
+            </div>
+          </div>
+        </div>
+      </>
+    )
   } else {
     return tsec > 0 && tsec != null ? (
       <>
         <div className="countdown">
           <div className="countdownObj">
-            <div className="dayshour">
-              {days}:{hours}
+            <div className="Rows">
+              <div className="days countObjs">
+                {days}
+              </div>
+              
+              <div className="hours countObjs">
+                {hours}
+              </div>
             </div>
-            <div className="minsec">
-              {mins}:{secs}
+            <div className="Rows">
+              <div className="min countObjs">
+                {mins}
+              </div>
+              
+              <div className="sec countObjs">
+                {secs}
+              </div>
             </div>
           </div>
           <div className="notcountdown">
             time before
             <br />
-              {event}
+            {event}
             <br />
           </div>
           <img className="mouseimg" src={mouseImg} alt="mouse img" />

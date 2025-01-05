@@ -1,3 +1,6 @@
+:root{
+    --counterObjsMargin : 1rem;
+}
 .confettiImg{
     position: fixed;
     z-index: 1;
@@ -50,46 +53,38 @@
     /* background-color: var(--color3); */
     color: var(--color1);
 }
-.dayshour{
+.countObjs{
     position: relative;   
     color: var(--color1);
+    margin-left: var(--counterObjsMargin);
+    margin-right: var(--counterObjsMargin);
 }
-.dayshour::after{
-    color: var(--color1a);
-    content: "hour";
-    position: absolute;
-    top: -2rem;
-    left: 53%;
-    font-size: 0.4em;
+.Rows{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
-.dayshour::before{
+.days::after{
     color: var(--color1a);
     content: "days";
-    position: absolute;
-    top: -2rem;
-    right: 53%;
     font-size: 0.4em;
 }
-.minsec{
-    color: var(--color1);
-    position: relative;
-}
-.minsec::after{
+.hours::after{
     color: var(--color1a);
-    content: "secs";
-    position: absolute;
-    top: -2rem;
-    left: 53%;
+    content: "hour";
     font-size: 0.4em;
 }
-.minsec::before{
+.min::after{
     color: var(--color1a);
     content: "mins";
-    position: absolute;
-    top: -2rem;
-    right: 54%;
     font-size: 0.4em;
 }
+.sec::after{
+    color: var(--color1a);
+    content: "secs";
+    font-size: 0.4em;
+}
+
 .mouseimg{
     padding-top: 0vh;
     height: auto;
