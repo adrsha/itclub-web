@@ -4,8 +4,8 @@ import App from "./App.jsx";
 import Events from "./Events/Events.jsx";
 import Notices from "./Notices/Notices.jsx";
 import Projects from "./Projects/Projects.jsx";
-import Dristi from "./Dristi/Dristi.jsx"
-import GitWatch from "./GitWatch/GitWatch.jsx"
+import Dristi from "./Dristi/Dristi.jsx";
+import GitWatch from "./GitWatch/GitWatch.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 const router = createBrowserRouter([
@@ -26,13 +26,13 @@ const router = createBrowserRouter([
     element: <Notices />,
   },
   {
-  path: "/dristi",
-  element: <Dristi />,
-},
+    path: "/dristi",
+    element: <Dristi />,
+  },
   {
-  path: "/gitwatch",
-  element: <GitWatch />,
-},
+    path: "/gitwatch",
+    element: <GitWatch />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
