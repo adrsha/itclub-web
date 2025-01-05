@@ -6,7 +6,6 @@ import confettiImg2 from '/confetti2.gif';
 import confettiImg3 from '/confetti3.gif';
 import confettiSound from '/sound.mp3';
 import mouseImg from '/m1.png';
-import { sec } from 'mathjs';
 
 // get the latest event
 let latestEvent = eventData[0];
@@ -76,14 +75,20 @@ function Countdown(props) {
   }, []);
 
   if (tsec <= 0 && tsec != null) {
+    let EventStr = ""
     return (
       <div className="countdown confetti">
         <audio id="myAudio">
           <source src={confettiSound} type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
-        <div className="countdownObj">{event}</div>
-        <div className="notcountdown">Event is happening Right Now!</div>
+        {
+          (props.displayDays)?<div className="countdownObj">Hackathon</div>:<div className="countdownObj">{event}</div>
+        }
+        {
+          EventStr = (props.displayDays)?"Event has ended !":<div className="countdownObj">Event is happening Right Now!</div>
+
+        }
         <img
           className="confettiImg"
           id="confetti1"
