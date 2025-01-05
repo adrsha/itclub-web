@@ -1,25 +1,36 @@
 .hackathonComponent{
+    color: var(--color1);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
 }
 .upperHalf{
-    height: 100vh;
     display: flex;
-}
-
-.gitInfo{
-    flex:1;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20rem;
 }
 
 .gitWatchContainer{
     overflow-y: auto;
     padding: 2vh;
 }
-.hello{
-    background-color: black;
+.gitInfo{
+    flex:1;
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 3rem;
 }
-.bottomCommitDisplay{
-    background-color: black;
+.noOfRepos{
+    display: flex;
+    flex-direction: column;
 }
+.infoContents{
+    font-size: 1.5rem;
+    padding: 2rem;
+    border-radius: 2rem 2rem 0rem 2rem;
+}
+

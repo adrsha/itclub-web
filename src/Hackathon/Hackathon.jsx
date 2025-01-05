@@ -22,7 +22,7 @@ function Hackathon() {
         <div className="upperHalf">
           <Countdown displayDays="true" />
           <div className="gitInfo">
-            <div className="glassCards gitLatestCommit">
+            <div className="glass gitLatestCommit infoContents">
               <span id="latestCommitAuthor">
                 {GitDetails().latestCommit.author}
               </span>
@@ -31,8 +31,10 @@ function Hackathon() {
                 {GitDetails().latestCommit.repo}
               </span>
             </div>
-            <div className="glassCards noOfRepos">
-                {GitDetails().noOfRepos}
+            <div className="glass noOfRepos infoContents">
+              Number Of Repositories
+              <span>{GitDetails().noOfRepos}</span>
+                
             </div>
           </div>
         </div>

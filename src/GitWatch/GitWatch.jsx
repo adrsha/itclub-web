@@ -76,9 +76,9 @@ export default function GitWatch() {
             <ul className="moreDetails">
               {repo.commits.slice(0, 5).map((commit) => (
                 <li key={commit.sha} className="">
-                  <p className="font-medium">{commit.commit.message}</p>
+                  <p className="font-medium"><span>Commit Message</span> : {commit.commit.message}</p>
                   <p className="">
-                    By: {commit.commit.author.name} on{" "}
+                    <span>Author</span>: {commit.commit.author.name} on{" "}
                     {new Date(commit.commit.author.date).toLocaleDateString()}
                   </p>
                 </li>
