@@ -6,6 +6,8 @@ export default function GitWatch() {
   const [repoData, setRepoData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
+  // let authorsCommits = new Map();
+  const [repoAuthors, setRepoAuths] = useState(new Map());
 
   useEffect(() => {
     const fetchAllRepoData = async () => {
@@ -30,11 +32,47 @@ export default function GitWatch() {
         );
 
         const results = await Promise.all(promises);
+        let authNames = [];
+        let authCommits = [];
+        let repoAuth = [];
+
+        results.forEach((repo, index) => {
+          authNames = [];
+          repo.forEach((cmt) => {
+            if (!authNames.includes(cmt.commit.author.name)) {
+              authNames.push(cmt.commit.author.name);
+            }
+          });
+
+          authCommits = [];
+          for (let i = 0; i < authNames.length; i++) {
+            authCommits.push(0);
+          }
+
+          repo.forEach((cmt) => {
+            for (let ind = 0; ind < authNames.length; ind++) {
+              if (authNames[ind] == cmt.commit.author.name) {
+                authCommits[ind]++;
+              }
+            }
+          });
+
+          let auth = [];
+          authNames.forEach((_, i) => {
+            auth.push([authNames[i], authCommits[i]]);
+          });
+
+          repoAuth.push([
+            `${GitWatchJSON[index].username}/${GitWatchJSON[index].repository}`,
+            auth,
+          ]);
+        });
 
         // Combine repository info with commit data
         const enhancedData = results.map((commits, index) => ({
           repository: `${GitWatchJSON[index].username}/${GitWatchJSON[index].repository}`,
           commits: commits,
+          author: repoAuth,
         }));
 
         enhancedData.sort((a, b) => {
@@ -64,7 +102,7 @@ export default function GitWatch() {
   }
 
   if (error) {
-    return <div className="p-4 text-red-600">Error: {error}</div>;
+    return <div className="">Error: {error}</div>;
   }
 
   return (
@@ -73,14 +111,28 @@ export default function GitWatch() {
         <div className="commitContainer glass" key={index}>
           <div key={index} className="eachCommit">
             <h2 className="commitHeader">{repo.repository}</h2>
+            <div className="repoAbstract">
+              {
+                Array.from(repo.author).map((repos) => (
+                  repos[0] == repo.repository
+                    ? repos[1].map((ac) =>
+                      <div className="authCommits" key={ac[0]}>
+                          <div className="authorName">{ac[0]}</div>
+                        {" "}has {" "}
+                          <div className="noOfCommits">{ac[1]} commits</div>
+                        </div>
+                      )
+                    : null
+                ))
+              }
+            </div>
             <ul className="moreDetails">
-              {repo.commits.slice(0, 5).map((commit) => (
+              {repo.commits.slice(0,2).map((commit) => (
                 <li key={commit.sha} className="">
-                  <p className="font-medium"><span>Commit Message</span> : {commit.commit.message}</p>
-                  <p className="">
-                    <span>Author</span>: {commit.commit.author.name} on{" "}
-                    {new Date(commit.commit.author.date).toLocaleDateString()}
-                  </p>
+                  <span>Commit Message</span> {commit.commit.message}
+                  <br />
+                  <span>Author</span> {commit.commit.author.name} on{" "}
+                  {new Date(commit.commit.author.date).toLocaleDateString()}
                 </li>
               ))}
             </ul>
@@ -147,7 +199,6 @@ export function GitDetails() {
       return -1;
     }
   });
-  // console.log("Repo", repoData[0])
   if (repoData.length > 0) {
     latestCommit.author = repoData[0].commits[0].commit.author.name;
     latestCommit.committer = repoData[0].commits[0].commit.committer.name;
@@ -155,5 +206,5 @@ export function GitDetails() {
     latestCommit.repo = repoData[0].repository;
   }
 
-  return {latestCommit: latestCommit, noOfRepos: noOfRepos}
+  return { latestCommit: latestCommit, noOfRepos: noOfRepos };
 }

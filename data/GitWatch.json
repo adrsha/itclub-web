@@ -10,24 +10,8 @@
         "branch" : "main"
      },
      {
-        "username" : "adrsha",
-        "repository" : "emacs",
-        "branch" : "main"
-     },
-     {
-        "username" : "adrsha",
-        "repository" : "itclub-web",
-        "branch" : "main"
-     },
-     {
-        "username" : "adrsha",
-        "repository" : "website",
-        "branch" : "main"
-     },
-     {
         "username" : "asur-zx",
         "repository" : "miniGREP",
         "branch" : "main"
      }
-
 ]
