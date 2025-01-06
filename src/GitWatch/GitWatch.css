@@ -4,28 +4,20 @@
   flex-wrap: wrap;
   justify-content: center;
   gap: 2em;
-  align-items: flex-end;
 }
 .commitContainer {
   padding-left: 2rem;
   padding-right: 2rem;
   border-radius: 1rem;
-  max-width: 30rem;
-  min-width: 20rem;
-  min-height: 2rem;
-  max-height: fit-content;
+  max-width: 20rem;
+  min-width: 15rem;
   transition: 0.4s ease;
 }
 
 .moreDetails {
   transition: 0.4s ease;
-  height: 0;
   overflow: hidden;
-}
-.commitContainer:hover .moreDetails {
-  height: 20vh;
-}
-.commitContainer:hover {
+    padding: 0;
 }
 
 .moreDetails li {
@@ -39,6 +31,7 @@
   color: var(--color1A);
   font-weight: bolder;
   /* border-radius: 1em; */
+  width: 100%;
   padding: 0.2em 0.5em;
 }
 
