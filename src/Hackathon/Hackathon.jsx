@@ -10,7 +10,7 @@ import Countdown from "../countdown/Countdown.jsx";
 import Lines from "../Lines/Lines.jsx";
 import "./Hackathon.css";
 
-let EndTime = "Jan 6 25 23:23:23";
+let EndTime = "Jan 10 25 07:00:00";
 function Hackathon() {
   return (
     <>
