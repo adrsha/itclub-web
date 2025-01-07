@@ -44,6 +44,8 @@
     /* background-color: var(--color3); */
     color: var(--color1)
 }
+
+
 .notcountdown{
     z-index: 1;
     font-size: 1.3rem;
@@ -59,30 +61,32 @@
     margin-left: var(--counterObjsMargin);
     margin-right: var(--counterObjsMargin);
 }
+.countObjs::after{
+    margin-left: 0.5rem;
+    font-size: 0.6em;
+    color: var(--color1a);
+}
 .Rows{
     display: flex;
     align-items: center;
     justify-content: center;
 }
+/* .hours::after,
+.days::after,
 .days::after{
-    color: var(--color1a);
+} */
+.days::after{
     content: "days";
-    font-size: 0.4em;
 }
 .hours::after{
-    color: var(--color1a);
-    content: "hour";
-    font-size: 0.4em;
+    content: "hours";
 }
 .min::after{
     color: var(--color1a);
     content: "mins";
-    font-size: 0.4em;
 }
 .sec::after{
-    color: var(--color1a);
     content: "secs";
-    font-size: 0.4em;
 }
 
 .mouseimg{

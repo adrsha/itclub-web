@@ -24,7 +24,7 @@ for (let i = 0; i < eventData.length; i++) {
 
 function Countdown(props) {
   // Get the data of the event
-  let dateStr = (props.endDate)?new Date(props.endDate): new Date(latestEvent.eventDate);
+  let dateStr = (props.endDate) ? new Date(props.endDate) : new Date(latestEvent.eventDate);
   let deadline = new Date(dateStr);
   const event = latestEvent.eventName;
 
@@ -74,7 +74,7 @@ function Countdown(props) {
     }, 1000);
   }, []);
 
-  if (tsec <= 0 && tsec != null) {
+  if (tsec <= 0 && tsec != null && !props.eventStart) {
     let EventStr = ""
     return (
       <div className="countdown confetti">
@@ -83,10 +83,10 @@ function Countdown(props) {
           Your browser does not support the audio element.
         </audio>
         {
-          (props.displayDays)?<div className="countdownObj">Hackathon</div>:<div className="countdownObj">{event}</div>
+          (props.displayDays) ? <div className="countdownObj">Hackathon</div> : <div className="countdownObj">{event}</div>
         }
         {
-          EventStr = (props.displayDays)?"Event has ended !":<div className="countdownObj">Event is happening Right Now!</div>
+          EventStr = (props.displayDays) ? "Event has ended !" : <div className="countdownObj">Event is happening Right Now!</div>
 
         }
         <img
@@ -111,27 +111,53 @@ function Countdown(props) {
     );
   }
   else if (props.displayDays && tsec != null) {
-    return (
-      <>
-        <div className="countdown">
-          <div className="countdownObj">
-            <div className="Rows">
-              <div className="hours countObjs">
-                {hours}
-              </div>
-              :
-              <div className="min countObjs">
-                {mins}
-              </div>
-              :
-              <div className="sec countObjs">
-                {secs}
-              </div>
-            </div>
+
+      return (
+
+        <>
+
+          <div className="countdown">
+
+            <div className="countdownObj">
+            <div className="notcountdown">
+            {(props.eventStart) ? <>Time before Hackathon</> : <>Event starts in:</>}
           </div>
-        </div>
-      </>
-    )
+
+              <div className="Rows">
+
+                <div className="hours countObjs">
+
+                  {(parseInt(days)>0) ? (parseInt(hours)+parseInt(days)*24):hours}
+
+                </div>
+                </div>
+                <div className="Rows">
+
+                <div className="min countObjs">
+
+                  {mins}
+
+                  </div>
+                  </div>
+                <div className="Rows">
+
+                <div className="sec countObjs">
+
+                  {secs}
+
+                </div>
+                
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </>
+
+      )
+
   } else {
     return tsec > 0 && tsec != null ? (
       <>

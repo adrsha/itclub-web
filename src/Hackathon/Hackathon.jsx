@@ -10,8 +10,14 @@ import Countdown from "../countdown/Countdown.jsx";
 import Lines from "../Lines/Lines.jsx";
 import "./Hackathon.css";
 
-let EndTime = "Jan 10 25 07:00:00";
 function Hackathon() {
+  
+let StartTime = "Jan 9 25 09:00:00";
+let EndTime = "Jan 11 25 09:00:00";
+let currentTime = new Date();
+let eventStart = currentTime<new Date(StartTime) ? false : true
+  console.log(currentTime, "and",StartTime)
+
   return (
     <>
       <Nav home events />
@@ -20,7 +26,7 @@ function Hackathon() {
       <Parallax />
       <div className="hackathonComponent">
         <div className="upperHalf">
-          <Countdown displayDays={true}  endDate = {EndTime}/>
+          <Countdown displayDays={true}  endDate = {(eventStart ? EndTime : StartTime)} eventStart = {eventStart}/>
           <div className="gitInfo">
             <div className="glass gitLatestCommit infoContents">
               <span id="latestCommitAuthor">
