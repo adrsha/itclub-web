@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import "./GitWatch.css";
 import GitWatchJSON from "../../data/GitWatch.json";
+import { log } from "mathjs";
 
 export default function GitWatch() {
   const [repoData, setRepoData] = useState([]);
@@ -24,7 +25,7 @@ export default function GitWatch() {
           ).then((response) => {
             if (!response.ok) {
               throw new Error(
-                `Failed to fetch data for ${gw.username}/${gw.repository}`,
+                `Failed to fetch data for ${gw.repository}`,
               );
             }
             return response.json();
@@ -63,14 +64,14 @@ export default function GitWatch() {
           });
 
           repoAuth.push([
-            `${GitWatchJSON[index].username}/${GitWatchJSON[index].repository}`,
+            GitWatchJSON[index].repository,
             auth,
           ]);
         });
 
         // Combine repository info with commit data
         const enhancedData = results.map((commits, index) => ({
-          repository: `${GitWatchJSON[index].username}/${GitWatchJSON[index].repository}`,
+          repository: GitWatchJSON[index].repository,
           commits: commits,
           author: repoAuth,
         }));
@@ -116,26 +117,18 @@ export default function GitWatch() {
                 Array.from(repo.author).map((repos) => (
                   repos[0] == repo.repository
                     ? repos[1].map((ac) =>
+                      ac[0]!="KEC IT Club"?
                       <div className="authCommits" key={ac[0]}>
                           <div className="authorName">{ac[0]}</div>
                         {" "}has {" "}
                           <div className="noOfCommits">{ac[1]} commits</div>
-                        </div>
+                        </div> : null
                       )
                     : null
                 ))
               }
             </div>
-            <ul className="moreDetails">
-              {repo.commits.slice(0,1).map((commit) => (
-                <li key={commit.sha} className="">
-                  <span>Commit Message</span> {commit.commit.message}
-                  <br />
-                  <span>Author</span> {commit.commit.author.name} on{" "}
-                  {new Date(commit.commit.author.date).toLocaleDateString()}
-                </li>
-              ))}
-            </ul>
+
           </div>
         </div>
       ))}
@@ -163,7 +156,7 @@ export function GitDetails() {
           ).then((response) => {
             if (!response.ok) {
               throw new Error(
-                `Failed to fetch data for ${gw.username}/${gw.repository}`,
+                `Failed to fetch data for ${gw.repository}`,
               );
             }
             return response.json();
@@ -174,7 +167,7 @@ export function GitDetails() {
 
         // Combine repository info with commit data
         const enhancedData = results.map((commits, index) => ({
-          repository: `${GitWatchJSON[index].username}/${GitWatchJSON[index].repository}`,
+          repository: GitWatchJSON[index].repository,
           commits: commits,
         }));
 
@@ -193,18 +186,19 @@ export function GitDetails() {
   let latestCommit = {};
 
   repoData.sort((a, b) => {
-    if (a.commits[0].commit.author.date < b.commits[0].commit.author.date) {
+    
+    if (a.commits.length < b.commits.length) {
       return 1;
     } else {
       return -1;
     }
   });
-  if (repoData.length > 0) {
-    latestCommit.author = repoData[0].commits[0].commit.author.name;
-    latestCommit.committer = repoData[0].commits[0].commit.committer.name;
-    latestCommit.time = new Date(repoData[0].commits[0].commit.author.date);
-    latestCommit.repo = repoData[0].repository;
-  }
+  let returndata = repoData.map(data => {
+    return {
+"name": data.repository,
+"commits" : data.commits.length
+    }
 
-  return { latestCommit: latestCommit, noOfRepos: noOfRepos };
+    }) 
+  return returndata;
 }

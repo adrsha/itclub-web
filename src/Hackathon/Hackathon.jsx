@@ -11,13 +11,11 @@ import Lines from "../Lines/Lines.jsx";
 import "./Hackathon.css";
 
 function Hackathon() {
-  
-let StartTime = "Jan 9 25 09:00:00";
-let EndTime = "Jan 11 25 09:00:00";
-let currentTime = new Date();
-let eventStart = currentTime<new Date(StartTime) ? false : true
-  console.log(currentTime, "and",StartTime)
 
+  let StartTime = "Jan 9 25 09:00:00";
+  let EndTime = "Jan 11 25 09:00:00";
+  let currentTime = new Date();
+  let eventStart = currentTime < new Date(StartTime) ? false : true
   return (
     <>
       <Nav home events />
@@ -26,21 +24,24 @@ let eventStart = currentTime<new Date(StartTime) ? false : true
       <Parallax />
       <div className="hackathonComponent">
         <div className="upperHalf">
-          <Countdown displayDays={true}  endDate = {(eventStart ? EndTime : StartTime)} eventStart = {eventStart}/>
+          <Countdown displayDays={true} endDate={(eventStart ? EndTime : StartTime)} eventStart={eventStart} />
           <div className="gitInfo">
-            <div className="glass gitLatestCommit infoContents">
-              <span id="latestCommitAuthor">
-                {GitDetails().latestCommit.author}
-              </span>
-              {" "}committed on{" "}
-              <span id="latestCommitRepo">
-                {GitDetails().latestCommit.repo}
-              </span>
-            </div>
-            <div className="glass noOfRepos infoContents">
-              Number Of Repositories
-              <span>{GitDetails().noOfRepos}</span>
-                
+            <div className="glass infoContents" >
+              <h3>Leaderboard</h3>
+              <div className="leaderboardContainer" data-lenis-prevent>
+              {
+                GitDetails().map(data => (
+                  <div className="leaderboardContent" key={data.name}>
+                    <div className="leaderboardName">{
+                      data.name
+                    }</div>
+                    <div className="leaderboardCommits">
+                      {data.commits}
+                    </div>
+                    </div>
+                ))
+              }
+              </div>
             </div>
           </div>
         </div>

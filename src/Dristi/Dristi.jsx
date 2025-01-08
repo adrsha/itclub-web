@@ -15,7 +15,6 @@ function DristiEvents(props) {
     marginTop: "-5rem",
   };
 
-  console.log(props);
   return (
     <>
       {isMobile() ? null : <Parallax />}

@@ -17,7 +17,6 @@ import { LenisComponent } from './Lenis/Lenis.js';
 
 const Carousel = (props) => {
     let path = props.defPath;
-    console.log(props.id)
     if (path == "" ){
         path = "/defaultPoster.png"
     }
