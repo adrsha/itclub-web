@@ -127,7 +127,7 @@ export default function GitWatch() {
               }
             </div>
             <ul className="moreDetails">
-              {repo.commits.slice(0,2).map((commit) => (
+              {repo.commits.slice(0,1).map((commit) => (
                 <li key={commit.sha} className="">
                   <span>Commit Message</span> {commit.commit.message}
                   <br />
