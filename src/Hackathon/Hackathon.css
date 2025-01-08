@@ -42,14 +42,13 @@
     font-size: 1.5rem;
     padding: 2rem;
     border-radius: 2rem 2rem 0rem 2rem;
-
 }
 .infoContents h3{
     margin: 0;
     margin-bottom: 1rem;
 }
 .leaderboardContainer{
-    width: 20vw;
+    width: fit-content;
     max-height: 40vh;
     overflow-y: scroll;
     border-top: 2px solid var(--color1a);
