@@ -1,32 +1,7 @@
 [
-    {
-        "username": "asur-zx",
-        "repository": "pasm",
-        "branch": "main"
-    },
-     {
-        "username" : "asur-zx",
-        "repository" : "2Du",
-        "branch" : "main"
-     },
-     {
-        "username" : "adrsha",
-        "repository" : "itclub-web",
-        "branch" : "main"
-     },
-     {
-        "username" : "adrsha",
-        "repository" : "website",
-        "branch" : "main"
-     },
-     {
-        "username" : "adrsha",
-        "repository" : "emacs",
-        "branch" : "main"
-     },
-     {
-        "username" : "kecitclub",
-        "repository" : "hackamigos",
-        "branch" : "main"
-     }
+   {
+      "username" : "kecitclub",
+      "repository" : "hackamigos",
+      "branch" : "main"
+   }
 ]
