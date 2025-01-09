@@ -12,8 +12,8 @@ import "./Hackathon.css";
 
 function Hackathon() {
 
-  let StartTime = "Jan 9 25 09:00:00";
-  let EndTime = "Jan 11 25 09:00:00";
+  let StartTime = "Jan 9 25 10:00:00";
+  let EndTime = "Jan 11 25 10:00:00";
   let currentTime = new Date();
   let eventStart = currentTime < new Date(StartTime) ? false : true
   return (
