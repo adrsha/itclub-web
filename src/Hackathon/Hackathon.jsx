@@ -27,7 +27,7 @@ function Hackathon() {
           <Countdown displayDays={true} endDate={(eventStart ? EndTime : StartTime)} eventStart={eventStart} />
           <div className="gitInfo">
             <div className="glass infoContents" >
-              <h3>Leaderboard</h3>
+              <h3>Most Commits</h3>
               <div className="leaderboardContainer" data-lenis-prevent>
               {
                 GitDetails().map(data => (
