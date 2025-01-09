@@ -24,9 +24,7 @@ export default function GitWatch() {
             },
           ).then((response) => {
             if (!response.ok) {
-              throw new Error(
-                `Failed to fetch data for ${gw.repository}`,
-              );
+              throw new Error(`Failed to fetch data for ${gw.repository}`);
             }
             return response.json();
           }),
@@ -63,10 +61,7 @@ export default function GitWatch() {
             auth.push([authNames[i], authCommits[i]]);
           });
 
-          repoAuth.push([
-            GitWatchJSON[index].repository,
-            auth,
-          ]);
+          repoAuth.push([GitWatchJSON[index].repository, auth]);
         });
 
         // Combine repository info with commit data
@@ -113,22 +108,19 @@ export default function GitWatch() {
           <div key={index} className="eachCommit">
             <h2 className="commitHeader">{repo.repository}</h2>
             <div className="repoAbstract">
-              {
-                Array.from(repo.author).map((repos) => (
-                  repos[0] == repo.repository
-                    ? repos[1].map((ac) =>
-                      ac[0]!="KEC IT Club"?
-                      <div className="authCommits" key={ac[0]}>
-                          <div className="authorName">{ac[0]}</div>
-                        {" "}has {" "}
+              {Array.from(repo.author).map((repos) =>
+                repos[0] == repo.repository
+                  ? repos[1].map((ac) =>
+                      ac[0] != "KEC IT Club" ? (
+                        <div className="authCommits" key={ac[0]}>
+                          <div className="authorName">{ac[0]}</div> has{" "}
                           <div className="noOfCommits">{ac[1]} commits</div>
-                        </div> : null
-                      )
-                    : null
-                ))
-              }
+                        </div>
+                      ) : null,
+                    )
+                  : null,
+              )}
             </div>
-
           </div>
         </div>
       ))}
@@ -155,9 +147,7 @@ export function GitDetails() {
             },
           ).then((response) => {
             if (!response.ok) {
-              throw new Error(
-                `Failed to fetch data for ${gw.repository}`,
-              );
+              throw new Error(`Failed to fetch data for ${gw.repository}`);
             }
             return response.json();
           }),
@@ -186,19 +176,23 @@ export function GitDetails() {
   let latestCommit = {};
 
   repoData.sort((a, b) => {
-    
     if (a.commits.length < b.commits.length) {
       return 1;
     } else {
       return -1;
     }
   });
-  let returndata = repoData.map(data => {
+  let returndata = repoData.map((data) => {
+    let commitLength = 0;
+    data.commits.forEach((d) => {
+      if (d.commit.author.name != "KEC IT Club") {
+        commitLength++;
+      }
+    });
     return {
-"name": data.repository,
-"commits" : data.commits.length-1
-    }
-
-    }) 
+      name: data.repository,
+      commits: commitLength
+    };
+  });
   return returndata;
 }
