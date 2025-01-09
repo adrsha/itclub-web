@@ -196,7 +196,7 @@ export function GitDetails() {
   let returndata = repoData.map(data => {
     return {
 "name": data.repository,
-"commits" : data.commits.length
+"commits" : data.commits.length-1
     }
 
     }) 
