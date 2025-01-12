@@ -28,10 +28,6 @@ const router = createBrowserRouter([
 
   path: "/dristi",
   element: <Dristi />,
-},
-{
-  path: "/hackathon",
-  element: <Hackathon/>,
 }
 ]);
 
