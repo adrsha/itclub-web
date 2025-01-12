@@ -60,7 +60,7 @@ function App() {
                     button2="Contact Us"
                     link2="#contactUs"
                 />
-                {/* <Carousel defPath={notices[noticeVal].posterImage} id={noticeVal}/> */}
+                <Carousel defPath={notices[noticeVal].posterImage} id={noticeVal}/>
                 <Cards
                     id="notice"
                     title={notices[0].noticeHead}
