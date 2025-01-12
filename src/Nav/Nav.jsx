@@ -164,14 +164,14 @@ function Nav(props) {
               </span>
             </a>
           ) : null}
-          {(Object.prototype.hasOwnProperty.call(props, "dristi") && EventData.display) ? (
+          {/* {(Object.prototype.hasOwnProperty.call(props, "dristi") && EventData.display) ? (
             <a href={EventData.eventLink} className="NavItems" id="events_nav">
               {EventData.eventName}
               <span className="NavItemIcons glass">
                 <img src={EventData.eventImg} alt="" />
               </span>
             </a>
-          ) : null}
+          ) : null} */}
         </nav>
       </div>
     </nav>
