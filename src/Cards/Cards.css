@@ -124,7 +124,7 @@
 
 
 #notice #noticeContent::before {
-  content: "NEW NOTICE!!";
+  content: "";
   text-align: center;
   color: var(--color4);
   background-color: var(--color1);
