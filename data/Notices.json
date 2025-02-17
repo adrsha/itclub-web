@@ -1,11 +1,11 @@
 [
   {
-    "noticeHead": "No new notices",
-    "noticeBody": "we will let you know soon !",
+    "noticeHead": "Workshop on CV!",
+    "noticeBody": "No new notices",
     "buttonDiscord": "",
     "buttonForm": "",
-    "posterImage": "",
-    "eventLink": "",
-    "noticeInfoLink": ""
+    "posterImage": "/image.png",
+    "eventLink": "/events",
+    "noticeInfoLink": "/notices"
   }
 ]
