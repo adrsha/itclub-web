@@ -1,11 +1,13 @@
 [
+
   {
-    "noticeHead": "",
-    "noticeBody": "No new notices",
+    "noticeHead": "Members Intake",
+    "noticeBody": "Apply to join IT CLUB",
     "buttonDiscord": "",
-    "buttonForm": "",
-    "posterImage": "",
+    "buttonForm": "https://docs.google.com/forms/d/1vM3NSaLrvpuW2mxSHkBGe913bhdEP9fuek-XDudoGqc/edit",
+    "posterImage": "call for members.png",
     "eventLink": "",
     "noticeInfoLink": ""
   }
+
 ]
