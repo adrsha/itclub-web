@@ -1,0 +1,56 @@
+.mainContainer {
+  color: var(--color1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+}
+.commitContainer {
+  padding: 2rem;
+  border-radius: 1rem;
+  height: fit-content;
+  max-width: 20rem;
+  min-width: 15rem;
+  transition: 0.4s ease;
+}
+.commitHeader{
+  margin: 0;
+}
+.authCommits{
+  margin-top: 1rem;
+}
+
+.moreDetails {
+  transition: 0.4s ease;
+  overflow: hidden;
+    padding: 0;
+}
+
+.moreDetails li {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--color4a);
+}
+
+.moreDetails li span {
+  /* background: var(--color1a); */
+  color: var(--color1A);
+  font-weight: bolder;
+  /* border-radius: 1em; */
+  width: 100%;
+  padding: 0.2em 0.5em;
+}
+
+.repoAbstract {
+  /* background: var(--color1e) */
+}
+
+.repoAbstract .authorName {
+  display: inline;
+  color: var(--color1a);
+  font-weight: bolder;
+}
+.repoAbstract .noOfCommits {
+  display: inline;
+  font-weight: bolder;
+}

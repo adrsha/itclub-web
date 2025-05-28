@@ -1,3 +1,4 @@
+import { Analytics } from "@vercel/analytics/react"
 import "./Nav.css";
 import logo from "/logo.png";
 import closeImg from "/close.png";
@@ -70,7 +71,8 @@ function Nav(props) {
 
 
   return (
-    <>
+    <nav className="theNav">
+      <Analytics />
       <a href="/" className="logo">
         <img src={logo} />
       </a>
@@ -162,17 +164,17 @@ function Nav(props) {
               </span>
             </a>
           ) : null}
-          {(Object.prototype.hasOwnProperty.call(props, "dristi") && EventData.display) ? (
+          {/* {(Object.prototype.hasOwnProperty.call(props, "dristi") && EventData.display) ? (
             <a href={EventData.eventLink} className="NavItems" id="events_nav">
               {EventData.eventName}
               <span className="NavItemIcons glass">
                 <img src={EventData.eventImg} alt="" />
               </span>
             </a>
-          ) : null}
+          ) : null} */}
         </nav>
       </div>
-    </>
+    </nav>
   );
 }
 

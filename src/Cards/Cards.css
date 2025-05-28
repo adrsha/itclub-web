@@ -1,5 +1,6 @@
 .glassCards {
   padding: 10vh;
+  border: 2px solid var(--color3A);
   border-radius: 10vh;
   color: var(--color1);
   font-family: "Quicksand";
@@ -24,35 +25,48 @@
 }
 
 .glassCards#image {
-  height: 25vw;
-  width: 25vw;
-  border-radius: 0vh;
-}
-
-.glassCards#image>img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  width: 60vh;
+  height: fit-content;
   border-radius: 5vh;
   filter: sepia(100%) saturate(300%) brightness(90%) hue-rotate(150deg);
   transition: 0.3s ease;
+  z-index: 0;
   border: 20px solid var(--color3A);
   outline: 2px solid var(--color1A);
+  cursor: pointer;
 }
 
-.glassCards#image>img:hover {
+
+.glassCards#image:hover {
   filter: brightness(100%);
   outline: 1px solid var(--color1A);
   border: 0px solid var(--color1A);
   border-radius: 1vh;
 }
+/* .glassCards#image>img { */
+/*     width: 100%; */
+/*     height: 100%; */
+/*   object-fit: contain; */
+/*   border-radius: 5vh; */
+/*   filter: sepia(100%) saturate(300%) brightness(90%) hue-rotate(150deg); */
+/*   transition: 0.3s ease; */
+/*   border: 20px solid var(--color3A); */
+/*   outline: 2px solid var(--color1A); */
+/* } */
+/**/
+/* .glassCards#image>img:hover { */
+/*   filter: brightness(100%); */
+/*   outline: 1px solid var(--color1A); */
+/*   border: 0px solid var(--color1A); */
+/*   border-radius: 1vh; */
+/* } */
 
 .glassCards .cardTitle {
   font-family: "JetBrains Mono", monospace;
   font-weight: 800;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
   font-size: 2.5em;
   margin-top: 0rem;
   margin-bottom: 2vh;
@@ -61,10 +75,11 @@
 .glassCards#circleButtons {
   margin: auto;
   display: flex;
+  position: relative;
   flex-direction: column;
   width: 33em;
   height: 33em;
-  z-index: 4;
+  z-index: 2;
   /* position: relative; */
   align-items: center;
   border-radius: 50%;
@@ -109,7 +124,7 @@
 
 
 #notice #noticeContent::before {
-  content: "NEW NOTICE!!";
+  content: "";
   text-align: center;
   color: var(--color4);
   background-color: var(--color1);
@@ -197,9 +212,12 @@
   justify-content: space-between;
   padding-left: 1rem;
   padding-right: 1rem;
-  background-color: var(--color4aA);
+  transition: 0.2s ease;
   width: 15vw;
   min-width: 15em;
+}
+.tablet:hover{
+  background-color: var(--color4);
 }
 
 .tablet img {

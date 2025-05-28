@@ -247,3 +247,4 @@ export function Canvas(props) {
         <canvas id="canvas" ref={canvasRef}></canvas>
     )
 }
+        

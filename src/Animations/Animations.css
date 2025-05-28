@@ -27,20 +27,20 @@
   }
 }
 
-@keyframes slideOut {
-  0%{
-  }
-  100% {
-    min-width: 60vw;
-  }
-}
-@keyframes slideIn{
-  0%{
-   min-width: 60vw;
-  }
-  100% {
-  }
-}
+/* @keyframes slideOut { */
+/*   0%{ */
+/*   } */
+/*   100% { */
+/*     min-width: 60vw; */
+/*   } */
+/* } */
+/* @keyframes slideIn{ */
+/*   0%{ */
+/*    min-width: 60vw; */
+/*   } */
+/*   100% { */
+/*   } */
+/* } */
 
 
 @keyframes bob{

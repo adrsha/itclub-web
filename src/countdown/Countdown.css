@@ -1,3 +1,6 @@
+:root{
+    --counterObjsMargin : 1rem;
+}
 .confettiImg{
     position: fixed;
     z-index: 1;
@@ -38,58 +41,54 @@
     z-index: 1;
     display: flex;
     flex-direction: column;
-    background-color: var(--color3);
+    /* background-color: var(--color3); */
     color: var(--color1)
 }
+
+
 .notcountdown{
     z-index: 1;
     font-size: 1.3rem;
     padding-bottom: 1vw;
     font-family: "JetBrains Mono", monospace;
     font-weight: bold;
-    background-color: var(--color3);
+    /* background-color: var(--color3); */
     color: var(--color1);
 }
-.dayshour{
+.countObjs{
     position: relative;   
     color: var(--color1);
+    margin-left: var(--counterObjsMargin);
+    margin-right: var(--counterObjsMargin);
 }
-.dayshour::after{
+.countObjs::after{
+    margin-left: 0.5rem;
+    font-size: 0.6em;
     color: var(--color1a);
-    content: "hour";
-    position: absolute;
-    top: -2rem;
-    left: 53%;
-    font-size: 0.4em;
 }
-.dayshour::before{
-    color: var(--color1a);
+.Rows{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* .hours::after,
+.days::after,
+.days::after{
+} */
+.days::after{
     content: "days";
-    position: absolute;
-    top: -2rem;
-    right: 53%;
-    font-size: 0.4em;
 }
-.minsec{
-    color: var(--color1);
-    position: relative;
+.hours::after{
+    content: "hours";
 }
-.minsec::after{
-    color: var(--color1a);
-    content: "secs";
-    position: absolute;
-    top: -2rem;
-    left: 53%;
-    font-size: 0.4em;
-}
-.minsec::before{
+.min::after{
     color: var(--color1a);
     content: "mins";
-    position: absolute;
-    top: -2rem;
-    right: 54%;
-    font-size: 0.4em;
 }
+.sec::after{
+    content: "secs";
+}
+
 .mouseimg{
     padding-top: 0vh;
     height: auto;

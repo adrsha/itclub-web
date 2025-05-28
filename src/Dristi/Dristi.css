@@ -1,70 +1,111 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&family=Russo+One&display=swap");
 :root {
-  --dristi_color1: #4FB3E5;
-  --dristi_color2: #2DAE8B;
-  --dristi_color3: #7B3494;
-  --dristi_color4: #F26422;
-  --dristi_color5: #2C1D5B;
-  --dristi_color1l: #A8D9F4;
-  --dristi_color2l: #96D4C4;
-  --dristi_color3l: #BB99C8;
-  --dristi_color4l: #F9B18F;
-  --dristi_color5l: #948DAC;
-  }
+ 
+}
 
-#root.dristi{
-    background-color: var(--color4aA);
-    background-image: url("/dristi_pattern.png");
-    background-size: 3rem 3rem;
-    background-attachment: fixed;
-    background-position: top;
-    box-shadow: inset 0 0 100px 100px var(--color4);
+#root.dristi {
+  background-color: var(--color4aA);
+  background-image: url("/dristi_pattern.png");
+  background-size: 3rem 3rem;
+  background-attachment: fixed;
+  background-position: top;
+    box-shadow: inset 0 0 10vw 0px var(--color4);
 }
 
 .specialEventHeader {
   color: var(--color1);
-  height: 30vw;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  height: min(calc(30vh + 30vw), 60vh);
   font-family: "Monomaniac One", cursive;
-  font-size: 15vw;
+  font-size: min(12em, 20vw);
+  padding-top: 20vh;
+  padding-bottom: 5vh;
   z-index: 1;
   position: relative;
-  text-shadow: 0.5rem 0.5rem 0 var(--dristi_color1), -0.5rem -0.5rem 0 var(--dristi_color2), 0.5rem -0.5rem 0 var(--dristi_color3), -0.5rem 0.5rem 0 var(--dristi_color4), 1rem 1.0rem 0 var(--dristi_color5);
+  text-shadow:
+    0.5rem 0.5rem 0 var(--dristi_color1),
+    -0.5rem -0.5rem 0 var(--dristi_color2),
+    0.5rem -0.5rem 0 var(--dristi_color3),
+    -0.5rem 0.5rem 0 var(--dristi_color4),
+    1rem 1rem 0 var(--dristi_color5);
 }
 
-.specialEventsSubHeader {
+.specialEventsScroll {
   color: var(--color1);
   font-family: "Monomaniac One", cursive;
-  font-size: 3vw;
-  margin-top: 2rem;
-  margin-bottom: 1rem;
+  font-size: 1rem;
+  position: relative;
   z-index: 1;
-  /* position: relative; */
-  /* text-shadow: 0.5rem 0.5rem 0 var(--dristi_color1), -0.5rem -0.5rem 0 var(--dristi_color2), 0.5rem -0.5rem 0 var(--dristi_color3), -0.5rem 0.5rem 0 var(--dristi_color4), 1rem 1.0rem 0 var(--dristi_color5); */
+  margin: auto;
+  display: block;
+  text-shadow: none;
+}
+
+.specialEventsScroll::after {
+  content: "⌄";
+  position: absolute;
+  font-size: 2em;
+  left: 50%;
+  transform: translate(-50%, 50%);
+}
+
+.affiliation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Rubik";
+  gap: 1em;
+  color: var(--color1);
+  font-size: 1.5em;
+  border-radius: 2em;
+  font-weight: bold;
+  margin: auto;
+  margin-bottom: 20px;
+  text-align: right;
+  width: fit-content;
+  padding: 2em;
+}
+.affiliation span {
+  text-align: right;
+  position: relative;
+}
+.affiliation img {
+  height: 3em;
+  width: auto;
 }
 
 .specialEventsList {
-    display: flex;
-    gap: 1rem;
-    padding: 10px;
-    width: 100%;
+  display: flex;
+  gap: 1rem;
+  padding: 10px;
+  width: 100%;
 }
 
 .masonry-column {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
 .specialEventContent {
-    border-radius: 5vw;
-    padding-bottom: 5rem;
-    background-color: var(--color4);
-    width: 100%;
-    break-inside: avoid;
-    margin-bottom: 1rem;
+  border-radius: 2vw 2vw 5vw 5vw;
+  padding-bottom: 5rem;
+  background-color: var(--color3e);
+  width: 100%;
+  break-inside: avoid;
+  margin-bottom: 1rem;
+}
+.specialEventButton {
+  margin: 2rem auto;
+  background: linear-gradient(to right, var(--color1a), var(--color1e));
+  font-family: "Quicksand", sans-serif;
+  font-size: 1.5rem;
+  transition: 0.2s ease;
+  color: var(--color4);
+}
+.specialEventButton:hover {
+  box-shadow: 0 0 1.5rem var(--color1aA);
+  color: var(--color1);
 }
 
 .specialEventContentTitle {
@@ -73,34 +114,91 @@
   font-size: 3rem;
 }
 
-img.specialEventContentImg{
-    object-fit: cover;
-    width: 100%;
-    border-radius: 2vw;
-    margin: 0px;
-    box-shadow: 0px 10px 10px 0px rgba(0,0,0,0.1)
+img.specialEventContentImg {
+  object-fit: cover;
+  width: 100%;
+  border-radius: 2vw;
+  margin: 0px;
+  box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.1);
+  filter: sepia(100%) saturate(300%) brightness(60%) hue-rotate(150deg);
+  transition: 0.3s ease;
 }
-.specialEventContentTime{
-    background-color: var(--color1e);
-    border-radius: 10px;
-    width: fit-content;
-    padding: 0.2em 1em;
-    font-weight: bolder;
-    margin: 1em auto ;
+img.specialEventContentImg:hover {
+  filter: sepia(0%) hue-rotate(0deg);
+  scale: 0.95;
 }
-.specialEventsDesc{
-    color: var(--color1);
-    padding-left: 2vw;
-    padding-right: 2vw;
+.specialEventContentTime {
+  background-color: var(--color1e);
+  border-radius: 10px;
+  width: fit-content;
+  padding: 0.2em 1em;
+  font-weight: bolder;
+  margin: 1em auto;
+}
+.specialEventsDesc {
+  color: var(--color1);
+  padding-left: 2vw;
+  padding-right: 2vw;
+}
+.advertVideo {
+  width: 60vw;
+  height: auto;
+  margin-bottom: 10vh;
+  border-radius: 5vw;
+  outline: 1px solid var(--color1A);
+  outline-offset: 10px;
+  transition: 0.3s ease;
+}
+.advertVideo:hover {
+  outline-offset: 20px;
 }
 
+.VODContainer {
+  position: relative;
+  width: fit-content;
+  margin: auto;
+}
+
+.pauseButton,
+.playButton {
+  z-index: 2;
+  position: absolute;
+  width: 12em;
+  bottom: 20%;
+  left: calc(30vw - 6em);
+  background-color: transparent;
+  overflow: visible;
+  /* border: 1px solid var(--color1A); */
+  aspect-ratio: 1;
+  border-radius: 50%;
+}
+.VODContainer .muteButton{
+  z-index: 2;
+  position: absolute;
+  background-color: transparent;
+    /* margin: auto; */
+  width: 12em;
+  left: calc(30vw - 6em);
+  bottom: 20%;
+    opacity: 0;
+    backdrop-filter: blur(10px);
+    transition: 0.2s ease;
+}
+.VODContainer:hover .muteButton {
+  opacity: 1;
+}
+
+.VODContainer:hover .playButton {
+  opacity: 1;
+}
+.playButton {
+  opacity: 0;
+  transition: 0.2s ease;
+}
 
 /* @media (max-width: 600px) { */
 /*     .specialEventsList { */
 /*         flex-direction: column; */
 /*     } */
-    
-/*     .masonry-column { */
-/*         width: 100%; */
-/*     } */
+
 /* } */

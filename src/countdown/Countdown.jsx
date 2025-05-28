@@ -1,11 +1,11 @@
-import { useState, useEffect } from "react";
-import "./Countdown.css";
-import eventData from "../../data/Events.json";
-import confettiImg1 from "/confetti1.gif";
-import confettiImg2 from "/confetti2.gif";
-import confettiImg3 from "/confetti3.gif";
-import confettiSound from "/sound.mp3";
-import mouseImg from "/m1.png";
+import { useState, useEffect } from 'react';
+import './Countdown.css';
+import eventData from '../../data/Events.json';
+import confettiImg1 from '/confetti1.gif';
+import confettiImg2 from '/confetti2.gif';
+import confettiImg3 from '/confetti3.gif';
+import confettiSound from '/sound.mp3';
+import mouseImg from '/m1.png';
 
 // get the latest event
 let latestEvent = eventData[0];
@@ -22,41 +22,42 @@ for (let i = 0; i < eventData.length; i++) {
   }
 }
 
-function Countdown() {
+function Countdown(props) {
   // Get the data of the event
-  const deadline = new Date(latestEvent.eventDate);
+  let dateStr = (props.endDate) ? new Date(props.endDate) : new Date(latestEvent.eventDate);
+  let deadline = new Date(dateStr);
   const event = latestEvent.eventName;
 
+  let [days, setDays] = useState(0);
+  let [hours, setHours] = useState(0);
+  let [mins, setMins] = useState(0);
+  let [secs, setSec] = useState(0);
   // Countdown
-  const [days, setDays] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [mins, setMins] = useState(0);
-  const [secs, setSec] = useState(0);
   let today = new Date();
   let time = (deadline.getTime() - today.getTime()) / 1000;
-  let tsec = (time<61596237)?time:null;
+  let tsec = time < 61596237 ? time : null;
 
   function UpdateDate(tsec) {
     setDays(
-      Math.floor(tsec / 86400).toLocaleString("en-US", {
+      Math.floor(tsec / 86400).toLocaleString('en-US', {
         minimumIntegerDigits: 2,
         useGrouping: false,
       }),
     );
     setHours(
-      Math.floor((tsec % 86400) / 3600).toLocaleString("en-US", {
+      Math.floor((tsec % 86400) / 3600).toLocaleString('en-US', {
         minimumIntegerDigits: 2,
         useGrouping: false,
       }),
     );
     setMins(
-      Math.floor((tsec % 3600) / 60).toLocaleString("en-US", {
+      Math.floor((tsec % 3600) / 60).toLocaleString('en-US', {
         minimumIntegerDigits: 2,
         useGrouping: false,
       }),
     );
     setSec(
-      Math.floor(tsec % 60).toLocaleString("en-US", {
+      Math.floor(tsec % 60).toLocaleString('en-US', {
         minimumIntegerDigits: 2,
         useGrouping: false,
       }),
@@ -73,15 +74,21 @@ function Countdown() {
     }, 1000);
   }, []);
 
-  if (tsec <= 0 && tsec!=null) {
+  if (tsec <= 0 && tsec != null && !props.eventStart) {
+    let EventStr = ""
     return (
       <div className="countdown confetti">
         <audio id="myAudio">
           <source src={confettiSound} type="audio/mpeg" />
           Your browser does not support the audio element.
         </audio>
-        <div className="countdownObj">{event}</div>
-        <div className="notcountdown">Event is happening Right Now!</div>
+        {
+          (props.displayDays) ? <div className="countdownObj">Hackathon</div> : <div className="countdownObj">{event}</div>
+        }
+        {
+          EventStr = (props.displayDays) ? "Event has ended !" : <div className="countdownObj">Event is happening Right Now!</div>
+
+        }
         <img
           className="confettiImg"
           id="confetti1"
@@ -102,35 +109,94 @@ function Countdown() {
         />
       </div>
     );
+  }
+  else if (props.displayDays && tsec != null) {
+
+      return (
+
+        <>
+
+          <div className="countdown">
+
+            <div className="countdownObj">
+            <div className="notcountdown">
+            {(props.eventStart) ? <>Time before Hackathon</> : <>Event starts in:</>}
+          </div>
+
+              <div className="Rows">
+
+                <div className="hours countObjs">
+
+                  {(parseInt(days)>0) ? (parseInt(hours)+parseInt(days)*24):hours}
+
+                </div>
+                </div>
+                <div className="Rows">
+
+                <div className="min countObjs">
+
+                  {mins}
+
+                  </div>
+                  </div>
+                <div className="Rows">
+
+                <div className="sec countObjs">
+
+                  {secs}
+
+                </div>
+                
+              </div>
+
+
+            </div>
+
+          </div>
+
+        </>
+
+      )
+
   } else {
-    return (
-      (tsec > 0 && tsec!=null)?
-      (<>
+    return tsec > 0 && tsec != null ? (
+      <>
         <div className="countdown">
           <div className="countdownObj">
-            <div className="dayshour">
-              {days}:{hours}
+            <div className="Rows">
+              <div className="days countObjs">
+                {days}
+              </div>
+
+              <div className="hours countObjs">
+                {hours}
+              </div>
             </div>
-            <div className="minsec">
-              {mins}:{secs}
+            <div className="Rows">
+              <div className="min countObjs">
+                {mins}
+              </div>
+
+              <div className="sec countObjs">
+                {secs}
+              </div>
             </div>
           </div>
           <div className="notcountdown">
-            left for <br />
+            time before
+            <br />
             {event}
             <br />
           </div>
           <img className="mouseimg" src={mouseImg} alt="mouse img" />
         </div>
-      </>):(<>
+      </>
+    ) : (
+      <>
         <div className="countdown">
           <div className="countdownObj">
-            <div className="dayshour">
-             ∞
-            </div>
-            <div className="minsec">
-             ∞
-            </div>
+            <div className="dayshour">∞</div>
+            <div className="minsec">∞</div>
           </div>
           <div className="notcountdown">
             No active Programs <br />
@@ -139,7 +205,7 @@ function Countdown() {
           </div>
           <img className="mouseimg" src={mouseImg} alt="mouse img" />
         </div>
-      </>)
+      </>
     );
   }
 }
