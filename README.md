@@ -1,4 +1,6 @@
-# IT CLUB KEC
+# IT CLUB KEC - DEPRECATED
+
+Check out adrsha/itclub. That is the new main repository now.
 
 ## Conventions
 
